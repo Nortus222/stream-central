@@ -35,5 +35,49 @@ class UsertModel {
             console.error(e);        
         }
     }
+
+    public async getPassword(response: any, userId: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            const user = await query.exec();
+            if (user) {
+                response.status(200).json({password: user.password});
+            } else {
+                response.status(404).send();
+            }
+        } catch (error) {
+            response.status(500).send();
+        }
+    }
+
+    public async changePassword(response: any, userId: string, newPassword: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            let user = await query.exec();
+            if (user) {
+                user.push({password: newPassword});
+                response.status(200).send();
+            } else {
+                response.status(404).send();
+            }
+        } catch (error) {
+            response.status(500).send();
+        }
+    }
+
+    public async deleteUser(response: any, userId: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            let user = await query.exec();
+            if (user) {
+                user.deleteOne({userId: userId});
+                response.status(200).send();
+            } else {
+                response.status(404).send();
+            }
+        } catch (error) {
+            response.status(500).send();
+        }
+    }
 }
 export {UsertModel};

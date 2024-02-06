@@ -7,7 +7,7 @@ interface IMovieModel extends Mongoose.Document {
         genreId: string;
         genreName: string;
     }];
-    moviegenre: [{
+    movieGenre: [{
         genreId: string;
         genreName: string;
     }]
@@ -29,6 +29,6 @@ interface IMovieModel extends Mongoose.Document {
     streamingServiceProviders: [{
         name: string;
         status: string;   // "Paid no ads", "Paid ads", "Free ads", "Free no ads"
-    }]
+    }];
 }
 export {IMovieModel};

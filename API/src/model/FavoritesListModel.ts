@@ -13,17 +13,13 @@ class FavoritesModel {
     }
 
     public createSchema(): void {
-        this.schema = new Mongoose.Schema(
-            {
-                userId: String,
-                movies: [ 
-                    {
-                        movieId: String,
-                        movieTitle: String,
-                    }
-                ],
-            }, {collection: 'favoritesList'}
-        );
+        this.schema = new Mongoose.Schema({
+            userId: String,
+            movies: [{
+                movieId: String,
+                movieTitle: String,
+            }],
+        }, {collection: 'favoritesList'});
     }
 
     public async createModel() {
@@ -39,87 +35,79 @@ class FavoritesModel {
         }
     }
 
-    // Read Function
     public async getUserFavorites(response: any, userId: string) {
         var query = this.model.findOne({userId: userId});
         try {
             const favoritesList = await query.exec();
             if (favoritesList) {
-                response.status(200);
+                response.status(200).json(favoritesList.movies);
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
-    // Update functions
-    public async addToFavorites(response: any, userId: string, movieId: string, movieTitle: string) : Promise<void> {
+    public async addToFavorites(response: any, userId: string, movieId: string, movieTitle: string) {
         var query = this.model.findOne({userId: userId});
         try {
             const favoritesList = await query.exec();
             if (favoritesList) {
                 favoritesList.movies.push({movieId: movieId, movieTitle: movieTitle});
                 await favoritesList.save();
-                response.status(200);
+                response.status(200).send();
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
-    public async removeFromFavorites(response: any, userId: string, movieId: string, movieTitle: string) {
+    public async removeFromFavorites(response: any, userId: string, movieId: string) {
         var query = this.model.findOne({userId: userId});
         try {
-            const favoritesList = await query.exec();
+            let favoritesList = await query.exec();
             if (favoritesList) {
-                favoritesList.movies = favoritesList.movies.filter(
-                    (movie: {movieId: string}) => movie.movieId !== movieId
-                );
+                favoritesList.movies = favoritesList.movies.filter((movie: {movieId: String, movieTitle: String}) => movie.movieId !== movieId);
                 await favoritesList.save();
-                response.status(200);
+                response.status(200).send();
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
-    // Delete Functions
     public async deleteFavoritesList(response: any, userId: string) {
-        var query = this.model.findOne({userId: userId});
         try {
-            const favoritesList = await query.exec();
-            if (favoritesList) {
-                this.model.Delete(favoritesList);
-                response.status(200);
+            const result = await this.model.deleteOne({userId: userId});
+            if (result.deletedCount > 0) {
+                response.status(200).send();
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
-    // Other functions
     public async getFavoritesListLength(response: any, userId: string) {
         var query = this.model.findOne({userId: userId});
         try {
             const favoritesList = await query.exec();
             if (favoritesList) {
-                response.status(200);
-                response.json({length: favoritesList.length()});
+                response.status(200).json({length: favoritesList.movies.length});
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 }
 export {FavoritesModel};
+
 

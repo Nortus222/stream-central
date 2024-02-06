@@ -13,23 +13,15 @@ class MovieGenreModel {
     }
 
     public createSchema(): void {
-        this.schema = new Mongoose.Schema(
-            {
-                genreId: String,
-                genreName: String,
-                movies: [
-                    {
-                        movieId: String,
-                        movieTitle: String,
-                    }
-                ],
-            }, {collection: 'movieGenres'}
-        );
+        this.schema = new Mongoose.Schema({
+            genreId: String,
+            genreName: String,
+            movies: [{
+                movieId: String,
+                movieTitle: String,
+            }],
+        }, {collection: 'movieGenres'});
     }
-
-    // CRUD functions
-
-    // Create function
 
     public async createModel() {
         try {
@@ -37,24 +29,24 @@ class MovieGenreModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IMovieGenreModel>("Task", this.schema);  
+            this.model = Mongoose.model<IMovieGenreModel>("MovieGenre", this.schema);  
         }
-        catch (e) {}
+        catch (e) {
+            console.error(e);
+        }
     }
 
-    // Read functions
     public async getAllMoviesInGenre(response: any, genreId: string) {
         var query = this.model.findOne({genreId: genreId});
         try {
             const genre = await query.exec();
             if (genre) {
-                response.status(200);
-                response.json(genre.movies);
+                response.status(200).json(genre.movies);
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
@@ -63,66 +55,60 @@ class MovieGenreModel {
         try {
             const genre = await query.exec();
             if (genre) {
-                response.status(200);
-                response.json({movies: genre.movies.length()});
+                response.status(200).json({numberOfMovies: genre.movies.length});
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
-    // Update function
     public async addMovieToGenre(response: any, genreId: string, movieId: string, movieTitle: string) {
         var query = this.model.findOne({genreId: genreId});
         try {
-            const genre = await query.exec();
+            let genre = await query.exec();
             if (genre) {
-                genre.movie.push({movieId: movieId, movieTitle: movieTitle});
+                genre.movies.push({movieId: movieId, movieTitle: movieTitle});
                 await genre.save();
-                response.status(200);
+                response.status(200).json();
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
     public async removeMovieFromGenre(response: any, genreId: string, movieId: string) {
         var query = this.model.findOne({genreId: genreId});
         try {
-            const genre = await query.exec();
+            let genre = await query.exec();
             if (genre) {
-                genre.movies = genre.movies.filter(
-                    (movie: {movieId: string, movieTitle: string})=> movie.movieId !== movieId
-                )
+                genre.movies = genre.movies.filter((movie: {movieId: String, movieTitle: String}) => movie.movieId !== movieId);
                 await genre.save();
-                response.status(200);
+                response.status(200).json(genre);
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 
-    // Delete functions
     public async deleteGenre(response: any, genreId: string) {
         var query = this.model.findOne({genreId: genreId});
         try {
             const genre = await query.exec();
             if (genre) {
-                genre.Delete();
-                response.status(200);
+                await this.model.deleteOne({genreId: genreId});
+                response.status(200).send();
             } else {
-                response.status(404);
+                response.status(404).send();
             }
         } catch (error) {
-            response.status(500);
+            response.status(500).send();
         }
     }
 }
 export {MovieGenreModel};
-
