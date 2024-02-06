@@ -27,6 +27,10 @@ class MovieGenreModel {
         );
     }
 
+    // CRUD functions
+
+    // Create function
+
     public async createModel() {
         try {
             await Mongoose.connect(this.dbConnectionString, {
@@ -37,6 +41,98 @@ class MovieGenreModel {
         }
         catch (e) {
             console.error(e);        
+        }
+    }
+
+    // Read functions
+    public async getAllMoviesInGenre(response: any, genreId: string) {
+        var query = this.model.findOne({genreId: genreId});
+        try {
+            const genre = await query.exec();
+            if (genre) {
+                response.status(200);
+                response.json(genre.movies);
+            } else {
+                response.status(404);
+                response.json({error: "Genre not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
+        }
+    }
+
+    public async getNumberMoviesInGenre(response: any, genreId: string) {
+        var query = this.model.findOne({genreId: genreId});
+        try {
+            const genre = await query.exec();
+            if (genre) {
+                response.status(200);
+                response.json({movies: genre.movies.length()});
+            } else {
+                response.status(404);
+                response.json({error: "Genre not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
+        }
+    }
+
+    // Update function
+    public async addMovieToGenre(response: any, genreId: string, movieId: string, movieTitle: string) {
+        var query = this.model.findOne({genreId: genreId});
+        try {
+            const genre = await query.exec();
+            if (genre) {
+                genre.movie.push({movieId: movieId, movieTitle: movieTitle});
+                await genre.save();
+                response.status(200);
+            } else {
+                response.status(404);
+                response.json({error: "Genre not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
+        }
+    }
+
+    public async removeMovieFromGenre(response: any, genreId: string, movieId: string) {
+        var query = this.model.findOne({genreId: genreId});
+        try {
+            const genre = await query.exec();
+            if (genre) {
+                genre.movies = genre.movies.filter(
+                    (movie: {movieId: string, movieTitle: string})=> movie.movieId !== movieId
+                )
+                await genre.save();
+                response.status(200);
+            } else {
+                response.status(404);
+                response.json({error: "Genre not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
+        }
+    }
+
+    // Delete functions
+    public async deleteGenre(response: any, genreId: string) {
+        var query = this.model.findOne({genreId: genreId});
+        try {
+            const genre = await query.exec();
+            if (genre) {
+                genre.Delete();
+                response.status(200);
+            } else {
+                response.status(404);
+                response.json({error: "Genre not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
         }
     }
 }

@@ -32,10 +32,103 @@ class FavoritesModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IFavoritesModel>("Task", this.schema);    
+            this.model = Mongoose.model<IFavoritesModel>("Favorites", this.schema);    
         }
         catch (e) {
             console.error(e);        
+        }
+    }
+
+    // Read Function
+    public async getUserFavorites(response: any, userId: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            const favoritesList = await query.exec();
+            if (favoritesList) {
+                response.status(200);
+                response.json(favoritesList.movies);
+            } else {
+                response.status(404);
+                response.json({error: 'Favorites List not found'});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server error"});
+        }
+    }
+
+    // Update functions
+    public async addToFavorites(response: any, userId: string, movieId: string, movieTitle: string) : Promise<void> {
+        var query = this.model.findOne({userId: userId});
+        try {
+            const favoritesList = await query.exec();
+            if (favoritesList) {
+                favoritesList.movies.push({movieId: movieId, movieTitle: movieTitle});
+                await favoritesList.save();
+                response.status(200);
+            } else {
+                response.status(404);
+                response.json({error: "Favorites List not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server error"});
+        }
+    }
+
+    public async removeFromFavorites(response: any, userId: string, movieId: string, movieTitle: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            const favoritesList = await query.exec();
+            if (favoritesList) {
+                favoritesList.movies = favoritesList.movies.filter(
+                    (movie: {movieId: string}) => movie.movieId !== movieId
+                );
+                await favoritesList.save();
+                response.status(200);
+            } else {
+                response.status(404);
+                response.json({error: "Favorites List not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
+        }
+    }
+
+    // Delete Functions
+    public async deleteFavoritesList(response: any, userId: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            const favoritesList = await query.exec();
+            if (favoritesList) {
+                this.model.Delete(favoritesList);
+                response.status(200);
+            } else {
+                response.status(404);
+                response.json({error: "Favorites List not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
+        }
+    }
+
+    // Other functions
+    public async getFavoritesListLength(response: any, userId: string) {
+        var query = this.model.findOne({userId: userId});
+        try {
+            const favoritesList = await query.exec();
+            if (favoritesList) {
+                response.status(200);
+                response.json({length: favoritesList.length()});
+            } else {
+                response.status(404);
+                response.json({error: "Favorites List not found"});
+            }
+        } catch (error) {
+            response.status(500);
+            response.json({error: "Server Error"});
         }
     }
 }
