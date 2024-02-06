@@ -30,7 +30,7 @@ def main():
       outfile.write(json.dumps(dict, indent=4))
       outfile.write(',\n')
 
-    
+    outfile.seek(outfile.tell() - 2, 0)
     outfile.write(']')
     
                       
