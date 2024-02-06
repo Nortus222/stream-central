@@ -1,10 +1,10 @@
 import Mongoose = require("mongoose");
 
 interface IMovieGenreModel extends Mongoose.Document {
-    genreId: string;
+    genreId: Number;
     genreName: string;
     movies: [{
-        movieId: string;
+        movieId: Number;
         movieTitle: string;
     }];
 }

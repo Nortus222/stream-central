@@ -11,7 +11,7 @@ def get_popular_movies_sample():
   with open("tmdb_sample_movies.json", "w") as outfile:
     outfile.write('[')
 
-    for item in fetch_populat_movies():
+    for item in fetch_popular_movies():
       outfile.write(json.dumps(item, indent=4))
       outfile.write(',\n')
 
@@ -68,7 +68,7 @@ def fetch_movies_by_genre(genre_id, number_of_movies=5):
     count += 1
     yield details
                     
-def fetch_populat_movies():
+def fetch_popular_movies():
   movie = Movie()
   popular = movie.popular()
   for item in popular:

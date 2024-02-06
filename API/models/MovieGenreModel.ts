@@ -15,11 +15,11 @@ class MovieGenreModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                genreId: String,
+                genreId: Number,
                 genreName: String,
                 movies: [
                     {
-                        movieId: String,
+                        movieId: Number,
                         movieTitle: String,
                     }
                 ],
@@ -33,7 +33,7 @@ class MovieGenreModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IMovieGenreModel>("Task", this.schema);    
+            this.model = Mongoose.model<IMovieGenreModel>("MovieGenres", this.schema);    
         }
         catch (e) {
             console.error(e);        
