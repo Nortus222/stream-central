@@ -11,8 +11,8 @@ def get_popular_movies_sample():
   with open("tmdb_sample_movies.json", "w") as outfile:
     outfile.write('[')
 
-    for item in fetch_popular_movies():
-      outfile.write(json.dumps(item, indent=4))
+    for movie in fetch_popular_movies():
+      outfile.write(json.dumps(movie, indent=4))
       outfile.write(',\n')
 
     outfile.seek(outfile.tell() - 2, 0)
@@ -26,11 +26,7 @@ def get_genres_sample():
   with open("tmdb_sample_genres.json", "w") as outfile:
     outfile.write('[')
 
-    for item in fetch_genres():
-      genre = {}
-      for key in item.keys():
-        genre[key] = item[key]
-
+    for genre in fetch_genres():
       genre['movies'] = [m for m in fetch_movies_by_genre(genre['id'])]
 
       outfile.write(json.dumps(genre, indent=4))
@@ -55,7 +51,10 @@ def fetch_genres():
   genre = Genre()
   genres = genre.movie_list()
   for item in genres:
-    yield item
+    json = {}
+    for key in item.keys():
+      json[key] = item[key]
+    yield json
 
 def fetch_movies_by_genre(genre_id, number_of_movies=5):
   discover = Discover()
