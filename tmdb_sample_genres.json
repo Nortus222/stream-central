@@ -1,0 +1,494 @@
+[{
+    "id": 28,
+    "name": "Action",
+    "movies": [
+        {
+            "id": 866398,
+            "title": "The Beekeeper"
+        },
+        {
+            "id": 933131,
+            "title": "Badland Hunters"
+        },
+        {
+            "id": 572802,
+            "title": "Aquaman and the Lost Kingdom"
+        },
+        {
+            "id": 940551,
+            "title": "Migration"
+        },
+        {
+            "id": 609681,
+            "title": "The Marvels"
+        }
+    ]
+},
+{
+    "id": 12,
+    "name": "Adventure",
+    "movies": [
+        {
+            "id": 572802,
+            "title": "Aquaman and the Lost Kingdom"
+        },
+        {
+            "id": 940551,
+            "title": "Migration"
+        },
+        {
+            "id": 1022796,
+            "title": "Wish"
+        },
+        {
+            "id": 609681,
+            "title": "The Marvels"
+        },
+        {
+            "id": 508883,
+            "title": "The Boy and the Heron"
+        }
+    ]
+},
+{
+    "id": 16,
+    "name": "Animation",
+    "movies": [
+        {
+            "id": 940551,
+            "title": "Migration"
+        },
+        {
+            "id": 1022796,
+            "title": "Wish"
+        },
+        {
+            "id": 508883,
+            "title": "The Boy and the Heron"
+        },
+        {
+            "id": 1230393,
+            "title": "Monsters 103 Mercies Dragon Damnation"
+        },
+        {
+            "id": 901362,
+            "title": "Trolls Band Together"
+        }
+    ]
+},
+{
+    "id": 35,
+    "name": "Comedy",
+    "movies": [
+        {
+            "id": 787699,
+            "title": "Wonka"
+        },
+        {
+            "id": 940551,
+            "title": "Migration"
+        },
+        {
+            "id": 955916,
+            "title": "Lift"
+        },
+        {
+            "id": 1007826,
+            "title": "The Underdoggs"
+        },
+        {
+            "id": 1072790,
+            "title": "Anyone But You"
+        }
+    ]
+},
+{
+    "id": 80,
+    "name": "Crime",
+    "movies": [
+        {
+            "id": 982940,
+            "title": "Due Justice"
+        },
+        {
+            "id": 955916,
+            "title": "Lift"
+        },
+        {
+            "id": 370464,
+            "title": "The Masked Saint"
+        },
+        {
+            "id": 385687,
+            "title": "Fast X"
+        },
+        {
+            "id": 848538,
+            "title": "Argylle"
+        }
+    ]
+},
+{
+    "id": 99,
+    "name": "Documentary",
+    "movies": [
+        {
+            "id": 1232289,
+            "title": "Society of the Snow: Who Were We on the Mountain?"
+        },
+        {
+            "id": 645488,
+            "title": "Aquaman: Heroines of Atlantis"
+        },
+        {
+            "id": 1226841,
+            "title": "The Greatest Night in Pop"
+        },
+        {
+            "id": 1206029,
+            "title": "Muchachos, la pel\u00edcula de la gente"
+        },
+        {
+            "id": 1192578,
+            "title": "I Choose to Believe"
+        }
+    ]
+},
+{
+    "id": 18,
+    "name": "Drama",
+    "movies": [
+        {
+            "id": 866398,
+            "title": "The Beekeeper"
+        },
+        {
+            "id": 933131,
+            "title": "Badland Hunters"
+        },
+        {
+            "id": 1212073,
+            "title": "Sixty Minutes"
+        },
+        {
+            "id": 753342,
+            "title": "Napoleon"
+        },
+        {
+            "id": 906126,
+            "title": "Society of the Snow"
+        }
+    ]
+},
+{
+    "id": 10751,
+    "name": "Family",
+    "movies": [
+        {
+            "id": 787699,
+            "title": "Wonka"
+        },
+        {
+            "id": 940551,
+            "title": "Migration"
+        },
+        {
+            "id": 1022796,
+            "title": "Wish"
+        },
+        {
+            "id": 901362,
+            "title": "Trolls Band Together"
+        },
+        {
+            "id": 1075794,
+            "title": "Leo"
+        }
+    ]
+},
+{
+    "id": 14,
+    "name": "Fantasy",
+    "movies": [
+        {
+            "id": 787699,
+            "title": "Wonka"
+        },
+        {
+            "id": 572802,
+            "title": "Aquaman and the Lost Kingdom"
+        },
+        {
+            "id": 1022796,
+            "title": "Wish"
+        },
+        {
+            "id": 508883,
+            "title": "The Boy and the Heron"
+        },
+        {
+            "id": 949567,
+            "title": "The Exorcism of Hannah Stevenson"
+        }
+    ]
+},
+{
+    "id": 36,
+    "name": "History",
+    "movies": [
+        {
+            "id": 753342,
+            "title": "Napoleon"
+        },
+        {
+            "id": 906126,
+            "title": "Society of the Snow"
+        },
+        {
+            "id": 872585,
+            "title": "Oppenheimer"
+        },
+        {
+            "id": 466420,
+            "title": "Killers of the Flower Moon"
+        },
+        {
+            "id": 862557,
+            "title": "The Hill"
+        }
+    ]
+},
+{
+    "id": 27,
+    "name": "Horror",
+    "movies": [
+        {
+            "id": 949567,
+            "title": "The Exorcism of Hannah Stevenson"
+        },
+        {
+            "id": 1028703,
+            "title": "The OctoGames"
+        },
+        {
+            "id": 899445,
+            "title": "Deep Fear"
+        },
+        {
+            "id": 863851,
+            "title": "M\u00edrame"
+        },
+        {
+            "id": 888001,
+            "title": "River of Fear"
+        }
+    ]
+},
+{
+    "id": 10402,
+    "name": "Music",
+    "movies": [
+        {
+            "id": 901362,
+            "title": "Trolls Band Together"
+        },
+        {
+            "id": 438695,
+            "title": "Sing 2"
+        },
+        {
+            "id": 354912,
+            "title": "Coco"
+        },
+        {
+            "id": 558915,
+            "title": "The Color Purple"
+        },
+        {
+            "id": 614934,
+            "title": "Elvis"
+        }
+    ]
+},
+{
+    "id": 9648,
+    "name": "Mystery",
+    "movies": [
+        {
+            "id": 899445,
+            "title": "Deep Fear"
+        },
+        {
+            "id": 888001,
+            "title": "River of Fear"
+        },
+        {
+            "id": 964592,
+            "title": "Sleep"
+        },
+        {
+            "id": 1071215,
+            "title": "Thanksgiving"
+        },
+        {
+            "id": 507089,
+            "title": "Five Nights at Freddy's"
+        }
+    ]
+},
+{
+    "id": 10749,
+    "name": "Romance",
+    "movies": [
+        {
+            "id": 1072790,
+            "title": "Anyone But You"
+        },
+        {
+            "id": 848187,
+            "title": "Role Play"
+        },
+        {
+            "id": 792307,
+            "title": "Poor Things"
+        },
+        {
+            "id": 1010581,
+            "title": "My Fault"
+        },
+        {
+            "id": 976573,
+            "title": "Elemental"
+        }
+    ]
+},
+{
+    "id": 878,
+    "name": "Science Fiction",
+    "movies": [
+        {
+            "id": 933131,
+            "title": "Badland Hunters"
+        },
+        {
+            "id": 609681,
+            "title": "The Marvels"
+        },
+        {
+            "id": 799155,
+            "title": "Attack"
+        },
+        {
+            "id": 695721,
+            "title": "The Hunger Games: The Ballad of Songbirds & Snakes"
+        },
+        {
+            "id": 792307,
+            "title": "Poor Things"
+        }
+    ]
+},
+{
+    "id": 10770,
+    "name": "TV Movie",
+    "movies": [
+        {
+            "id": 928833,
+            "title": "Craig Before the Creek"
+        },
+        {
+            "id": 1105787,
+            "title": "A Royal Recipe for Love"
+        },
+        {
+            "id": 492258,
+            "title": "Cocaine Godmother"
+        },
+        {
+            "id": 55241,
+            "title": "Meteor Storm"
+        },
+        {
+            "id": 16237,
+            "title": "Teen Titans: Trouble in Tokyo"
+        }
+    ]
+},
+{
+    "id": 53,
+    "name": "Thriller",
+    "movies": [
+        {
+            "id": 866398,
+            "title": "The Beekeeper"
+        },
+        {
+            "id": 982940,
+            "title": "Due Justice"
+        },
+        {
+            "id": 799155,
+            "title": "Attack"
+        },
+        {
+            "id": 1028703,
+            "title": "The OctoGames"
+        },
+        {
+            "id": 899445,
+            "title": "Deep Fear"
+        }
+    ]
+},
+{
+    "id": 10752,
+    "name": "War",
+    "movies": [
+        {
+            "id": 753342,
+            "title": "Napoleon"
+        },
+        {
+            "id": 965571,
+            "title": "Patriots Time"
+        },
+        {
+            "id": 918692,
+            "title": "Granit"
+        },
+        {
+            "id": 877013,
+            "title": "Hell Hath No Fury"
+        },
+        {
+            "id": 554600,
+            "title": "Uri: The Surgical Strike"
+        }
+    ]
+},
+{
+    "id": 37,
+    "name": "Western",
+    "movies": [
+        {
+            "id": 843380,
+            "title": "Dead for a Dollar"
+        },
+        {
+            "id": 866038,
+            "title": "Apache Junction"
+        },
+        {
+            "id": 1079394,
+            "title": "The Five"
+        },
+        {
+            "id": 840326,
+            "title": "Sisu"
+        },
+        {
+            "id": 698508,
+            "title": "Redeeming Love"
+        }
+    ]
+}]
