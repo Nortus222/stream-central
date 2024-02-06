@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "lib": ["ES2015", "es2018", "dom", "ES6"],
+    "target": "es6",
+    "moduleResolution" : "node",
+    "rootDir": "./",
+    "outDir": "dist",
+    "sourceMap": true,
+    "types":["node"],
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+  },
+  "includes" : [
+    "**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
