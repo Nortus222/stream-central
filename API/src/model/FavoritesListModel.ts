@@ -46,14 +46,11 @@ class FavoritesModel {
             const favoritesList = await query.exec();
             if (favoritesList) {
                 response.status(200);
-                response.json(favoritesList.movies);
             } else {
                 response.status(404);
-                response.json({error: 'Favorites List not found'});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server error"});
         }
     }
 
@@ -68,11 +65,9 @@ class FavoritesModel {
                 response.status(200);
             } else {
                 response.status(404);
-                response.json({error: "Favorites List not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server error"});
         }
     }
 
@@ -88,11 +83,9 @@ class FavoritesModel {
                 response.status(200);
             } else {
                 response.status(404);
-                response.json({error: "Favorites List not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 
@@ -106,11 +99,9 @@ class FavoritesModel {
                 response.status(200);
             } else {
                 response.status(404);
-                response.json({error: "Favorites List not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 
@@ -124,11 +115,9 @@ class FavoritesModel {
                 response.json({length: favoritesList.length()});
             } else {
                 response.status(404);
-                response.json({error: "Favorites List not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 }

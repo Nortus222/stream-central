@@ -37,11 +37,9 @@ class MovieGenreModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IMovieGenreModel>("Task", this.schema);    
+            this.model = Mongoose.model<IMovieGenreModel>("Task", this.schema);  
         }
-        catch (e) {
-            console.error(e);        
-        }
+        catch (e) {}
     }
 
     // Read functions
@@ -54,11 +52,9 @@ class MovieGenreModel {
                 response.json(genre.movies);
             } else {
                 response.status(404);
-                response.json({error: "Genre not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 
@@ -71,11 +67,9 @@ class MovieGenreModel {
                 response.json({movies: genre.movies.length()});
             } else {
                 response.status(404);
-                response.json({error: "Genre not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 
@@ -90,11 +84,9 @@ class MovieGenreModel {
                 response.status(200);
             } else {
                 response.status(404);
-                response.json({error: "Genre not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 
@@ -110,11 +102,9 @@ class MovieGenreModel {
                 response.status(200);
             } else {
                 response.status(404);
-                response.json({error: "Genre not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 
@@ -128,11 +118,9 @@ class MovieGenreModel {
                 response.status(200);
             } else {
                 response.status(404);
-                response.json({error: "Genre not found"});
             }
         } catch (error) {
             response.status(500);
-            response.json({error: "Server Error"});
         }
     }
 }

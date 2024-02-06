@@ -26,5 +26,9 @@ interface IMovieModel extends Mongoose.Document {
     producers: [{
         producerName: string;
     }];
+    streamingServiceProviders: [{
+        name: string;
+        status: string;   // "Paid no ads", "Paid ads", "Free ads", "Free no ads"
+    }]
 }
 export {IMovieModel};
