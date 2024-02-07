@@ -5,7 +5,6 @@ interface IRecommendationSetModel extends Mongoose.Document {
     userId: string;
     recommendedMovies: [{
         movieId: string;
-        movieTitle: string;    
     }];
 }
 export {IRecommendationSetModel};

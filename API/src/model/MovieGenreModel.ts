@@ -14,11 +14,19 @@ class MovieGenreModel {
 
     public createSchema(): void {
         this.schema = new Mongoose.Schema({
-            genreId: String,
-            genreName: String,
+            genreId: {
+                type: String,
+                unique: true,
+            },
+            genreName: {
+                type: String,
+                unique: true,
+            },
             movies: [{
-                movieId: String,
-                movieTitle: String,
+                movieId: {
+                    type: String,
+                    unqiue: true,
+                },
             }],
         }, {collection: 'movieGenres'});
     }
@@ -43,7 +51,7 @@ class MovieGenreModel {
             if (genre) {
                 response.status(200).json(genre.movies);
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -57,7 +65,7 @@ class MovieGenreModel {
             if (genre) {
                 response.status(200).json({numberOfMovies: genre.movies.length});
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -73,7 +81,7 @@ class MovieGenreModel {
                 await genre.save();
                 response.status(200).json();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -89,7 +97,7 @@ class MovieGenreModel {
                 await genre.save();
                 response.status(200).json(genre);
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -104,7 +112,7 @@ class MovieGenreModel {
                 await this.model.deleteOne({genreId: genreId});
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();

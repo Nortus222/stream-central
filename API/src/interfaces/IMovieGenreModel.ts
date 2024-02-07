@@ -5,7 +5,6 @@ interface IMovieGenreModel extends Mongoose.Document {
     genreName: string;
     movies: [{
         movieId: string;
-        movieTitle: string;
     }];
 }
 export {IMovieGenreModel};

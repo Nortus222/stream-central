@@ -14,10 +14,19 @@ class FavoritesModel {
 
     public createSchema(): void {
         this.schema = new Mongoose.Schema({
-            userId: String,
+            favoritesListId: {
+                type: String,
+                unique: true,
+            },
+            userId: {
+                type: String,
+                unique: true,
+            },
             movies: [{
-                movieId: String,
-                movieTitle: String,
+                movieId: {
+                    type: String,
+                    unique: true,
+                },
             }],
         }, {collection: 'favoritesList'});
     }
@@ -42,23 +51,23 @@ class FavoritesModel {
             if (favoritesList) {
                 response.status(200).json(favoritesList.movies);
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
         }
     }
 
-    public async addToFavorites(response: any, userId: string, movieId: string, movieTitle: string) {
+    public async addToFavorites(response: any, userId: string, movieId: string) {
         var query = this.model.findOne({userId: userId});
         try {
             const favoritesList = await query.exec();
             if (favoritesList) {
-                favoritesList.movies.push({movieId: movieId, movieTitle: movieTitle});
+                favoritesList.movies.push({movieId: movieId});
                 await favoritesList.save();
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -70,11 +79,11 @@ class FavoritesModel {
         try {
             let favoritesList = await query.exec();
             if (favoritesList) {
-                favoritesList.movies = favoritesList.movies.filter((movie: {movieId: String, movieTitle: String}) => movie.movieId !== movieId);
+                favoritesList.movies = favoritesList.movies.filter((movie: {movieId: String}) => movie.movieId !== movieId);
                 await favoritesList.save();
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -87,7 +96,7 @@ class FavoritesModel {
             if (result.deletedCount > 0) {
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -101,7 +110,7 @@ class FavoritesModel {
             if (favoritesList) {
                 response.status(200).json({length: favoritesList.movies.length});
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();

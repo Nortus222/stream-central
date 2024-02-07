@@ -15,11 +15,19 @@ class ReccomendationSetModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                recommendationSetId: String,
-                userId: String,
+                recommendationSetId: {
+                    type: String,
+                    unique: true,
+                },
+                userId: {
+                    type: String,
+                    unique: true,
+                },
                 recommendedMovies: [{
-                    movieId: String,
-                    movieTitle: String,    
+                    movieId: {
+                        type: String,
+                        unique: true,
+                    }
                 }],
             }
         );
@@ -45,7 +53,7 @@ class ReccomendationSetModel {
             if (recSet) {
                 response.status(200).json(recSet.movies);
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -59,7 +67,7 @@ class ReccomendationSetModel {
             if (recSet) {
                 response.status(200).json({numberOfMovies: recSet.movies.length});
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -75,7 +83,7 @@ class ReccomendationSetModel {
                 await recSet.save();
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -91,7 +99,7 @@ class ReccomendationSetModel {
                 await recSet.save();
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -106,7 +114,7 @@ class ReccomendationSetModel {
                 await this.model.deleteOne({recommendationSetId: recommendationSetId});
                 response.status(200).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();

@@ -3,21 +3,17 @@ import Mongoose = require("mongoose");
 interface IMovieModel extends Mongoose.Document {
     movieId: string;
     movieTitle: string;
-    genreIds: [{
+    movieGenres: [{
         genreId: string;
-        genreName: string;
     }];
-    movieGenre: [{
-        genreId: string;
-        genreName: string;
-    }]
     actors: [{
         actorName:string;
     }];
     movieDirector: string;
     movieDescription: string;
     movieRatings: [{
-        source: string;
+        sourceId: string;
+        sourceName: string;
         rating: number;
     }];
     imageFileName: string;

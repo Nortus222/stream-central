@@ -58,7 +58,7 @@ class UsertModel {
             if (user) {
                 response.status(200).json({password: user.password});
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -72,9 +72,9 @@ class UsertModel {
             if (user) {
                 user.password = newPassword;
                 await user.save();
-                response.status(200).send();
+                response.status(204).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -87,9 +87,9 @@ class UsertModel {
             let user = await query.exec();
             if (user) {
                 user.deleteOne({userId: userId});
-                response.status(200).send();
+                response.status(204).send();
             } else {
-                response.status(404).send();
+                response.status(304).send();
             }
         } catch (error) {
             response.status(500).send();
