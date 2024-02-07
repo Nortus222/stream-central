@@ -16,16 +16,16 @@ class FavoritesModel {
         this.schema = new Mongoose.Schema({
             favoritesListId: {
                 type: String,
-                unique: true,
+                unique: false,
             },
             userId: {
                 type: String,
-                unique: true,
+                unique: false,
             },
             movies: [{
                 movieId: {
                     type: String,
-                    unique: true,
+                    unique: false,
                 },
             }],
         }, {collection: 'favoritesList'});

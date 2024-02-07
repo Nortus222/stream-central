@@ -16,16 +16,16 @@ class MovieGenreModel {
         this.schema = new Mongoose.Schema({
             genreId: {
                 type: String,
-                unique: true,
+                unique: false,
             },
             genreName: {
                 type: String,
-                unique: true,
+                unique: false,
             },
             movies: [{
                 movieId: {
                     type: String,
-                    unqiue: true,
+                    unique: false,
                 },
             }],
         }, {collection: 'movieGenres'});
