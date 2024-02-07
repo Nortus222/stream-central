@@ -17,12 +17,7 @@ class MovieGenreModel {
             {
                 genreId: Number,
                 genreName: String,
-                movies: [
-                    {
-                        movieId: Number,
-                        movieTitle: String,
-                    }
-                ],
+                movies: [Number] ,
             }, {collection: 'movieGenres'}
         );
     }

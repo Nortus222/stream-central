@@ -16,12 +16,7 @@ class FavoritesModel {
         this.schema = new Mongoose.Schema(
             {
                 userId: String,
-                movies: [ 
-                    {
-                        movieId: String,
-                        movieTitle: String,
-                    }
-                ],
+                movies: [Number],
             }, {collection: 'favoritesList'}
         );
     }
