@@ -1,5 +1,6 @@
 import * as Mongoose from "mongoose";
 import { IUserModel } from "../interfaces/IUserModel";
+import * as bcrypt from 'bcryptjs';
 
 class UsertModel {
     public schema: any;
@@ -15,12 +16,26 @@ class UsertModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                userId: String,
-                password: String,
+                userId: {
+                    type: String,
+                    require: true,
+                    unique: true,
+                },
+                username: {
+                    type: String,
+                    require: true,
+                    unique: true,
+                },
+                password: {
+                    type: String,
+                    minLength: 6,
+                },
                 loginStatus: Boolean,
                 email: String,
             }
         );
+
+        // Create pre save password hash??
     }
 
     public async createModel() {
@@ -29,7 +44,7 @@ class UsertModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IUserModel>("Task", this.schema);    
+            this.model = Mongoose.model<IUserModel>("User", this.schema);    
         }
         catch (e) {
             console.error(e);        
@@ -55,7 +70,8 @@ class UsertModel {
         try {
             let user = await query.exec();
             if (user) {
-                user.push({password: newPassword});
+                user.password = newPassword;
+                await user.save();
                 response.status(200).send();
             } else {
                 response.status(404).send();
