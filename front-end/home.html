@@ -10,11 +10,12 @@
     </style>
 </head>
 <body>
+    <!--Nav-bar-->
     <header>
         <nav class= "navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container">
                 <div class="d-flex flex-wrap allign-items-center justify-content-center">
-                    <a class="navbar-brand fw-bold text-white" href="#">StreamCentral</a>
+                    <a class="navbar-brand fw-bold text-white" href="/home">StreamCentral</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -22,9 +23,6 @@
                     </button>
                     <div class="collapse navbar-collapse" id="nav-links">
                         <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 mb-md-0">
-                            <li class="nav-item">
-                                <a class="nav-link active text-light" aria-current="page" href="/home">Home</a>
-                            </li>
                             <li class="nav-item">
                                 <a class="nav-link text-light" href="/tv-shows">TV-Shows</a>
                             </li>
@@ -60,7 +58,7 @@
                         <!-- Add other links as necessary -->
                     </div>
                 </div>
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <form class="row-cols-sm-2 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 </form>
                 <div class="text-end" id="user-auth">
@@ -69,7 +67,7 @@
                 </div>
             </div>
         </nav>
-    </header>   
+    </header>  
     <div class="b-example-divider"></div>
     <main>
         <!--Section for carousel ads/ movies-->
@@ -79,7 +77,17 @@
                 <h1 class="fw-light text-white">Section for Ad <address></address></h1>
                 </div>
             </div>
-            </section>
+        </section>
+        <div class="container py-2 pb-3">
+            <div class="d-grid gap-3" style="grid-template-columns: 1fr 2fr;">
+              <div class="bg-body-tertiary border rounded-3">
+                <br><br><br><br><br><br><br><br><br><br>
+              </div>
+              <div class="bg-body-tertiary border rounded-3">
+                <br><br><br><br><br><br><br><br><br><br>
+              </div>
+            </div>
+          </div>
         <!--Section for Popular Movies-->
         <div class="album py-5 bg-body-tertiary">
             <div class="container">
@@ -398,6 +406,9 @@
         <!-- Footer content here -->
     </footer>
 
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" 
             integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" 
             crossorigin="anonymous"></script>
