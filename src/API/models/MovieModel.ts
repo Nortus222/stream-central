@@ -15,13 +15,6 @@ class MovieModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                adult: Boolean,
-                belongs_to_collection: {
-                    id: Number,
-                    name: String,
-                    poster_path: String,
-                    backdrop_path: String
-                },
                 budget: Number,
                 genres: [
                     {
@@ -29,7 +22,7 @@ class MovieModel {
                         name: String
                     }
                 ],
-                id: Number,
+                tmdb_id: Number,
                 imdb_id: String,
                 original_language: String,
                 original_title: String,
@@ -60,35 +53,14 @@ class MovieModel {
                 casts: {
                     cast: [
                         {
-                            adult: Boolean,
                             gender: Number,
                             id: Number,
-                            known_for_department: String,
                             name: String,
-                            original_name: String,
-                            popularity: Number,
                             profile_path: String,
-                            cast_id: Number,
                             character: String,
-                            credit_id: String,
                             order: Number
                         }
                     ],
-                    crew: [
-                        {
-                            adult: Boolean,
-                            gender: Number,
-                            id: Number,
-                            known_for_department: String,
-                            name: String,
-                            original_name: String,
-                            popularity: Number,
-                            profile_path: String,
-                            credit_id: String,
-                            department: String,
-                            job: String
-                        }
-                    ]
                 },
                 keywords: {
                     keywords: [
@@ -128,8 +100,8 @@ class MovieModel {
         }
     }
 
-    public async retrieveMovieById(response: any, id: number) {
-        var query = this.model.find({ id: id });
+    public async retrieveMovieById(response: any, tmdb_id: number) {
+        var query = this.model.find({ tmdb_id: tmdb_id });
 
         try {
             const item = await query.exec();

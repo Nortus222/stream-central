@@ -1,19 +1,12 @@
 import Mongoose = require("mongoose");
 
 interface IMovieModel extends Mongoose.Document {
-    adult: boolean;
-    belongs_to_collection: {
-        id: number;
-        name: string;
-        poster_path: string;
-        backdrop_path: string;
-    };
     budget: number;
     genres: {
         id: number;
         name: string;
     }[];
-    id: number;
+    tmdb_id: number;
     imdb_id: string;
     original_language: string;
     original_title: string;
@@ -39,31 +32,12 @@ interface IMovieModel extends Mongoose.Document {
     vote_count: number;
     casts: {
         cast: {
-            adult: boolean;
             gender: number;
             id: number;
-            known_for_department: string;
             name: string;
-            original_name: string;
-            popularity: number;
             profile_path: string;
-            cast_id: number;
             character: string;
-            credit_id: string;
             order: number;
-        }[];
-        crew: {
-            adult: boolean;
-            gender: number;
-            id: number;
-            known_for_department: string;
-            name: string;
-            original_name: string;
-            popularity: number;
-            profile_path: string;
-            credit_id: string;
-            department: string;
-            job: string;
         }[];
     };
     keywords: {
