@@ -7,7 +7,7 @@ db.createCollection('movies')
 moviesCollection = db.getCollection("movies")
 moviesCollection.remove({})
 
-const data = JSON.parse(fs.readFileSync('tmdb_sample.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync('tmdb_sample_movies.json', 'utf8'));
 
 moviesCollection.insertMany(data);
 
