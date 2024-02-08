@@ -19,16 +19,13 @@ class UsertModel {
                 userId: {
                     type: String,
                     require: true,
-                    unique: true,
                 },
                 username: {
                     type: String,
                     require: true,
-                    unique: true,
                 },
                 password: {
                     type: String,
-                    minLength: 6,
                 },
                 loginStatus: Boolean,
                 email: String,
@@ -58,7 +55,7 @@ class UsertModel {
             if (user) {
                 response.status(200).json({password: user.password});
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -74,7 +71,7 @@ class UsertModel {
                 await user.save();
                 response.status(204).send();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -89,7 +86,7 @@ class UsertModel {
                 user.deleteOne({userId: userId});
                 response.status(204).send();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();

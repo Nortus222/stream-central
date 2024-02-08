@@ -16,16 +16,13 @@ class MovieModel {
         this.schema = new Mongoose.Schema({
             movieId: {
                 type: String,
-                unqiue: true,
             },
             movieTitle: {
                 type: String,
-                unique: false,
             },
             movieGenres: [{
                 genreId: {
                     type: String,
-                    unique: true,
                 },
             }],
             actors: [{
@@ -36,21 +33,17 @@ class MovieModel {
             movieRatings: [{
                 sourceId: {
                     type: String,
-                    unique: true,
                 },
                 sourceName: {
                     type: String,
-                    unqiue: true,
                 },
                 rating: {
                     type: Number,
-                    unique: false,
                 },
             }],
             imageFileName: String,
             releaseYear: {
                 type: Number,
-                unique: false,
             },
             budget: Number,
             producers: [{
@@ -84,7 +77,7 @@ class MovieModel {
             if (movie) {
                 response.status(200).json(movie);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -98,7 +91,7 @@ class MovieModel {
             if (movie) {
                 response.status(200).json(movie.movieRatings);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -112,7 +105,7 @@ class MovieModel {
             if (movie) {
                 response.status(200).json({imageFileName: movie.imageFileName});
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -126,7 +119,7 @@ class MovieModel {
             if (movie) {
                 response.status(200).json(movie.streamingServiceProviders);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -140,7 +133,7 @@ class MovieModel {
             if (movie) {
                 response.status(200).json({movieTitle: movie.movieTitle});
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -164,7 +157,7 @@ class MovieModel {
             if (movies) {
                 response.status(200).json(movies);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -181,7 +174,7 @@ class MovieModel {
                 await movie.save();
                 response.status(200);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -196,7 +189,7 @@ class MovieModel {
                 movies.psuh({gross: newAmount});
                 response.status(200);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -212,7 +205,7 @@ class MovieModel {
                 movie.deleteOne({movieId: movieId});
                 response.status(200);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();

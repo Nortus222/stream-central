@@ -16,16 +16,13 @@ class FavoritesModel {
         this.schema = new Mongoose.Schema({
             favoritesListId: {
                 type: String,
-                unique: false,
             },
             userId: {
                 type: String,
-                unique: false,
             },
             movies: [{
                 movieId: {
                     type: String,
-                    unique: false,
                 },
             }],
         }, {collection: 'favoritesList'});
@@ -51,7 +48,7 @@ class FavoritesModel {
             if (favoritesList) {
                 response.status(200).json(favoritesList.movies);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -67,7 +64,7 @@ class FavoritesModel {
                 await favoritesList.save();
                 response.status(200).send();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -83,7 +80,7 @@ class FavoritesModel {
                 await favoritesList.save();
                 response.status(200).send();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -96,7 +93,7 @@ class FavoritesModel {
             if (result.deletedCount > 0) {
                 response.status(200).send();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -110,7 +107,7 @@ class FavoritesModel {
             if (favoritesList) {
                 response.status(200).json({length: favoritesList.movies.length});
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();

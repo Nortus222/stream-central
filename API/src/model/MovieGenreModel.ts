@@ -16,16 +16,13 @@ class MovieGenreModel {
         this.schema = new Mongoose.Schema({
             genreId: {
                 type: String,
-                unique: false,
             },
             genreName: {
                 type: String,
-                unique: false,
             },
             movies: [{
                 movieId: {
                     type: String,
-                    unique: false,
                 },
             }],
         }, {collection: 'movieGenres'});
@@ -51,7 +48,7 @@ class MovieGenreModel {
             if (genre) {
                 response.status(200).json(genre.movies);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -65,7 +62,7 @@ class MovieGenreModel {
             if (genre) {
                 response.status(200).json({numberOfMovies: genre.movies.length});
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -81,7 +78,7 @@ class MovieGenreModel {
                 await genre.save();
                 response.status(200).json();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -97,7 +94,7 @@ class MovieGenreModel {
                 await genre.save();
                 response.status(200).json(genre);
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
@@ -112,7 +109,7 @@ class MovieGenreModel {
                 await this.model.deleteOne({genreId: genreId});
                 response.status(200).send();
             } else {
-                response.status(304).send();
+                response.status(404).send();
             }
         } catch (error) {
             response.status(500).send();
