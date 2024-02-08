@@ -15,7 +15,8 @@ class MovieGenreModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                genreId: Number,
+                _id: Mongoose.Schema.Types.ObjectId,
+                tmdb_id: Number,
                 genreName: String,
                 movies: [Number] ,
             }, {collection: 'movieGenres'}
@@ -28,7 +29,7 @@ class MovieGenreModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IMovieGenreModel>("MovieGenres", this.schema);    
+            this.model = Mongoose.model<IMovieGenreModel>("movieGenres", this.schema);    
         }
         catch (e) {
             console.error(e);        
