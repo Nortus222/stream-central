@@ -1,0 +1,4221 @@
+[{
+    "budget": 35000000,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "tmdb_id": 866398,
+    "imdb_id": "tt15314262",
+    "original_language": "en",
+    "original_title": "The Beekeeper",
+    "overview": "One man\u2019s campaign for vengeance takes on national stakes after he is revealed to be a former operative of a powerful and clandestine organization known as Beekeepers.",
+    "popularity": 4578.602,
+    "poster_path": "/A7EByudX0eOzlkQ2FIbogzyazm2.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "GB",
+            "name": "United Kingdom"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2024-01-10",
+    "revenue": 122926919,
+    "runtime": 105,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Espa\u00f1ol"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Expose the corruption. Protect the hive.",
+    "title": "The Beekeeper",
+    "vote_average": 7.326,
+    "vote_count": 772,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 976,
+            "name": "Jason Statham",
+            "profile_path": "/lldeQ91GwIVff43JBrpdbAAeYWj.jpg",
+            "character": "Adam Clay",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 2026050,
+            "name": "Emmy Raver-Lampman",
+            "profile_path": "/cBkHUBzqoqrnkxDXWlqQmm91pD2.jpg",
+            "character": "Agent Verona Parker",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 1375501,
+            "name": "Bobby Naderi",
+            "profile_path": "/kl8UjAeoj2ET20Udt8u9tgr5FAp.jpg",
+            "character": "Agent Matt Wiley",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 27972,
+            "name": "Josh Hutcherson",
+            "profile_path": "/npowygg8rH7uJ4v7rAoDMsHBhNq.jpg",
+            "character": "Derek Danforth",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 16940,
+            "name": "Jeremy Irons",
+            "profile_path": "/w8Ct1q02Ht3sWdOSqfp3B85TzT.jpg",
+            "character": "Wallace Westwyld",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 1497913,
+            "name": "Taylor James",
+            "profile_path": "/sMMCf0O7GcbJZoxmyWAbU6CsN6B.jpg",
+            "character": "Lazarus",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 119598,
+            "name": "Phylicia Rash\u0101d",
+            "profile_path": "/orbTpG0jaYkPR167TNiEg0AKG3M.jpg",
+            "character": "Eloise Parker",
+            "order": 6
+        },
+        {
+            "gender": 1,
+            "id": 80145,
+            "name": "Jemma Redgrave",
+            "profile_path": "/1Lgtd9zpwwuyKqjmd5ME2lN9FUq.jpg",
+            "character": "President Jessica Danforth",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 6613,
+            "name": "Minnie Driver",
+            "profile_path": "/pROqdpF9tTCA2giYB50dMwhCJvC.jpg",
+            "character": "Director Janet Hayworth",
+            "order": 8
+        },
+        {
+            "gender": 0,
+            "id": 3424753,
+            "name": "Sophia Feliciano",
+            "profile_path": "/swc8f5uEvwOnahLwpWDt6E3OhZX.jpg",
+            "character": "Kelly Krane",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 91494,
+            "name": "Enzo Cilenti",
+            "profile_path": "/lGFHPUsOlAnncpZLfdFXCGq2nji.jpg",
+            "character": "Rico Anzalone",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1766052,
+            "name": "Dan Li",
+            "profile_path": "/76guW48UqJWIfgeImAYIs5ZfWo7.jpg",
+            "character": "Agent Kim",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 2681182,
+            "name": "Reza Diako",
+            "profile_path": "/z3f2f2Pl2Uw4JZLPhFnwosNR4sV.jpg",
+            "character": "Barry",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 2437985,
+            "name": "Adam Basil",
+            "profile_path": "/nFacpuhpaOl013z9cUqL1dSFxtj.jpg",
+            "character": "Saffa",
+            "order": 13
+        },
+        {
+            "gender": 2,
+            "id": 1227776,
+            "name": "David Witts",
+            "profile_path": "/kqelxzQqffd1Qcz8VKOYSpoP7p8.jpg",
+            "character": "Mickey Garnett",
+            "order": 14
+        },
+        {
+            "gender": 2,
+            "id": 1338019,
+            "name": "Michael Epp",
+            "profile_path": "/3Nz3sX7QISm5e6mWNvJDKUD2Qyd.jpg",
+            "character": "Pettis",
+            "order": 15
+        },
+        {
+            "gender": 2,
+            "id": 1225318,
+            "name": "Don Gilet",
+            "profile_path": "/9pXhLmYZRLi9HZ1WJ7UmOydZOQu.jpg",
+            "character": "Deputy Director Prigg",
+            "order": 16
+        },
+        {
+            "gender": 1,
+            "id": 1511170,
+            "name": "Megan Le",
+            "profile_path": "/5WIQmIMgEqSo3w69TiDoUKehae8.jpg",
+            "character": "Anisette",
+            "order": 17
+        },
+        {
+            "gender": 1,
+            "id": 1561310,
+            "name": "Georgia Goodman",
+            "profile_path": "/igrVZq0JVIkFW1TbgaOG9ESd9pR.jpg",
+            "character": "Detective Marquez",
+            "order": 18
+        },
+        {
+            "gender": 2,
+            "id": 1647129,
+            "name": "Derek Siow",
+            "profile_path": "/qvgJitn5JRvyoEQEPqc3VcM7x1e.jpg",
+            "character": "Detective Chen",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 227206,
+                "name": "potus"
+            },
+            {
+                "id": 271668,
+                "name": "secret government agency"
+            },
+            {
+                "id": 272551,
+                "name": "fbi agent"
+            },
+            {
+                "id": 273209,
+                "name": "beekeepers"
+            },
+            {
+                "id": 276974,
+                "name": "scammer"
+            },
+            {
+                "id": 277712,
+                "name": "scam call center"
+            },
+            {
+                "id": 306255,
+                "name": "retired assassin"
+            },
+            {
+                "id": 328086,
+                "name": "god's grace video library"
+            }
+        ]
+    }
+},
+{
+    "budget": 125000000,
+    "genres": [
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 10751,
+            "name": "Family"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        }
+    ],
+    "tmdb_id": 787699,
+    "imdb_id": "tt6166392",
+    "original_language": "en",
+    "original_title": "Wonka",
+    "overview": "Willy Wonka \u2013 chock-full of ideas and determined to change the world one delectable bite at a time \u2013 is proof that the best things in life begin with a dream, and if you\u2019re lucky enough to meet Willy Wonka, anything is possible.",
+    "popularity": 1665.323,
+    "poster_path": "/qhb1qOilapbapxWQn9jtRCMwXJF.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "GB",
+            "name": "United Kingdom"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-12-06",
+    "revenue": 572668328,
+    "runtime": 117,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Every good thing in this world started with a dream.",
+    "title": "Wonka",
+    "vote_average": 7.204,
+    "vote_count": 1909,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 1190668,
+            "name": "Timoth\u00e9e Chalamet",
+            "profile_path": "/BE2sdjpgsa2rNTFa66f7upkaOP.jpg",
+            "character": "Willy Wonka",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 1939373,
+            "name": "Calah Lane",
+            "profile_path": "/rhEcrfvtkIuzjOvt010xHiVHWXY.jpg",
+            "character": "Noodle",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 298410,
+            "name": "Keegan-Michael Key",
+            "profile_path": "/vAR5gVXRG2Cl6WskXT99wgkAoH8.jpg",
+            "character": "Chief-of-Police",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 3291,
+            "name": "Hugh Grant",
+            "profile_path": "/tUHkXYdwm405DjBm2IpPxGjYkjj.jpg",
+            "character": "Oompa-Loompa / Lofty",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 19868,
+            "name": "Paterson Joseph",
+            "profile_path": "/n8kf0aowLTcPSt72k0eC4ZShe3s.jpg",
+            "character": "Arthur Slugworth",
+            "order": 4
+        },
+        {
+            "gender": 1,
+            "id": 39187,
+            "name": "Olivia Colman",
+            "profile_path": "/4ZwZ66zXZyX26Kf2wfeMt1tQZQf.jpg",
+            "character": "Mrs. Scrubbit",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 1464254,
+            "name": "Tom Davis",
+            "profile_path": "/n7JqvXrpPsbpfeelPpZ5R8HTWMG.jpg",
+            "character": "Bleacher",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 20070,
+            "name": "Jim Carter",
+            "profile_path": "/okiL3gc0mNqP0kPfMQHHvFjKnHb.jpg",
+            "character": "Abacus Crunch",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 10730,
+            "name": "Rowan Atkinson",
+            "profile_path": "/wxTgS4SFanVKbnvu9xqOzNJWJwz.jpg",
+            "character": "Father Julius",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 26209,
+            "name": "Matt Lucas",
+            "profile_path": "/2OhGLJqiknaWlbTkG2KDwT935km.jpg",
+            "character": "Prodnose",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 1246784,
+            "name": "Mathew Baynton",
+            "profile_path": "/g3FnkjMKL5bsGQc0sEpuXFYK4u4.jpg",
+            "character": "Ficklegruber",
+            "order": 10
+        },
+        {
+            "gender": 1,
+            "id": 1546282,
+            "name": "Natasha Rothwell",
+            "profile_path": "/x5KdL3QoS4YuozVpfuPsu3MLwwf.jpg",
+            "character": "Piper Benz",
+            "order": 11
+        },
+        {
+            "gender": 1,
+            "id": 1147671,
+            "name": "Rakhee Thakrar",
+            "profile_path": "/kvkmi0HCdZHOvpqdNgrpZDEGK9D.jpg",
+            "character": "Lottie Bell",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 98106,
+            "name": "Rich Fulcher",
+            "profile_path": "/hVJkSDRBGg8McuAN5QMtFyLeFvm.jpg",
+            "character": "Larry Chucklesworth",
+            "order": 13
+        },
+        {
+            "gender": 2,
+            "id": 202775,
+            "name": "Kobna Holdbrook-Smith",
+            "profile_path": "/6KNQjNWVdosnKAehV7FHpxQV2dD.jpg",
+            "character": "Officer Affable",
+            "order": 14
+        },
+        {
+            "gender": 2,
+            "id": 114253,
+            "name": "Simon Farnaby",
+            "profile_path": "/ki10aIf7pVkfYun2qn9XxbC2U3K.jpg",
+            "character": "Basil, Zoo Security Guard",
+            "order": 15
+        },
+        {
+            "gender": 1,
+            "id": 1616784,
+            "name": "Ellie White",
+            "profile_path": "/kIc4g1MsL4RZsNtaBFgkQMN96Ul.jpg",
+            "character": "Gwennie, Mistress of the Keys",
+            "order": 16
+        },
+        {
+            "gender": 1,
+            "id": 39658,
+            "name": "Sally Hawkins",
+            "profile_path": "/osYgwtQIiNbPFc8JkFDxreBgqxZ.jpg",
+            "character": "Willy Wonka's Mother",
+            "order": 17
+        },
+        {
+            "gender": 2,
+            "id": 3257962,
+            "name": "Colin O'Brien",
+            "profile_path": "/9LRXawNRNMQBprhuI9zEkKACcs9.jpg",
+            "character": "Young Willy Wonka",
+            "order": 18
+        },
+        {
+            "gender": 1,
+            "id": 1791508,
+            "name": "Freya Parker",
+            "profile_path": "/k2nXbHWHjrheQ1k4TdPpWeecGu3.jpg",
+            "character": "Miss Bon Bon",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 715,
+                "name": "chocolate"
+            },
+            {
+                "id": 4344,
+                "name": "musical"
+            },
+            {
+                "id": 9675,
+                "name": "prequel"
+            },
+            {
+                "id": 179431,
+                "name": "duringcreditsstinger"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "tmdb_id": 933131,
+    "imdb_id": "tt29722855",
+    "original_language": "ko",
+    "original_title": "\ud669\uc57c",
+    "overview": "After a deadly earthquake turns Seoul into a lawless badland, a fearless huntsman springs into action to rescue a teenager abducted by a mad doctor.",
+    "popularity": 1602.083,
+    "poster_path": "/zVMyvNowgbsBAL6O6esWfRpAcOb.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "KR",
+            "name": "South Korea"
+        }
+    ],
+    "release_date": "2024-01-26",
+    "revenue": 0,
+    "runtime": 109,
+    "spoken_languages": [
+        {
+            "english_name": "Korean",
+            "iso_639_1": "ko",
+            "name": "\ud55c\uad6d\uc5b4/\uc870\uc120\ub9d0"
+        }
+    ],
+    "status": "Released",
+    "tagline": "One last hunt to save us all.",
+    "title": "Badland Hunters",
+    "vote_average": 6.941,
+    "vote_count": 213,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 1024395,
+            "name": "Ma Dong-seok",
+            "profile_path": "/zt1vx7FesNA4x6mTZtyzu2uco8E.jpg",
+            "character": "Nam-san",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 1046863,
+            "name": "Lee Hee-jun",
+            "profile_path": "/4slyXnHbKgzmeyJNetBSORgDDEF.jpg",
+            "character": "Yang Gi-su",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 1904058,
+            "name": "Lee Jun-young",
+            "profile_path": "/41ZqSutUfV3F2aZUNUqVmpDuyXN.jpg",
+            "character": "Choi Ji-wan",
+            "order": 2
+        },
+        {
+            "gender": 1,
+            "id": 1257587,
+            "name": "Roh Jeong-eui",
+            "profile_path": "/ijbjqMVsipJnmxkXSC0OIgJ5jY8.jpg",
+            "character": "Han Su-na",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 2121601,
+            "name": "Ahn Ji-hye",
+            "profile_path": "/4cRUKo02kg4SYDyVWcUIlNt2IxT.jpg",
+            "character": "Lee Eun-ho",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 2378978,
+            "name": "Park Ji-hoon",
+            "profile_path": "/5JUoEXIzVgHWEIgpW0GdQt68w4k.jpg",
+            "character": "Kwon Sang-sa",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 93996,
+            "name": "Jang Young-nam",
+            "profile_path": "/u0hl8WSswFhKVaKwaMAERU0xUJk.jpg",
+            "character": "teacher",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 1310821,
+            "name": "Park Hyo-joon",
+            "profile_path": "/ybvsKqzVS4qPnczayKMH8QyclbI.jpg",
+            "character": "\"Tiger\"",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 496935,
+            "name": "Seong Byeong-suk",
+            "profile_path": "/cFVOqICCoXVgdBTip1ZwgGlXqw2.jpg",
+            "character": "Su-na's grandmother",
+            "order": 8
+        },
+        {
+            "gender": 1,
+            "id": 2463266,
+            "name": "Jung Young-ju",
+            "profile_path": "/oPHCzElm0I0cR6sB1WTutvtKAtI.jpg",
+            "character": "",
+            "order": 9
+        },
+        {
+            "gender": 1,
+            "id": 3950834,
+            "name": "Lee Han-joo",
+            "profile_path": "/mzacdh0UONnjlJ1EuoMsH8GaL0U.jpg",
+            "character": "Ju-ye",
+            "order": 10
+        },
+        {
+            "gender": 1,
+            "id": 147853,
+            "name": "Kim Young-sun",
+            "profile_path": "/iXAsncrUmI183e6osPzHxV6tNh4.jpg",
+            "character": "Ju-ye's mother",
+            "order": 11
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 4458,
+                "name": "post-apocalyptic future"
+            },
+            {
+                "id": 3521,
+                "name": "earthquake"
+            },
+            {
+                "id": 185457,
+                "name": "badlands"
+            },
+            {
+                "id": 288474,
+                "name": "based on webcomic or webtoon"
+            },
+            {
+                "id": 290327,
+                "name": "seoul, south korea"
+            }
+        ]
+    }
+},
+{
+    "budget": 205000000,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        }
+    ],
+    "tmdb_id": 572802,
+    "imdb_id": "tt9663764",
+    "original_language": "en",
+    "original_title": "Aquaman and the Lost Kingdom",
+    "overview": "Black Manta seeks revenge on Aquaman for his father's death. Wielding the Black Trident's power, he becomes a formidable foe. To defend Atlantis, Aquaman forges an alliance with his imprisoned brother. They must protect the kingdom.",
+    "popularity": 1111.929,
+    "poster_path": "/7lTnXOy0iNtBAdRP3TZvaKJ77F6.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-12-20",
+    "revenue": 423853270,
+    "runtime": 124,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Korean",
+            "iso_639_1": "ko",
+            "name": "\ud55c\uad6d\uc5b4/\uc870\uc120\ub9d0"
+        }
+    ],
+    "status": "Released",
+    "tagline": "The tide is turning.",
+    "title": "Aquaman and the Lost Kingdom",
+    "vote_average": 6.972,
+    "vote_count": 1461,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 117642,
+            "name": "Jason Momoa",
+            "profile_path": "/6dEFBpZH8C8OijsynkSajQT99Pb.jpg",
+            "character": "Arthur Curry / Aquaman",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 17178,
+            "name": "Patrick Wilson",
+            "profile_path": "/tc1ezEfIY8BhCy85svOUDtpBFPt.jpg",
+            "character": "Orm",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 1639847,
+            "name": "Yahya Abdul-Mateen II",
+            "profile_path": "/aBDebGZs2pAucyaK4EhHVJGm0Xu.jpg",
+            "character": "Black Manta",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 79082,
+            "name": "Randall Park",
+            "profile_path": "/GpERQxWcT3TXLHpH8b6hIyUazK.jpg",
+            "character": "Dr. Shin",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 55085,
+            "name": "Amber Heard",
+            "profile_path": "/vnDolRlZWiOLBg1N0hsUTz4OH4C.jpg",
+            "character": "Mera",
+            "order": 4
+        },
+        {
+            "gender": 1,
+            "id": 2227,
+            "name": "Nicole Kidman",
+            "profile_path": "/q4pjhmbvI0bCvvX3N9tGS8Y1nUW.jpg",
+            "character": "Atlanna",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 16644,
+            "name": "Dolph Lundgren",
+            "profile_path": "/fisJpm05tw6GCJ4v62TKBCoWuZM.jpg",
+            "character": "King Nereus",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 7242,
+            "name": "Temuera Morrison",
+            "profile_path": "/1ckHDFgKXJ8pazmvLCW7DeOKqA0.jpg",
+            "character": "Tom",
+            "order": 7
+        },
+        {
+            "gender": 3,
+            "id": 1789788,
+            "name": "Indya Moore",
+            "profile_path": "/kW3BI0LFgePZCVKE5Xyl239vMbm.jpg",
+            "character": "Karshon",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 90060,
+            "name": "Pilou Asb\u00e6k",
+            "profile_path": "/tAfdT1vfbRol4L40xWvV0sqWGPF.jpg",
+            "character": "Kordax",
+            "order": 9
+        },
+        {
+            "gender": 1,
+            "id": 1364149,
+            "name": "Jani Zhao",
+            "profile_path": "/dQ9nyHLc3q33hpJL9OUhzM9kkQH.jpg",
+            "character": "Stingray",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 9831,
+            "name": "Vincent Regan",
+            "profile_path": "/cJQTmdDHWiEIh8PP9at7RGL3L60.jpg",
+            "character": "Atlan",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 519,
+            "name": "Martin Short",
+            "profile_path": "/vWoZIOk7K8TSKu1IN90akswsWjZ.jpg",
+            "character": "Kingfish (voice)",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 655,
+            "name": "John Rhys-Davies",
+            "profile_path": "/bfn4WvhGo2QKYtv5ynk7tKu7NnL.jpg",
+            "character": "Brine King (voice)",
+            "order": 13
+        },
+        {
+            "gender": 1,
+            "id": 20755,
+            "name": "Natalia Safran",
+            "profile_path": "/3luVtifpeQvF54jEf6NbK2Oz0dE.jpg",
+            "character": "Council Lady",
+            "order": 14
+        },
+        {
+            "gender": 0,
+            "id": 4446224,
+            "name": "Samuel Gosrani",
+            "profile_path": null,
+            "character": "Mercenary Tech",
+            "order": 15
+        },
+        {
+            "gender": 2,
+            "id": 2651811,
+            "name": "Jay Rincon",
+            "profile_path": "/r7rJsxsJjfyN2YYWWaXzliu1zzh.jpg",
+            "character": "Scientist #1",
+            "order": 16
+        },
+        {
+            "gender": 1,
+            "id": 1891226,
+            "name": "Sohm Kapila",
+            "profile_path": "/ySLjCzMYmeMKiP0xVO48F2aJLTE.jpg",
+            "character": "Reporter",
+            "order": 17
+        },
+        {
+            "gender": 2,
+            "id": 25912,
+            "name": "Ricardo Molina",
+            "profile_path": "/ubtiODxiE8Ne0axLW5c0XxiNsNY.jpg",
+            "character": "Reporter",
+            "order": 18
+        },
+        {
+            "gender": 1,
+            "id": 117656,
+            "name": "Ingrid Bisu",
+            "profile_path": "/2thd0dnfnI2TK7s9RZHkkq82O4t.jpg",
+            "character": "Pier Waitress",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 9715,
+                "name": "superhero"
+            },
+            {
+                "id": 2908,
+                "name": "secret society"
+            },
+            {
+                "id": 6231,
+                "name": "half-brother"
+            },
+            {
+                "id": 9663,
+                "name": "sequel"
+            },
+            {
+                "id": 9748,
+                "name": "revenge"
+            },
+            {
+                "id": 226325,
+                "name": "dysfunctional relationship"
+            },
+            {
+                "id": 229266,
+                "name": "dc extended universe (dceu)"
+            },
+            {
+                "id": 229863,
+                "name": "ancient evil"
+            },
+            {
+                "id": 232412,
+                "name": "underwater world"
+            },
+            {
+                "id": 232766,
+                "name": "vengeance"
+            },
+            {
+                "id": 243959,
+                "name": "brother brother relationship"
+            }
+        ]
+    }
+},
+{
+    "budget": 274800000,
+    "genres": [
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        }
+    ],
+    "tmdb_id": 609681,
+    "imdb_id": "tt10676048",
+    "original_language": "en",
+    "original_title": "The Marvels",
+    "overview": "Carol Danvers, aka Captain Marvel, has reclaimed her identity from the tyrannical Kree and taken revenge on the Supreme Intelligence. But unintended consequences see Carol shouldering the burden of a destabilized universe. When her duties send her to an anomalous wormhole linked to a Kree revolutionary, her powers become entangled with that of Jersey City super-fan Kamala Khan, aka Ms. Marvel, and Carol\u2019s estranged niece, now S.A.B.E.R. astronaut Captain Monica Rambeau. Together, this unlikely trio must team up and learn to work in concert to save the universe.",
+    "popularity": 1399.352,
+    "poster_path": "/9GBhzXMFjgcZ3FdR9w3bUMMTps5.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-11-08",
+    "revenue": 206089499,
+    "runtime": 105,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Urdu",
+            "iso_639_1": "ur",
+            "name": "\u0627\u0631\u062f\u0648"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Higher. Further. Faster. Together.",
+    "title": "The Marvels",
+    "vote_average": 6.34,
+    "vote_count": 1437,
+    "casts": [
+        {
+            "gender": 1,
+            "id": 60073,
+            "name": "Brie Larson",
+            "profile_path": "/xSGvMwNNJcEQvVcjiIUTyxyMfkZ.jpg",
+            "character": "Carol Danvers / Captain Marvel",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 970219,
+            "name": "Teyonah Parris",
+            "profile_path": "/mArqi5mGbKvfrNsrEEkdy0gDvGu.jpg",
+            "character": "Monica Rambeau",
+            "order": 1
+        },
+        {
+            "gender": 1,
+            "id": 2798462,
+            "name": "Iman Vellani",
+            "profile_path": "/tAq0b5qS1NyAMUtsSkm68BRYahm.jpg",
+            "character": "Kamala Khan / Ms. Marvel",
+            "order": 2
+        },
+        {
+            "gender": 1,
+            "id": 118034,
+            "name": "Zawe Ashton",
+            "profile_path": "/zbxVfvhPhCfgpgmWTdtHWurNqYu.jpg",
+            "character": "Dar-Benn",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 2231,
+            "name": "Samuel L. Jackson",
+            "profile_path": "/nCJJ3NVksYNxIzEHcyC1XziwPVj.jpg",
+            "character": "Nick Fury",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 480,
+            "name": "Gary Lewis",
+            "profile_path": "/cOaibfAluUeWPtcSOjedfGXn9ym.jpg",
+            "character": "Emperor Dro'ge",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 1347525,
+            "name": "Park Seo-jun",
+            "profile_path": "/rLAhC54IdUBRmpSRQrCC6a0wTLV.jpg",
+            "character": "Prince Yan",
+            "order": 6
+        },
+        {
+            "gender": 1,
+            "id": 1809782,
+            "name": "Zenobia Shroff",
+            "profile_path": "/zo3GlNoJkjtKMbZc5hcwmE5q9C6.jpg",
+            "character": "Muneeba Khan",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 1014905,
+            "name": "Mohan Kapur",
+            "profile_path": "/lL0J5DBOwN1pwLCvuo7uQ0ApjF.jpg",
+            "character": "Yusuf Khan",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 2889306,
+            "name": "Saagar Shaikh",
+            "profile_path": "/dipfu3fGTNcLPvmRuh9I7HWRzhr.jpg",
+            "character": "Aamir Khan",
+            "order": 9
+        },
+        {
+            "gender": 1,
+            "id": 2044882,
+            "name": "Leila Farzad",
+            "profile_path": "/cjB87g9aZOfmgKBvYhfNCJUM1Kn.jpg",
+            "character": "Talia",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1432064,
+            "name": "Abraham Popoola",
+            "profile_path": "/r5mojn6TjWgHefdMCJNiohvY82f.jpg",
+            "character": "Dag",
+            "order": 11
+        },
+        {
+            "gender": 1,
+            "id": 1360281,
+            "name": "Lashana Lynch",
+            "profile_path": "/ypNxRag9uJ5nzPAN2um3amQK340.jpg",
+            "character": "Maria Rambeau",
+            "order": 12
+        },
+        {
+            "gender": 1,
+            "id": 62561,
+            "name": "Tessa Thompson",
+            "profile_path": "/cJ64yI9OiQN8Edp4FgAHiLuoWiQ.jpg",
+            "character": "Valkyrie",
+            "order": 13
+        },
+        {
+            "gender": 2,
+            "id": 1131724,
+            "name": "Daniel Ings",
+            "profile_path": "/VHtgRMz5t0F8DEjYMxSmY09DTw.jpg",
+            "character": "Ty-Rone",
+            "order": 14
+        },
+        {
+            "gender": 2,
+            "id": 2197138,
+            "name": "Alex Hughes",
+            "profile_path": "/7cuhi8hDxSNLa48UBdyHA5la30Z.jpg",
+            "character": "Kree Announcer",
+            "order": 15
+        },
+        {
+            "gender": 0,
+            "id": 4350019,
+            "name": "Shardiah Ssagala",
+            "profile_path": null,
+            "character": "Skrull Young Adult",
+            "order": 16
+        },
+        {
+            "gender": 0,
+            "id": 4016965,
+            "name": "Cecily Cleeve",
+            "profile_path": null,
+            "character": "Skrull Young Girl",
+            "order": 17
+        },
+        {
+            "gender": 0,
+            "id": 4364359,
+            "name": "Remi Dabiri-McQuaid",
+            "profile_path": null,
+            "character": "Skrull Child",
+            "order": 18
+        },
+        {
+            "gender": 1,
+            "id": 1769602,
+            "name": "Ffion Jolly",
+            "profile_path": "/8HnceyJeu3uQhLVG0bHLBnI4VvP.jpg",
+            "character": "Skrull Woman",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 1701,
+                "name": "hero"
+            },
+            {
+                "id": 9715,
+                "name": "superhero"
+            },
+            {
+                "id": 3801,
+                "name": "space travel"
+            },
+            {
+                "id": 9717,
+                "name": "based on comic"
+            },
+            {
+                "id": 9663,
+                "name": "sequel"
+            },
+            {
+                "id": 10809,
+                "name": "teenage girl"
+            },
+            {
+                "id": 179430,
+                "name": "aftercreditsstinger"
+            },
+            {
+                "id": 179431,
+                "name": "duringcreditsstinger"
+            },
+            {
+                "id": 180547,
+                "name": "marvel cinematic universe (mcu)"
+            },
+            {
+                "id": 195114,
+                "name": "space adventure"
+            }
+        ]
+    }
+},
+{
+    "budget": 72000000,
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 10751,
+            "name": "Family"
+        }
+    ],
+    "tmdb_id": 940551,
+    "imdb_id": "tt6495056",
+    "original_language": "en",
+    "original_title": "Migration",
+    "overview": "After a migrating duck family alights on their pond with thrilling tales of far-flung places, the Mallard family embarks on a family road trip, from New England, to New York City, to tropical Jamaica.",
+    "popularity": 1015.587,
+    "poster_path": "/ldfCF9RhR40mppkzmftxapaHeTo.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        },
+        {
+            "iso_3166_1": "CA",
+            "name": "Canada"
+        },
+        {
+            "iso_3166_1": "FR",
+            "name": "France"
+        }
+    ],
+    "release_date": "2023-12-06",
+    "revenue": 221900000,
+    "runtime": 83,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Odd ducks welcome.",
+    "title": "Migration",
+    "vote_average": 7.671,
+    "vote_count": 543,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 466505,
+            "name": "Kumail Nanjiani",
+            "profile_path": "/9EyrK1Cv7ey1h1GgmsVAOn45w6G.jpg",
+            "character": "Mack Mallard (voice)",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 9281,
+            "name": "Elizabeth Banks",
+            "profile_path": "/zrkI1dYucpTM8Qydtrtro9MgQPb.jpg",
+            "character": "Pam Mallard (voice)",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 1736671,
+            "name": "Caspar Jennings",
+            "profile_path": "/2z3sxiux2pe4J5zWPPnzebeVysF.jpg",
+            "character": "Dax Mallard (voice)",
+            "order": 2
+        },
+        {
+            "gender": 1,
+            "id": 4031156,
+            "name": "Tresi Gazal",
+            "profile_path": null,
+            "character": "Gwen Mallard (voice)",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 1625558,
+            "name": "Awkwafina",
+            "profile_path": "/l5AKkg3H1QhMuXmTTmq1EyjyiRb.jpg",
+            "character": "Chump (voice)",
+            "order": 4
+        },
+        {
+            "gender": 1,
+            "id": 10556,
+            "name": "Carol Kane",
+            "profile_path": "/4ZPnxUFgUHND5fv6MshT3YRDLmq.jpg",
+            "character": "Erin (voice)",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 298410,
+            "name": "Keegan-Michael Key",
+            "profile_path": "/vAR5gVXRG2Cl6WskXT99wgkAoH8.jpg",
+            "character": "Delroy (voice)",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 518,
+            "name": "Danny DeVito",
+            "profile_path": "/gNHF2SNXFFCRqwIQ2Xv6r6aV6UD.jpg",
+            "character": "Uncle Dan (voice)",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 139075,
+            "name": "David Mitchell",
+            "profile_path": "/mHN2NWjBsXseWqq7Zg8K31NS91n.jpg",
+            "character": "GooGoo (voice)",
+            "order": 8
+        },
+        {
+            "gender": 1,
+            "id": 1428070,
+            "name": "Isabela Merced",
+            "profile_path": "/84nQ463zQHtKVXMDlGMVqGgu82a.jpg",
+            "character": "Kim (voice)",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 59784,
+            "name": "Carlos Alazraqui",
+            "profile_path": "/d2hufnjlfsZiY7N9NLZ6b7FE1IZ.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1529387,
+            "name": "Brock Baker",
+            "profile_path": "/wWNKCFvRXmP8U8VHWxfdbhOEw3e.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 19547,
+            "name": "Gregg Berger",
+            "profile_path": "/bMlJUmhblX50gQrnA8XWG7UuaLk.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 571562,
+            "name": "Steve Blum",
+            "profile_path": "/cpO0muunoigq1WHegeOEI1AIQAo.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 13
+        },
+        {
+            "gender": 1,
+            "id": 54427,
+            "name": "Kimberly Brooks",
+            "profile_path": "/iPlCk1VQ8fnAtsMow6HlCZoQc0w.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 14
+        },
+        {
+            "gender": 2,
+            "id": 70615,
+            "name": "Rodger Bumpass",
+            "profile_path": "/lGQkw6adxqB6Hcm7VK8nVHbKupe.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 15
+        },
+        {
+            "gender": 2,
+            "id": 35219,
+            "name": "Corey Burton",
+            "profile_path": "/wcpFwdL7m01cZoBJiUSMQVakK2G.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 16
+        },
+        {
+            "gender": 2,
+            "id": 2025381,
+            "name": "Sean Chiplock",
+            "profile_path": "/8P5OURG4GSdvzt17EqO2W9L8rbz.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 17
+        },
+        {
+            "gender": 1,
+            "id": 2447208,
+            "name": "Amber Lee Connors",
+            "profile_path": "/2Rbv4zNRpIn626N6YdcQojyRoLi.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 18
+        },
+        {
+            "gender": 2,
+            "id": 45924,
+            "name": "Ian James Corlett",
+            "profile_path": "/8oBYy558j01kb1Go4ULgqiY1zZt.jpg",
+            "character": "Additional Voices (voice)",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 1339,
+                "name": "duck"
+            },
+            {
+                "id": 1729,
+                "name": "migration"
+            },
+            {
+                "id": 8044,
+                "name": "flight"
+            },
+            {
+                "id": 11477,
+                "name": "anthropomorphism"
+            },
+            {
+                "id": 18035,
+                "name": "family"
+            },
+            {
+                "id": 18165,
+                "name": "animal"
+            },
+            {
+                "id": 18293,
+                "name": "chef"
+            },
+            {
+                "id": 218182,
+                "name": "overprotective father"
+            },
+            {
+                "id": 277462,
+                "name": "bird"
+            }
+        ]
+    }
+},
+{
+    "budget": 175000000,
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 10751,
+            "name": "Family"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        }
+    ],
+    "tmdb_id": 1022796,
+    "imdb_id": "tt11304740",
+    "original_language": "en",
+    "original_title": "Wish",
+    "overview": "Asha, a sharp-witted idealist, makes a wish so powerful that it is answered by a cosmic force \u2013 a little ball of boundless energy called Star. Together, Asha and Star confront a most formidable foe - the ruler of Rosas, King Magnifico - to save her community and prove that when the will of one courageous human connects with the magic of the stars, wondrous things can happen.",
+    "popularity": 1064.652,
+    "poster_path": "/AcoVfiv1rrWOmAdpnAMnM56ki19.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-11-13",
+    "revenue": 244086146,
+    "runtime": 95,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Be careful what you wish for.",
+    "title": "Wish",
+    "vote_average": 6.666,
+    "vote_count": 643,
+    "casts": [
+        {
+            "gender": 1,
+            "id": 1437491,
+            "name": "Ariana DeBose",
+            "profile_path": "/8HTSA2iVTsDN83OncAvFTcqxsAr.jpg",
+            "character": "Asha (voice)",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 62064,
+            "name": "Chris Pine",
+            "profile_path": "/mi00EsvrAebidnEYK7LZxgbKYyH.jpg",
+            "character": "Magnifico (voice)",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 21088,
+            "name": "Alan Tudyk",
+            "profile_path": "/jUuUbPuMGonFT5E2pcs4alfqaCN.jpg",
+            "character": "Valentino (voice)",
+            "order": 2
+        },
+        {
+            "gender": 1,
+            "id": 1001536,
+            "name": "Angelique Cabral",
+            "profile_path": "/v2N5mPDiUxScgJnNVOgYLvjs39a.jpg",
+            "character": "Amaya (voice)",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 8536,
+            "name": "Victor Garber",
+            "profile_path": "/v0xcGF04VgjX0LxQFUyAH8hY9l.jpg",
+            "character": "Sarric (voice)",
+            "order": 4
+        },
+        {
+            "gender": 1,
+            "id": 1546282,
+            "name": "Natasha Rothwell",
+            "profile_path": "/x5KdL3QoS4YuozVpfuPsu3MLwwf.jpg",
+            "character": "Sakina (voice)",
+            "order": 5
+        },
+        {
+            "gender": 0,
+            "id": 1519596,
+            "name": "Jennifer Kumiyama",
+            "profile_path": "/bJwLLeS7sNXaGrZ48JIS7NO5CLm.jpg",
+            "character": "Dahlia (voice)",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 210172,
+            "name": "Harvey Guill\u00e9n",
+            "profile_path": "/yiNBonobPwqMVweB02JWufzp2l9.jpg",
+            "character": "Gabo (voice)",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 3782649,
+            "name": "Niko Vargas",
+            "profile_path": "/bKHSuALwgbB105uj2orcnKwLf2H.jpg",
+            "character": "Hal (voice)",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 55089,
+            "name": "Evan Peters",
+            "profile_path": "/zxfMLydSWz5OaZp5EvGTBsuYmpt.jpg",
+            "character": "Simon (voice)",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 1382987,
+            "name": "Ramy Youssef",
+            "profile_path": "/7ASVvzrU2cdhuIotzeKnqQVNNUM.jpg",
+            "character": "Safi (voice)",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1714925,
+            "name": "Jon Rudnitsky",
+            "profile_path": "/y9S1Glj4T6W4v1ZkYMy3BnLccDp.jpg",
+            "character": "Dario (voice)",
+            "order": 11
+        },
+        {
+            "gender": 1,
+            "id": 1610446,
+            "name": "Della Saba",
+            "profile_path": "/q2ksier0nLdvKbGUzVmpblgl8NT.jpg",
+            "character": "Bazeema (voice)",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 91387,
+            "name": "Keone Young",
+            "profile_path": "/nDTQe7D7NmbzAryfKQKx2NALmid.jpg",
+            "character": "Mountain Climber / Tall Man Tourist / Guard 1 (voice)",
+            "order": 13
+        },
+        {
+            "gender": 0,
+            "id": 4368170,
+            "name": "Lucas Sigler",
+            "profile_path": null,
+            "character": "Bunny / Baby Mushroom (voice)",
+            "order": 14
+        },
+        {
+            "gender": 0,
+            "id": 3804184,
+            "name": "Holland Watkins",
+            "profile_path": null,
+            "character": "Mouse / Mountain Climber Wife (voice)",
+            "order": 15
+        },
+        {
+            "gender": 0,
+            "id": 1340671,
+            "name": "Woody Buck",
+            "profile_path": null,
+            "character": "The Stag / Guard 2 / Citizen 5 (voice)",
+            "order": 16
+        },
+        {
+            "gender": 1,
+            "id": 1181333,
+            "name": "Ef\u00e9",
+            "profile_path": "/8Q2db5BVTWXTeUGiLGSSqF4xeGY.jpg",
+            "character": "Ship Captain / Fan Tourist (voice)",
+            "order": 17
+        },
+        {
+            "gender": 1,
+            "id": 1195144,
+            "name": "Nicole Lynn Evans",
+            "profile_path": "/kzbuNBhBNFUDFPKcBgZFnShWMA1.jpg",
+            "character": "Mountain Climber's Wife / Mother Tourist (voice)",
+            "order": 18
+        },
+        {
+            "gender": 1,
+            "id": 33656,
+            "name": "Heather Matarazzo",
+            "profile_path": "/afZhMKmsAHZA9jHq7F9tNUFZci6.jpg",
+            "character": "Flying Woman (voice)",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 6054,
+                "name": "friendship"
+            },
+            {
+                "id": 4252,
+                "name": "black magic"
+            },
+            {
+                "id": 4896,
+                "name": "wish"
+            },
+            {
+                "id": 4344,
+                "name": "musical"
+            },
+            {
+                "id": 10159,
+                "name": "computer animation"
+            },
+            {
+                "id": 11322,
+                "name": "female protagonist"
+            },
+            {
+                "id": 171854,
+                "name": "betrayal by friend"
+            },
+            {
+                "id": 179430,
+                "name": "aftercreditsstinger"
+            },
+            {
+                "id": 187056,
+                "name": "woman director"
+            },
+            {
+                "id": 235308,
+                "name": "wicked king"
+            },
+            {
+                "id": 245776,
+                "name": "disabled person"
+            },
+            {
+                "id": 307254,
+                "name": "evil king"
+            },
+            {
+                "id": 317481,
+                "name": "star"
+            },
+            {
+                "id": 324145,
+                "name": "corrupt government"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 80,
+            "name": "Crime"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        }
+    ],
+    "tmdb_id": 370464,
+    "imdb_id": "tt3103166",
+    "original_language": "en",
+    "original_title": "The Masked Saint",
+    "overview": "The journey of a professional wrestler who becomes a small town pastor and moonlights as a masked vigilante fighting injustice. While facing crises at home and at the church, the Pastor must evade the police and somehow reconcile his violent secret identity with his calling as a pastor.",
+    "popularity": 867.889,
+    "poster_path": "/zlT1Tc9hA1Ntye5hr7Gxos9U6U9.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2016-01-08",
+    "revenue": 0,
+    "runtime": 111,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Husband. Pastor. Hero.",
+    "title": "The Masked Saint",
+    "vote_average": 3.9,
+    "vote_count": 23,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 1438026,
+            "name": "Brett Granstaff",
+            "profile_path": "/4ds4zv2r5rrSTN2UM352MpwFVN4.jpg",
+            "character": "Chris Samuels",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 1102260,
+            "name": "Lara Jean Chorostecki",
+            "profile_path": "/gBuEZfohaCyZS8FeOUYeJEqLpRY.jpg",
+            "character": "Michelle Samuels",
+            "order": 1
+        },
+        {
+            "gender": 1,
+            "id": 1393826,
+            "name": "T.J. McGibbon",
+            "profile_path": "/k75hqHbiyun2guO4VGlEbwu4VDJ.jpg",
+            "character": "Carrie Samuels",
+            "order": 2
+        },
+        {
+            "gender": 1,
+            "id": 20158,
+            "name": "Diahann Carroll",
+            "profile_path": "/unBFEOFc1Vjyh5T8GXvq47JeRgp.jpg",
+            "character": "Ms. Edna",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 44240,
+            "name": "Roddy Piper",
+            "profile_path": "/3LZvHroOYjUe8mKP3AWL87ML8d7.jpg",
+            "character": "Nicky Stone",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 1084758,
+            "name": "James Preston Rogers",
+            "profile_path": "/6eVau2kFnU15T7D35OCt1uk5cIl.jpg",
+            "character": "The Reaper",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 61856,
+            "name": "Mykel Shannon Jenkins",
+            "profile_path": "/byIXjhCcP9D854m5NoFYydW6uLC.jpg",
+            "character": "Detective Harper",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 44172,
+            "name": "Patrick McKenna",
+            "profile_path": "/x3i6LaieQC7z96DN4jYlwnVYI6S.jpg",
+            "character": "Judd Lumpkin",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 1472778,
+            "name": "Ann Pirvu",
+            "profile_path": "/nYEX6WTw6fgv4hm88I4mMkbOJYt.jpg",
+            "character": "Emily Anne",
+            "order": 8
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 1499,
+                "name": "pastor"
+            },
+            {
+                "id": 11431,
+                "name": "wrestler"
+            },
+            {
+                "id": 9672,
+                "name": "based on true story"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "tmdb_id": 1212073,
+    "imdb_id": "tt29538571",
+    "original_language": "de",
+    "original_title": "60 Minuten",
+    "overview": "Desperate to keep custody of his daughter, a mixed martial arts fighter abandons a big match and races across Berlin to attend her birthday party.",
+    "popularity": 923.603,
+    "poster_path": "/jojfbnIHGsRpodIood3OQoqA45Y.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "DE",
+            "name": "Germany"
+        }
+    ],
+    "release_date": "2024-01-19",
+    "revenue": 0,
+    "runtime": 89,
+    "spoken_languages": [
+        {
+            "english_name": "German",
+            "iso_639_1": "de",
+            "name": "Deutsch"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Sixty Minutes",
+    "vote_average": 7.064,
+    "vote_count": 225,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 1209579,
+            "name": "Emilio Sakraya",
+            "profile_path": "/rWKX19bKWLHFIYhRTLmG98A6kp0.jpg",
+            "character": "Octavio Bergmann",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 1271591,
+            "name": "Dennis Mojen",
+            "profile_path": "/iSDxSUMO2lEiGgJIOZ13nwo7eEH.jpg",
+            "character": "Paul Lehmann",
+            "order": 1
+        },
+        {
+            "gender": 1,
+            "id": 1979183,
+            "name": "Marie Mouroum",
+            "profile_path": "/42kktBafPgWXvkrRHVqEglutj1p.jpg",
+            "character": "Cosima",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 2473647,
+            "name": "Florian Schmidtke",
+            "profile_path": "/yCCWQH2z8S5ruCQgslVWHsbOYew.jpg",
+            "character": "Winkler",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 1582193,
+            "name": "Paul Wollin",
+            "profile_path": "/flpMDnrxJDjYtiwhvTT4fJGcpFh.jpg",
+            "character": "",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 2090388,
+            "name": "Aristo Luis",
+            "profile_path": null,
+            "character": "",
+            "order": 5
+        },
+        {
+            "gender": 0,
+            "id": 4489384,
+            "name": "Morik Heydo",
+            "profile_path": null,
+            "character": "",
+            "order": 6
+        },
+        {
+            "gender": 0,
+            "id": 1085577,
+            "name": "Alain Blazevic",
+            "profile_path": null,
+            "character": "Accountant",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 2758719,
+            "name": "Harry Szovik",
+            "profile_path": null,
+            "character": "Shop Owner",
+            "order": 8
+        },
+        {
+            "gender": 0,
+            "id": 2082744,
+            "name": "\u00c1rp\u00e1d Antolik",
+            "profile_path": null,
+            "character": "Kreuzberg",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 1445749,
+            "name": "Ludger B\u00f6kelmann",
+            "profile_path": "/2eUILEG4AYMhElPwocYqz5UMovJ.jpg",
+            "character": "",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1612653,
+            "name": "Philipp Droste",
+            "profile_path": "/3aqxYrafYU6DWJD80Em6B6ZVdDA.jpg",
+            "character": "Business Guy Wiedeking",
+            "order": 11
+        },
+        {
+            "gender": 0,
+            "id": 4489392,
+            "name": "Szabolcs Kelemen",
+            "profile_path": null,
+            "character": "Keri",
+            "order": 12
+        },
+        {
+            "gender": 1,
+            "id": 1464091,
+            "name": "Livia Matthes",
+            "profile_path": "/9v41LVDJ7dN8wWlkuwyteSJ4NtZ.jpg",
+            "character": "Mina",
+            "order": 13
+        },
+        {
+            "gender": 0,
+            "id": 2254898,
+            "name": "Bal\u00e1zs Megyeri",
+            "profile_path": null,
+            "character": "Fight Assistant",
+            "order": 14
+        }
+    ],
+    "keywords": {
+        "keywords": []
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 80,
+            "name": "Crime"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        }
+    ],
+    "tmdb_id": 982940,
+    "imdb_id": "tt14791590",
+    "original_language": "en",
+    "original_title": "Due Justice",
+    "overview": "An attorney with a military past hunts down the gang who killed his wife and took his daughter.",
+    "popularity": 860.86,
+    "poster_path": "/35Uef7fz9ctYbJLXbJBCqvtttEQ.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-11-24",
+    "revenue": 0,
+    "runtime": 98,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Vengeance is his.",
+    "title": "Due Justice",
+    "vote_average": 6.9,
+    "vote_count": 23,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 34502,
+            "name": "Kellan Lutz",
+            "profile_path": "/pLzdFABlU6oS2BvlHlAN990woY1.jpg",
+            "character": "Max",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 4520,
+            "name": "William Forsythe",
+            "profile_path": "/35BXHugSG931iVPbHn6W9SNXNY1.jpg",
+            "character": "",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 20495,
+            "name": "Jeff Fahey",
+            "profile_path": "/zRu1ZmM7ekKwKbmXn3U0VjD8Wyd.jpg",
+            "character": "Ellis",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 20190,
+            "name": "Efren Ramirez",
+            "profile_path": "/vo4IDt4NeNCHBXLz58Wjlx5994a.jpg",
+            "character": "Santiago",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 179510,
+            "name": "Manu Intiraymi",
+            "profile_path": "/aJRjRKKzWXxfkm230OlTCPVj22B.jpg",
+            "character": "Jerry",
+            "order": 4
+        },
+        {
+            "gender": 0,
+            "id": 1307722,
+            "name": "Niko Foster",
+            "profile_path": "/gN1YaMDZOrRERftUCamY1wqqnsI.jpg",
+            "character": "Capt. Daniels",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 3889203,
+            "name": "Tonantzin Esparza",
+            "profile_path": "/pKTLrHxS6f2UPsJZwncWhJ78QFQ.jpg",
+            "character": "Det. Vasquez",
+            "order": 6
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 9730,
+                "name": "crime boss"
+            },
+            {
+                "id": 7002,
+                "name": "vigilante"
+            },
+            {
+                "id": 190636,
+                "name": "crime syndicate"
+            },
+            {
+                "id": 222287,
+                "name": "murder of family"
+            },
+            {
+                "id": 232766,
+                "name": "vengeance"
+            },
+            {
+                "id": 252204,
+                "name": "revenge thriller"
+            },
+            {
+                "id": 266013,
+                "name": "vigilante justice"
+            },
+            {
+                "id": 287884,
+                "name": "organ trafficking"
+            },
+            {
+                "id": 300847,
+                "name": "attorney"
+            },
+            {
+                "id": 301040,
+                "name": "abducted daughter"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 53,
+            "name": "Thriller"
+        }
+    ],
+    "tmdb_id": 799155,
+    "imdb_id": "tt7529298",
+    "original_language": "hi",
+    "original_title": "Attack",
+    "overview": "With the Parliament under siege, India\u2019s first super soldier Arjun Shergill is tasked to get hold of the terrorists in the nick of time, save the Prime Minister from their clutches and stop a dirty bomb from exploding and destroying Delhi. Will Arjun succeed in his mission?",
+    "popularity": 719.265,
+    "poster_path": "/5jGKbYuZtdxSNOocI6ZziQeiY4n.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "IN",
+            "name": "India"
+        }
+    ],
+    "release_date": "2022-04-01",
+    "revenue": 0,
+    "runtime": 123,
+    "spoken_languages": [
+        {
+            "english_name": "Hindi",
+            "iso_639_1": "hi",
+            "name": "\u0939\u093f\u0928\u094d\u0926\u0940"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Attack",
+    "vote_average": 7.366,
+    "vote_count": 116,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 52971,
+            "name": "John Abraham",
+            "profile_path": "/2ITVYVFou0dh3QVcJlhNJVzrA2p.jpg",
+            "character": "Arjun Shergill",
+            "order": 0
+        },
+        {
+            "gender": 0,
+            "id": 3379351,
+            "name": "Serena Walia",
+            "profile_path": null,
+            "character": "IRA (voice)",
+            "order": 1
+        },
+        {
+            "gender": 1,
+            "id": 1143308,
+            "name": "Rakul Preet Singh",
+            "profile_path": "/4n4MmOFNyxKc4qMfzyapglvDDlF.jpg",
+            "character": "Dr. Sabah Qureshi",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 89153,
+            "name": "Prakash Raj",
+            "profile_path": "/QbWfctGpZFmnZySUGYIq2sq5sj.jpg",
+            "character": "Vadraj Kumar Subramaniam",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 95506,
+            "name": "Ratna Pathak Shah",
+            "profile_path": "/3AQY50MSl6jg1cVqLQdPHNdUVPM.jpg",
+            "character": "Shanti Shergill",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 1010819,
+            "name": "Elham Ehsas",
+            "profile_path": "/mlOS34qKEVApg5VVLTBUzY8cftN.jpg",
+            "character": "Hamid Gul",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 95505,
+            "name": "Jacqueline Fernandez",
+            "profile_path": "/x7RQ5uI2WFaXOPW1kIe0yUQ0jbe.jpg",
+            "character": "Ayesha",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 232828,
+            "name": "Kiran Kumar",
+            "profile_path": "/vnpgMjRmNXl9r6LE2N5RJ1F5gD6.jpg",
+            "character": "Indian Army Chief",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 226769,
+            "name": "Rajit Kapoor",
+            "profile_path": "/mATIzHiXTeW6xB8IoJVLTD5NDMn.jpg",
+            "character": "Home Minister",
+            "order": 8
+        },
+        {
+            "gender": 0,
+            "id": 1872501,
+            "name": "Jaimini Pathak",
+            "profile_path": null,
+            "character": "Sukrit",
+            "order": 9
+        },
+        {
+            "gender": 0,
+            "id": 2664747,
+            "name": "Mehroos Mir",
+            "profile_path": null,
+            "character": "Young Hamid Gul",
+            "order": 10
+        },
+        {
+            "gender": 0,
+            "id": 3495989,
+            "name": "Shahnawaz Bhatt",
+            "profile_path": null,
+            "character": "Saqlain",
+            "order": 11
+        },
+        {
+            "gender": 0,
+            "id": 3074837,
+            "name": "Babrak Akbari",
+            "profile_path": null,
+            "character": "Mustafa",
+            "order": 12
+        },
+        {
+            "gender": 0,
+            "id": 3379349,
+            "name": "Ranjit Punia",
+            "profile_path": null,
+            "character": "CRPF Officer",
+            "order": 13
+        },
+        {
+            "gender": 0,
+            "id": 3185658,
+            "name": "Habib Al Aidroos",
+            "profile_path": null,
+            "character": "Rehman Gul",
+            "order": 14
+        },
+        {
+            "gender": 0,
+            "id": 3495994,
+            "name": "Nimish Desai",
+            "profile_path": null,
+            "character": "Prime Minister",
+            "order": 15
+        },
+        {
+            "gender": 2,
+            "id": 3711033,
+            "name": "Mohd Talib",
+            "profile_path": null,
+            "character": "",
+            "order": 16
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 6079,
+                "name": "parliament"
+            },
+            {
+                "id": 10834,
+                "name": "super soldier"
+            },
+            {
+                "id": 13065,
+                "name": "soldier"
+            },
+            {
+                "id": 191819,
+                "name": "indian army"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        }
+    ],
+    "tmdb_id": 528656,
+    "imdb_id": "tt7473390",
+    "original_language": "zh",
+    "original_title": "\u6218\u795e\u7eaa",
+    "overview": "Tem\u00fcjin and B\u00f6rte are childhood lovers who are deeply in love; but news of Tem\u00fcjin's father's death swiftly disrupted their relationship. Tem\u00fcjin heads back to his hometown, but was faced with a sudden attack from his father's former comrades, causing his whole tribe to be destroyed.",
+    "popularity": 494.47,
+    "poster_path": "/FgFoX4wlZUT31ErGGzVnNlh8U3.jpg",
+    "production_countries": [],
+    "release_date": "2018-04-28",
+    "revenue": 0,
+    "runtime": 119,
+    "spoken_languages": [
+        {
+            "english_name": "Mandarin",
+            "iso_639_1": "zh",
+            "name": "\u666e\u901a\u8bdd"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Genghis Khan",
+    "vote_average": 5.143,
+    "vote_count": 7,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 127268,
+            "name": "William Chan Wai-Ting",
+            "profile_path": "/ovPTGfoN7EJei92CSAqs0sPvuoS.jpg",
+            "character": "Temujin",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 1574909,
+            "name": "Lin Yun",
+            "profile_path": "/h4qE35URtADADoE7fH82FDmZbDr.jpg",
+            "character": "Borte",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 96862,
+            "name": "Hu Jun",
+            "profile_path": "/f7g3zcMI6RAuWTaWMF9hxdoBtQg.jpg",
+            "character": "Kuchuru",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 17382,
+            "name": "Ni Dahong",
+            "profile_path": "/t0fw2ninZfWjMX2OT8Wp1eDriK9.jpg",
+            "character": "Shaman",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 565344,
+            "name": "Li Guangjie",
+            "profile_path": "/5ux2lxIGgjMIWPmpc2NNNDIOXho.jpg",
+            "character": "Jamuqa",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 1117866,
+            "name": "Baasanjav Mijid",
+            "profile_path": "/7fkkraLMALIN8HKfvQS9xPwSe7O.jpg",
+            "character": "Dei-Sechen",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 126851,
+            "name": "Zhang Xinyi",
+            "profile_path": "/envIGo2oj73IuCKO835po6nhaMP.jpg",
+            "character": "Dodai",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 3333237,
+            "name": "Si Ligeng",
+            "profile_path": "/ulL6LxBGgqIsgSKDELE6XzYpwcd.jpg",
+            "character": "Mogan",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 1513411,
+            "name": "Zhao Lixin",
+            "profile_path": "/zGyFSlO2p3wdrWENubQDt5imwXk.jpg",
+            "character": "Targutai Girildeg",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 2491299,
+            "name": "Tumen",
+            "profile_path": "/q5VXZ185eVHUxic55eQRjXCkfwH.jpg",
+            "character": "Hoboyan",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 3108730,
+            "name": "Li Shengda",
+            "profile_path": null,
+            "character": "Arukhan",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1191801,
+            "name": "Li Ming",
+            "profile_path": "/7DGT83fpCH8swn28MiglB4t3gNg.jpg",
+            "character": "",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 2168121,
+            "name": "Bayaneruul",
+            "profile_path": "/f4PwGzY7y4hTUp07BBWuGMH4if1.jpg",
+            "character": "Yesugei",
+            "order": 12
+        }
+    ],
+    "keywords": {
+        "keywords": []
+    }
+},
+{
+    "budget": 165000000,
+    "genres": [
+        {
+            "id": 36,
+            "name": "History"
+        },
+        {
+            "id": 10752,
+            "name": "War"
+        },
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 18,
+            "name": "Drama"
+        }
+    ],
+    "tmdb_id": 753342,
+    "imdb_id": "tt13287846",
+    "original_language": "en",
+    "original_title": "Napoleon",
+    "overview": "An epic that details the checkered rise and fall of French Emperor Napoleon Bonaparte and his relentless journey to power through the prism of his addictive, volatile relationship with his wife, Josephine.",
+    "popularity": 641.688,
+    "poster_path": "/vcZWJGvB5xydWuUO1vaTLI82tGi.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "GB",
+            "name": "United Kingdom"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-11-22",
+    "revenue": 219867941,
+    "runtime": 158,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "French",
+            "iso_639_1": "fr",
+            "name": "Fran\u00e7ais"
+        },
+        {
+            "english_name": "German",
+            "iso_639_1": "de",
+            "name": "Deutsch"
+        },
+        {
+            "english_name": "Russian",
+            "iso_639_1": "ru",
+            "name": "P\u0443\u0441\u0441\u043a\u0438\u0439"
+        }
+    ],
+    "status": "Released",
+    "tagline": "He came from nothing. He conquered everything.",
+    "title": "Napoleon",
+    "vote_average": 6.536,
+    "vote_count": 1604,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 73421,
+            "name": "Joaquin Phoenix",
+            "profile_path": "/ls72wfQl8AhRVFeBnotmnAdy3JR.jpg",
+            "character": "Napoleon Bonaparte",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 556356,
+            "name": "Vanessa Kirby",
+            "profile_path": "/a8a9U00KL2JJkkekzhNnueIGKKF.jpg",
+            "character": "Josephine Bonaparte",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 81051,
+            "name": "Tahar Rahim",
+            "profile_path": "/cM5S6jdTnurZjSLwm61rqtsliI4.jpg",
+            "character": "Paul Barras",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 4757,
+            "name": "Rupert Everett",
+            "profile_path": "/g0kqfIxf9eIV7rOMQcbebsgMS9Z.jpg",
+            "character": "Duke of Wellington",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 1231402,
+            "name": "Mark Bonnar",
+            "profile_path": "/qEOp1lj0HGAVy1wpqIxMNkxIzn7.jpg",
+            "character": "Junot",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 80365,
+            "name": "Paul Rhys",
+            "profile_path": "/l7uc38oZGMQbbq7WqE8rKn9xZJr.jpg",
+            "character": "Talleyrand",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 11280,
+            "name": "Ben Miles",
+            "profile_path": "/mT3BqoFUkyktXLvefQA6VxaGHJz.jpg",
+            "character": "Caulaincourt",
+            "order": 6
+        },
+        {
+            "gender": 1,
+            "id": 2599915,
+            "name": "Riana Duce",
+            "profile_path": "/AgJxumDV4srU7ye3d3m0IPDlH7P.jpg",
+            "character": "Lucille",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 4390,
+            "name": "Ludivine Sagnier",
+            "profile_path": "/hHYq2MfSF9R26pVNJBjVUZPCvMM.jpg",
+            "character": "Theresa Cabarrus",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 1700994,
+            "name": "Edouard Philipponnat",
+            "profile_path": "/ffm6LPX4LWnwPyd1PJTH89bBlvU.jpg",
+            "character": "Tsar Alexander",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 221857,
+            "name": "Miles Jupp",
+            "profile_path": "/xVNI6kPi16lpIce0WQfS3DnIspT.jpg",
+            "character": "Emperor Francis I",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 32559,
+            "name": "Scott Handy",
+            "profile_path": "/r5RR74HmLXbCOwilwMGwGBF3fcO.jpg",
+            "character": "Marshal Berthier",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 1264979,
+            "name": "Youssef Kerkour",
+            "profile_path": "/yspOPFMRWPzImc1gvO6FRtiBw6U.jpg",
+            "character": "Marshal Davout",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 1386824,
+            "name": "John Hollingworth",
+            "profile_path": "/7aT6wgl1xYfBHtW2q3oADUuAwMM.jpg",
+            "character": "Marshal Ney",
+            "order": 13
+        },
+        {
+            "gender": 2,
+            "id": 2026407,
+            "name": "Abubakar Salim",
+            "profile_path": "/cUddJiPnCTDDOBuk7jTmLsiODMb.jpg",
+            "character": "General Dumas",
+            "order": 14
+        },
+        {
+            "gender": 0,
+            "id": 2858894,
+            "name": "Thom Ashley",
+            "profile_path": "/qXUBsdQCVmbzQlWJa1hCbCtMGDf.jpg",
+            "character": "La Bedoyere",
+            "order": 15
+        },
+        {
+            "gender": 2,
+            "id": 54676,
+            "name": "Jannis Niew\u00f6hner",
+            "profile_path": "/zMwWBrcyoCj0xtFBUuc3mcN66SO.jpg",
+            "character": "Hippolyte Charles",
+            "order": 16
+        },
+        {
+            "gender": 2,
+            "id": 7031,
+            "name": "Julian Rhind-Tutt",
+            "profile_path": "/jvwtFc8XFpTb7NX1XRJX8TOfH5.jpg",
+            "character": "Sieyes",
+            "order": 17
+        },
+        {
+            "gender": 2,
+            "id": 1348558,
+            "name": "John Hodgkinson",
+            "profile_path": null,
+            "character": "Fouche",
+            "order": 18
+        },
+        {
+            "gender": 1,
+            "id": 3568189,
+            "name": "Erin Ainsworth",
+            "profile_path": "/baN75XU1bTnKbpSqVW5gTl7f23t.jpg",
+            "character": "Hortense I",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 11195,
+                "name": "empire"
+            },
+            {
+                "id": 254,
+                "name": "france"
+            },
+            {
+                "id": 5565,
+                "name": "biography"
+            },
+            {
+                "id": 4381,
+                "name": "napoleon bonaparte"
+            },
+            {
+                "id": 9672,
+                "name": "based on true story"
+            },
+            {
+                "id": 33384,
+                "name": "napoleonic wars"
+            },
+            {
+                "id": 207928,
+                "name": "19th century"
+            },
+            {
+                "id": 310237,
+                "name": "biopic"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 80,
+            "name": "Crime"
+        }
+    ],
+    "tmdb_id": 955916,
+    "imdb_id": "tt14371878",
+    "original_language": "en",
+    "original_title": "Lift",
+    "overview": "An international heist crew, led by Cyrus Whitaker, race to lift $500 million in gold from a passenger plane at 40,000 feet.",
+    "popularity": 609.763,
+    "poster_path": "/gma8o1jWa6m0K1iJ9TzHIiFyTtI.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2024-01-10",
+    "revenue": 0,
+    "runtime": 106,
+    "spoken_languages": [
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Espa\u00f1ol"
+        },
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Italian",
+            "iso_639_1": "it",
+            "name": "Italiano"
+        }
+    ],
+    "status": "Released",
+    "tagline": "The heist begins at 40,000 ft.",
+    "title": "Lift",
+    "vote_average": 6.582,
+    "vote_count": 688,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 55638,
+            "name": "Kevin Hart",
+            "profile_path": "/7OwsFfoxNGIfWwSmdORyB7v8XNj.jpg",
+            "character": "Cyrus Whitaker",
+            "order": 0
+        },
+        {
+            "gender": 1,
+            "id": 1216606,
+            "name": "Gugu Mbatha-Raw",
+            "profile_path": "/6iQd1y72ym3eRAzslSRChdbBQrS.jpg",
+            "character": "Abby Gladwell",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 65731,
+            "name": "Sam Worthington",
+            "profile_path": "/mflBcox36s9ZPbsZPVOuhf6axaJ.jpg",
+            "character": "Dennis Huxley",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 7132,
+            "name": "Vincent D'Onofrio",
+            "profile_path": "/qkyiLolEqYMGH25xD4sFIXAjZQB.jpg",
+            "character": "Denton",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 1042728,
+            "name": "\u00darsula Corber\u00f3",
+            "profile_path": "/rRgkZUNgD68DD7xDsv1XMmQBjld.jpg",
+            "character": "Camila",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 141034,
+            "name": "Billy Magnussen",
+            "profile_path": "/bA38HDFxJtwSV4OgSo3yJ1u9H2J.jpg",
+            "character": "Magnus",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 2754580,
+            "name": "Kim Yun-jee",
+            "profile_path": "/sAm8NpuiEkUxmf6apVpDvUEertV.jpg",
+            "character": "Mi-Sun",
+            "order": 6
+        },
+        {
+            "gender": 2,
+            "id": 1968476,
+            "name": "Viveik Kalra",
+            "profile_path": "/xKfQ5J0WOl0SBJFsXnmB0xGajzo.jpg",
+            "character": "Luke",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 1003,
+            "name": "Jean Reno",
+            "profile_path": "/e8eBRcTp1zldvKxAlVCsjY6aZ8h.jpg",
+            "character": "Lars Jorgensen",
+            "order": 8
+        },
+        {
+            "gender": 2,
+            "id": 39659,
+            "name": "Burn Gorman",
+            "profile_path": "/op0cX5tAiWtqnyAI2zJpFn6gkEM.jpg",
+            "character": "Cormac",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 220448,
+            "name": "Paul Anderson",
+            "profile_path": "/nds5rTBZvJ4rEsP4N6OaoEgQDkW.jpg",
+            "character": "Donal",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 1649152,
+            "name": "Jacob Batalon",
+            "profile_path": "/53YhaL4xw4Sb1ssoHkeSSBaO29c.jpg",
+            "character": "N8",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 965670,
+            "name": "David Proud",
+            "profile_path": "/djuBxfJGm0KZTRcyGXL26lyKgTp.jpg",
+            "character": "Harry",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 3103651,
+            "name": "Oli Green",
+            "profile_path": "/yBi24vR9IztX4XFrlAXPmgHSBAz.jpg",
+            "character": "Mollsen",
+            "order": 13
+        },
+        {
+            "gender": 2,
+            "id": 1374534,
+            "name": "Ross Anderson",
+            "profile_path": "/918MEQzDshopEdGBvotRNmp39c2.jpg",
+            "character": "Ross",
+            "order": 14
+        },
+        {
+            "gender": 0,
+            "id": 1858979,
+            "name": "Stefano Skalkotos",
+            "profile_path": "/i6Za0Zw5IUIt7bGou6Z2k6AC3fv.jpg",
+            "character": "Stefano",
+            "order": 15
+        },
+        {
+            "gender": 1,
+            "id": 4479540,
+            "name": "Martina Avogadri",
+            "profile_path": "/fmoXZ2vd6FBsZBYNrKbJbRZND5O.jpg",
+            "character": "Leviathan Leader",
+            "order": 16
+        },
+        {
+            "gender": 2,
+            "id": 88630,
+            "name": "Jess Liaudin",
+            "profile_path": "/dEEFUlZw6WydI7JQbfR0DiTOQqh.jpg",
+            "character": "Arthur Tigue",
+            "order": 17
+        },
+        {
+            "gender": 1,
+            "id": 1229186,
+            "name": "Caroline Loncq",
+            "profile_path": "/4wAnrUiJLTZEsJsJJmk8qYJxbmo.jpg",
+            "character": "Sandra",
+            "order": 18
+        },
+        {
+            "gender": 0,
+            "id": 1318818,
+            "name": "Alessandro Quattro",
+            "profile_path": "/Xbs8zxFaCAWNwDwp2WhXPpLteF.jpg",
+            "character": "Sterling's Auctioneer",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 1321,
+                "name": "gold"
+            },
+            {
+                "id": 3882,
+                "name": "gang of thieves"
+            },
+            {
+                "id": 10051,
+                "name": "heist"
+            },
+            {
+                "id": 10184,
+                "name": "airplane hijacking"
+            },
+            {
+                "id": 159333,
+                "name": "caper comedy"
+            },
+            {
+                "id": 181129,
+                "name": "terrorist group"
+            },
+            {
+                "id": 218122,
+                "name": "cyber terrorism"
+            },
+            {
+                "id": 235820,
+                "name": "international manhunt"
+            },
+            {
+                "id": 249953,
+                "name": "plane"
+            },
+            {
+                "id": 250043,
+                "name": "art heist"
+            },
+            {
+                "id": 321964,
+                "name": "gold heist"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 28,
+            "name": "Action"
+        },
+        {
+            "id": 10752,
+            "name": "War"
+        }
+    ],
+    "tmdb_id": 965571,
+    "imdb_id": "tt19878422",
+    "original_language": "ru",
+    "original_title": "\u0412\u0440\u0435\u043c\u044f \u043f\u0430\u0442\u0440\u0438\u043e\u0442\u043e\u0432",
+    "overview": "The brothers Sultan and Bekzat Ibrayev are serving faithfully in the Armed Forces of Kazakhstan, and at the same time they are in family disagreement. Sultan is a valiant intelligence officer and Bekzat is a talented fighter pilot. While an international terrorist organization prepares a carefully planned attack on the country's strategically important facilities, the brothers have to face not only a mortal threat, but also face a family confrontation related to their dead father. Circumstances force them to unite in order to save human lives, and the brothers eventually understand that their homeland and family are the most valuable thing they have.",
+    "popularity": 563.697,
+    "poster_path": "/yrafAmPQgr5RWEe67BrbHu7jiB.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "KZ",
+            "name": "Kazakhstan"
+        }
+    ],
+    "release_date": "2022-04-28",
+    "revenue": 0,
+    "runtime": 101,
+    "spoken_languages": [
+        {
+            "english_name": "Russian",
+            "iso_639_1": "ru",
+            "name": "P\u0443\u0441\u0441\u043a\u0438\u0439"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "Patriots Time",
+    "vote_average": 8.3,
+    "vote_count": 31,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 1827945,
+            "name": "Daniyar Alshinov",
+            "profile_path": "/fyNywpg1WA4zSUcy5XGeDwxzIXX.jpg",
+            "character": "Sultan Ibraev",
+            "order": 0
+        },
+        {
+            "gender": 0,
+            "id": 2147962,
+            "name": "Sanurzhan Suleymenov",
+            "profile_path": null,
+            "character": "",
+            "order": 1
+        },
+        {
+            "gender": 0,
+            "id": 1780445,
+            "name": "Dasten Shakirov",
+            "profile_path": null,
+            "character": "",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 578844,
+            "name": "Sayat Isembayev",
+            "profile_path": "/r5U1k0tdL769Qla29stYix0xZko.jpg",
+            "character": "",
+            "order": 3
+        },
+        {
+            "gender": 0,
+            "id": 3264092,
+            "name": "Bekzat Eleusizov",
+            "profile_path": null,
+            "character": "",
+            "order": 4
+        },
+        {
+            "gender": 1,
+            "id": 3516660,
+            "name": "Zarina Khadzhimetova",
+            "profile_path": "/xjcgDIpFbzJEFtQPpbjJIurzIOV.jpg",
+            "character": "",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 2065747,
+            "name": "Askar Ilyasov",
+            "profile_path": "/40ZeK6lOZ0S2XQYAC8d6SBHQC6k.jpg",
+            "character": "",
+            "order": 6
+        }
+    ],
+    "keywords": {
+        "keywords": []
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 10751,
+            "name": "Family"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        }
+    ],
+    "tmdb_id": 1139829,
+    "imdb_id": "tt28066777",
+    "original_language": "en",
+    "original_title": "Orion and the Dark",
+    "overview": "A boy with an active imagination faces his fears on an unforgettable journey through the night with his new friend: a giant, smiling creature named Dark.",
+    "popularity": 378.035,
+    "poster_path": "/uHiXFLMlnl5jBjtfOliapN16yBD.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2024-02-02",
+    "revenue": 0,
+    "runtime": 93,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Hello Darkness, my new friend.",
+    "title": "Orion and the Dark",
+    "vote_average": 6.924,
+    "vote_count": 92,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 1277188,
+            "name": "Jacob Tremblay",
+            "profile_path": "/ngQAfH1GuKhnMSOQNm9zo7aWiqO.jpg",
+            "character": "Orion (voice)",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 1294982,
+            "name": "Paul Walter Hauser",
+            "profile_path": "/hV2oiKF2xlDMXtuq3Si1TA4b6DA.jpg",
+            "character": "Dark (voice)",
+            "order": 1
+        },
+        {
+            "gender": 1,
+            "id": 9780,
+            "name": "Angela Bassett",
+            "profile_path": "/tKnuviliyeKNGlo26IU5gIrJAtd.jpg",
+            "character": "Sweet Dreams (voice)",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 3492,
+            "name": "Colin Hanks",
+            "profile_path": "/xe44rLf5CbEY0ovNaOD0RIy5VCJ.jpg",
+            "character": "Adult Orion (voice)",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 1971031,
+            "name": "Natasia Demetriou",
+            "profile_path": "/65aNRTM520iUaBUoSyfyXHXY8xH.jpg",
+            "character": "Sleep (voice)",
+            "order": 4
+        },
+        {
+            "gender": 1,
+            "id": 1856875,
+            "name": "Golda Rosheuvel",
+            "profile_path": "/nlSIvTWzMEzZGljKYgpZxGcsJtv.jpg",
+            "character": "Unexplained Noises (voice)",
+            "order": 5
+        },
+        {
+            "gender": 2,
+            "id": 105648,
+            "name": "Nat Faxon",
+            "profile_path": "/i7bsT8ewAjCr7zByWOyCnbrT0x9.jpg",
+            "character": "Insomnia (voice)",
+            "order": 6
+        },
+        {
+            "gender": 1,
+            "id": 1625231,
+            "name": "Aparna Nancherla",
+            "profile_path": "/vwpktqJnQCAGEfq2EKUjB8ZdnhI.jpg",
+            "character": "Quiet (voice)",
+            "order": 7
+        },
+        {
+            "gender": 2,
+            "id": 198150,
+            "name": "Ike Barinholtz",
+            "profile_path": "/pxK1HXsQFfh3zT1KA3t6lEKMiZK.jpg",
+            "character": "Light (voice)",
+            "order": 8
+        },
+        {
+            "gender": 1,
+            "id": 17832,
+            "name": "Carla Gugino",
+            "profile_path": "/dAqGOsHSzlP6RhaUURX2NrwITaq.jpg",
+            "character": "Orion's Mom (voice)",
+            "order": 9
+        },
+        {
+            "gender": 2,
+            "id": 1642827,
+            "name": "Matt Dellapina",
+            "profile_path": "/4tm6jFo0tbDfMztCd5LnlrS3ac7.jpg",
+            "character": "Orion's Dad (voice)",
+            "order": 10
+        },
+        {
+            "gender": 0,
+            "id": 3815856,
+            "name": "Nick Kishiyama",
+            "profile_path": null,
+            "character": "Tycho (voice)",
+            "order": 11
+        },
+        {
+            "gender": 0,
+            "id": 3893118,
+            "name": "Mia Akemi Brown",
+            "profile_path": null,
+            "character": "Hypatia (voice)",
+            "order": 12
+        },
+        {
+            "gender": 1,
+            "id": 221843,
+            "name": "Shannon Chan-Kent",
+            "profile_path": "/pt8rq0yQXPHxXBDi1xbeVBjfqiD.jpg",
+            "character": "Adult Hypatia (voice)",
+            "order": 13
+        },
+        {
+            "gender": 2,
+            "id": 1850355,
+            "name": "Jack Fisher",
+            "profile_path": "/nEVLXTTWB1DpOzBWdLlzwKFvgSr.jpg",
+            "character": "Richie Panici (voice)",
+            "order": 14
+        },
+        {
+            "gender": 2,
+            "id": 6818,
+            "name": "Werner Herzog",
+            "profile_path": "/vokqteY91Pda0L13pTqTzTCo7vV.jpg",
+            "character": "Narrator (voice)",
+            "order": 15
+        },
+        {
+            "gender": 1,
+            "id": 2405433,
+            "name": "Sky Alexis",
+            "profile_path": "/z1tEwgQFrLWF9lCDAugpN0yNSS4.jpg",
+            "character": "Lisa (voice)",
+            "order": 16
+        },
+        {
+            "gender": 1,
+            "id": 1213598,
+            "name": "Hira Ambrosino",
+            "profile_path": "/1vXyC6wAEAeH1srIfe0dvPQQyt7.jpg",
+            "character": "Woman at the Drive-In (voice)",
+            "order": 17
+        },
+        {
+            "gender": 2,
+            "id": 1069661,
+            "name": "Yoshi Ando",
+            "profile_path": "/qsceQaCLKqvMJk2wGdLGNyXlczt.jpg",
+            "character": "Man at the Drive-In (voice)",
+            "order": 18
+        },
+        {
+            "gender": 0,
+            "id": 4513571,
+            "name": "Larisa Asuaje",
+            "profile_path": null,
+            "character": "Mrs. Spinoza (voice)",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 977,
+                "name": "cat"
+            },
+            {
+                "id": 15101,
+                "name": "based on children's book"
+            },
+            {
+                "id": 183427,
+                "name": "horror for children"
+            }
+        ]
+    }
+},
+{
+    "budget": 35000000,
+    "genres": [
+        {
+            "id": 878,
+            "name": "Science Fiction"
+        },
+        {
+            "id": 10749,
+            "name": "Romance"
+        },
+        {
+            "id": 35,
+            "name": "Comedy"
+        }
+    ],
+    "tmdb_id": 792307,
+    "imdb_id": "tt14230458",
+    "original_language": "en",
+    "original_title": "Poor Things",
+    "overview": "Brought back to life by an unorthodox scientist, a young woman runs off with a debauched lawyer on a whirlwind adventure across the continents. Free from the prejudices of her times, she grows steadfast in her purpose to stand for equality and liberation.",
+    "popularity": 441.719,
+    "poster_path": "/kCGlIMHnOm8JPXq3rXM6c5wMxcT.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "IE",
+            "name": "Ireland"
+        },
+        {
+            "iso_3166_1": "GB",
+            "name": "United Kingdom"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-12-07",
+    "revenue": 68798642,
+    "runtime": 141,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "French",
+            "iso_639_1": "fr",
+            "name": "Fran\u00e7ais"
+        },
+        {
+            "english_name": "Portuguese",
+            "iso_639_1": "pt",
+            "name": "Portugu\u00eas"
+        }
+    ],
+    "status": "Released",
+    "tagline": "She's like nothing you've ever seen.",
+    "title": "Poor Things",
+    "vote_average": 8.157,
+    "vote_count": 988,
+    "casts": [
+        {
+            "gender": 1,
+            "id": 54693,
+            "name": "Emma Stone",
+            "profile_path": "/3UaYw9KF4fEXRMRWhf25aGJpAW2.jpg",
+            "character": "Bella Baxter",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 103,
+            "name": "Mark Ruffalo",
+            "profile_path": "/5GilHMOt5PAQh6rlUKZzGmaKEI7.jpg",
+            "character": "Duncan Wedderburn",
+            "order": 1
+        },
+        {
+            "gender": 2,
+            "id": 5293,
+            "name": "Willem Dafoe",
+            "profile_path": "/ui8e4sgZAwMPi3hzEO53jyBJF9B.jpg",
+            "character": "Godwin Baxter",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 1382987,
+            "name": "Ramy Youssef",
+            "profile_path": "/7ASVvzrU2cdhuIotzeKnqQVNNUM.jpg",
+            "character": "Max McCandles",
+            "order": 3
+        },
+        {
+            "gender": 2,
+            "id": 1400880,
+            "name": "Jerrod Carmichael",
+            "profile_path": "/v1i5xodXbPw3blXYg4v0HmH3PGK.jpg",
+            "character": "Harry Astley",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 984629,
+            "name": "Christopher Abbott",
+            "profile_path": "/4uGSSUdRl45HkAyW3CLM77GcK2V.jpg",
+            "character": "Alfie Blessington",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 1392137,
+            "name": "Margaret Qualley",
+            "profile_path": "/jStNyMj3acpLuH48awLVLqqlyaV.jpg",
+            "character": "Felicity",
+            "order": 6
+        },
+        {
+            "gender": 1,
+            "id": 2331794,
+            "name": "Suzy Bemba",
+            "profile_path": "/1JT97VgV2l6jNpFeYXZ8SQu3BOr.jpg",
+            "character": "Toinette",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 72309,
+            "name": "Kathryn Hunter",
+            "profile_path": "/ni98cNE8kOAj6kcpEVmIfi8iAsw.jpg",
+            "character": "Swiney",
+            "order": 8
+        },
+        {
+            "gender": 1,
+            "id": 3734,
+            "name": "Hanna Schygulla",
+            "profile_path": "/fxH98JLkAYB2vSpo7bT5OHhoQ42.jpg",
+            "character": "Martha Von Kurtzroc",
+            "order": 9
+        },
+        {
+            "gender": 1,
+            "id": 1248292,
+            "name": "Vicki Pepperdine",
+            "profile_path": "/kosVS1yJJ60fG1rZRfGpgJmJt4n.jpg",
+            "character": "Mrs. Prim",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 2538307,
+            "name": "Jack Barton",
+            "profile_path": "/pIxIPFO8pq9IgzbZfnbURor1yKZ.jpg",
+            "character": "Fop 1",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 590267,
+            "name": "Charlie Hiscock",
+            "profile_path": "/bywWYXVpl9Y3v84uxMV6mxjsvcM.jpg",
+            "character": "Fop 2",
+            "order": 12
+        },
+        {
+            "gender": 2,
+            "id": 3622317,
+            "name": "Attila Dobai",
+            "profile_path": null,
+            "character": "Hapless Student",
+            "order": 13
+        },
+        {
+            "gender": 1,
+            "id": 4230743,
+            "name": "Emma Hindle",
+            "profile_path": "/csJsSCYA0p3wD0K5N7u3DnF8JIM.jpg",
+            "character": "Woman with Kid in London Street",
+            "order": 14
+        },
+        {
+            "gender": 2,
+            "id": 3804308,
+            "name": "Anders Grundberg",
+            "profile_path": null,
+            "character": "Kid in London Street",
+            "order": 15
+        },
+        {
+            "gender": 2,
+            "id": 4230744,
+            "name": "Attila Kecskem\u00e9thy",
+            "profile_path": null,
+            "character": "Burly Guy",
+            "order": 16
+        },
+        {
+            "gender": 2,
+            "id": 4230745,
+            "name": "Jucimar Barbosa",
+            "profile_path": null,
+            "character": "Lisbon Doorman",
+            "order": 17
+        },
+        {
+            "gender": 1,
+            "id": 1159965,
+            "name": "Carminho",
+            "profile_path": "/km0Cv1BbVd3hxS9N1XFeNNaDLPc.jpg",
+            "character": "Fado Singing Woman",
+            "order": 18
+        },
+        {
+            "gender": 1,
+            "id": 4230747,
+            "name": "Angela Paula Stander",
+            "profile_path": null,
+            "character": "Arguing Woman",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 818,
+                "name": "based on novel or book"
+            },
+            {
+                "id": 1523,
+                "name": "obsession"
+            },
+            {
+                "id": 7340,
+                "name": "crooked lawyer"
+            },
+            {
+                "id": 9673,
+                "name": "love"
+            },
+            {
+                "id": 10303,
+                "name": "domestic abuse"
+            },
+            {
+                "id": 11322,
+                "name": "female protagonist"
+            },
+            {
+                "id": 13005,
+                "name": "doctor"
+            },
+            {
+                "id": 13059,
+                "name": "prostitution"
+            },
+            {
+                "id": 14624,
+                "name": "cruelty"
+            },
+            {
+                "id": 14760,
+                "name": "scientist"
+            },
+            {
+                "id": 157676,
+                "name": "disfigured face"
+            },
+            {
+                "id": 189464,
+                "name": "exploring sexuality"
+            },
+            {
+                "id": 191731,
+                "name": "female empowerment"
+            },
+            {
+                "id": 197758,
+                "name": "female sexuality"
+            },
+            {
+                "id": 203836,
+                "name": "brain transplant"
+            },
+            {
+                "id": 214655,
+                "name": "absurdism"
+            },
+            {
+                "id": 228558,
+                "name": "spousal abuse"
+            },
+            {
+                "id": 234119,
+                "name": "women's liberation"
+            },
+            {
+                "id": 252596,
+                "name": "victorian era"
+            },
+            {
+                "id": 258464,
+                "name": "frankenstein"
+            },
+            {
+                "id": 283085,
+                "name": "body horror"
+            },
+            {
+                "id": 315518,
+                "name": "shot on film"
+            }
+        ]
+    }
+},
+{
+    "budget": 50000000,
+    "genres": [
+        {
+            "id": 16,
+            "name": "Animation"
+        },
+        {
+            "id": 12,
+            "name": "Adventure"
+        },
+        {
+            "id": 14,
+            "name": "Fantasy"
+        }
+    ],
+    "tmdb_id": 508883,
+    "imdb_id": "tt6587046",
+    "original_language": "ja",
+    "original_title": "\u541b\u305f\u3061\u306f\u3069\u3046\u751f\u304d\u308b\u304b",
+    "overview": "While the Second World War rages, the teenage Mahito, haunted by his mother's tragic death, is relocated from Tokyo to the serene rural home of his new stepmother Natsuko, a woman who bears a striking resemblance to the boy's mother. As he tries to adjust, this strange new world grows even stranger following the appearance of a persistent gray heron, who perplexes and bedevils Mahito, dubbing him the \"long-awaited one.\"",
+    "popularity": 477.871,
+    "poster_path": "/y9xS5NQTBnFjDoXhSFQeGxlmkoM.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "JP",
+            "name": "Japan"
+        }
+    ],
+    "release_date": "2023-07-14",
+    "revenue": 165208613,
+    "runtime": 124,
+    "spoken_languages": [
+        {
+            "english_name": "Japanese",
+            "iso_639_1": "ja",
+            "name": "\u65e5\u672c\u8a9e"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Where death comes to an end, life finds a new beginning.",
+    "title": "The Boy and the Heron",
+    "vote_average": 7.461,
+    "vote_count": 920,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 2234011,
+            "name": "Soma Santoki",
+            "profile_path": "/g4I9g3IRcbxqTqDuOtgG9QicvfB.jpg",
+            "character": "Mahito Maki (voice)",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 585211,
+            "name": "Masaki Suda",
+            "profile_path": "/dYSUOemkmEfwDY2zIMNf2CaXr4q.jpg",
+            "character": "Gray Heron (voice)",
+            "order": 1
+        },
+        {
+            "gender": 1,
+            "id": 58593,
+            "name": "Ko Shibasaki",
+            "profile_path": "/gcuJz8dbYjtgsL8CAWMjVd5R7B9.jpg",
+            "character": "Kiriko (voice)",
+            "order": 2
+        },
+        {
+            "gender": 1,
+            "id": 2705230,
+            "name": "Aimyon",
+            "profile_path": "/e1KXoFxJREP3a09C5jpyShjrExT.jpg",
+            "character": "Lady Himi (voice)",
+            "order": 3
+        },
+        {
+            "gender": 1,
+            "id": 72764,
+            "name": "Yoshino Kimura",
+            "profile_path": "/fI0ALURUC3CO96fEb33f4iijlF.jpg",
+            "character": "Natsuko (voice)",
+            "order": 4
+        },
+        {
+            "gender": 2,
+            "id": 12670,
+            "name": "Takuya Kimura",
+            "profile_path": "/sswCg8kvFsgSaVJwcIKKe4K7jOe.jpg",
+            "character": "Shoichi Maki (voice)",
+            "order": 5
+        },
+        {
+            "gender": 1,
+            "id": 548758,
+            "name": "Keiko Takeshita",
+            "profile_path": "/eEZHjyUzzoI1DKxeAennDJKUgWh.jpg",
+            "character": "Izumi (voice)",
+            "order": 6
+        },
+        {
+            "gender": 1,
+            "id": 119244,
+            "name": "Jun Fubuki",
+            "profile_path": "/uHF9NdKrG1bN7GwZB7PI21Rkdv8.jpg",
+            "character": "Utako (voice)",
+            "order": 7
+        },
+        {
+            "gender": 1,
+            "id": 930413,
+            "name": "Sawako Agawa",
+            "profile_path": "/erf8kZxEitlpiOOcyFWqBNjbOjX.jpg",
+            "character": "Eriko (voice)",
+            "order": 8
+        },
+        {
+            "gender": 1,
+            "id": 1815948,
+            "name": "Karen Takizawa",
+            "profile_path": "/5jqe7vYpvVxN2EF1PAx2C2ZyThr.jpg",
+            "character": "Warawara (voice)",
+            "order": 9
+        },
+        {
+            "gender": 1,
+            "id": 545825,
+            "name": "Shinobu Otake",
+            "profile_path": "/az5hCPy37MFM9EH2f3gn1cTBhA6.jpg",
+            "character": "Aiko (voice)",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 2541,
+            "name": "Jun Kunimura",
+            "profile_path": "/zC0GbuXQGPur7i8AkdPUWedmDKz.jpg",
+            "character": "The Parakeet King (voice)",
+            "order": 11
+        },
+        {
+            "gender": 2,
+            "id": 20332,
+            "name": "Kaoru Kobayashi",
+            "profile_path": "/pJSt6nRgcIsli0hw2aOCzc2l622.jpg",
+            "character": "Noble Pelican (voice)",
+            "order": 12
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 818,
+                "name": "based on novel or book"
+            },
+            {
+                "id": 697,
+                "name": "loss of loved one"
+            },
+            {
+                "id": 1956,
+                "name": "world war ii"
+            },
+            {
+                "id": 2470,
+                "name": "education"
+            },
+            {
+                "id": 6733,
+                "name": "bullying"
+            },
+            {
+                "id": 10683,
+                "name": "coming of age"
+            },
+            {
+                "id": 10706,
+                "name": "spirituality"
+            },
+            {
+                "id": 12987,
+                "name": "poverty"
+            },
+            {
+                "id": 18068,
+                "name": "teenage boy"
+            },
+            {
+                "id": 161570,
+                "name": "troubled childhood"
+            },
+            {
+                "id": 197786,
+                "name": "moving to a city"
+            },
+            {
+                "id": 210024,
+                "name": "anime"
+            },
+            {
+                "id": 234662,
+                "name": "hand drawn animation"
+            },
+            {
+                "id": 283250,
+                "name": "magic world"
+            },
+            {
+                "id": 299369,
+                "name": "courage"
+            }
+        ]
+    }
+},
+{
+    "budget": 0,
+    "genres": [
+        {
+            "id": 14,
+            "name": "Fantasy"
+        },
+        {
+            "id": 27,
+            "name": "Horror"
+        }
+    ],
+    "tmdb_id": 949567,
+    "imdb_id": "tt11959452",
+    "original_language": "en",
+    "original_title": "The Exorcism of Hannah Stevenson",
+    "overview": "Hannah and Matt, a young couple on their first holiday together, quickly discover that they may not see eye-to-eye. Feeling as though she let her boyfriend down, Hannah enlists the help of a mysterious gypsy woman, in the hope that the couple's troubles can be overcome. However, when Matt wakes to find his girlfriend has disappeared, the gypsy woman's sinister intentions become all too clear.",
+    "popularity": 473.933,
+    "poster_path": "/so05qY0sDY0348bRg0tK9tSnnEq.jpg",
+    "production_countries": [],
+    "release_date": "2022-03-14",
+    "revenue": 0,
+    "runtime": 75,
+    "spoken_languages": [
+        {
+            "english_name": "English",
+            "iso_639_1": "en",
+            "name": "English"
+        },
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Espa\u00f1ol"
+        }
+    ],
+    "status": "Released",
+    "tagline": "",
+    "title": "The Exorcism of Hannah Stevenson",
+    "vote_average": 6.6,
+    "vote_count": 13,
+    "casts": [
+        {
+            "gender": 0,
+            "id": 3471662,
+            "name": "Tom Hogan",
+            "profile_path": null,
+            "character": "",
+            "order": 0
+        },
+        {
+            "gender": 0,
+            "id": 3471663,
+            "name": "Hannah Rose",
+            "profile_path": null,
+            "character": "",
+            "order": 1
+        },
+        {
+            "gender": 0,
+            "id": 3471665,
+            "name": "Edward Gist",
+            "profile_path": null,
+            "character": "",
+            "order": 2
+        }
+    ],
+    "keywords": {
+        "keywords": []
+    }
+},
+{
+    "budget": 65500000,
+    "genres": [
+        {
+            "id": 18,
+            "name": "Drama"
+        },
+        {
+            "id": 36,
+            "name": "History"
+        }
+    ],
+    "tmdb_id": 906126,
+    "imdb_id": "tt16277242",
+    "original_language": "es",
+    "original_title": "La sociedad de la nieve",
+    "overview": "On October 13, 1972, Uruguayan Air Force Flight 571, chartered to take a rugby team to Chile, crashes into a glacier in the heart of the Andes.",
+    "popularity": 462.673,
+    "poster_path": "/2e853FDVSIso600RqAMunPxiZjq.jpg",
+    "production_countries": [
+        {
+            "iso_3166_1": "ES",
+            "name": "Spain"
+        },
+        {
+            "iso_3166_1": "US",
+            "name": "United States of America"
+        }
+    ],
+    "release_date": "2023-12-13",
+    "revenue": 0,
+    "runtime": 144,
+    "spoken_languages": [
+        {
+            "english_name": "Spanish",
+            "iso_639_1": "es",
+            "name": "Espa\u00f1ol"
+        }
+    ],
+    "status": "Released",
+    "tagline": "Based on a remarkable true story.",
+    "title": "Society of the Snow",
+    "vote_average": 8.1,
+    "vote_count": 1721,
+    "casts": [
+        {
+            "gender": 2,
+            "id": 3301646,
+            "name": "Enzo Vogrincic",
+            "profile_path": "/l8qPdDiAfdE96pUDPlHb0gf7DZW.jpg",
+            "character": "Numa Turcatti",
+            "order": 0
+        },
+        {
+            "gender": 2,
+            "id": 1769529,
+            "name": "Agust\u00edn Pardella",
+            "profile_path": "/kjfxwOILQDoL7eThSNvxedoZK3m.jpg",
+            "character": "Fernando 'Nando' Parrado",
+            "order": 1
+        },
+        {
+            "gender": 0,
+            "id": 2446476,
+            "name": "Mat\u00edas Recalt",
+            "profile_path": "/4VjjKw3Jzue37Y8Tm0hSWEWW1e2.jpg",
+            "character": "Roberto Canessa",
+            "order": 2
+        },
+        {
+            "gender": 2,
+            "id": 3329027,
+            "name": "Tomas Wolf",
+            "profile_path": null,
+            "character": "Gustavo Zerbino",
+            "order": 3
+        },
+        {
+            "gender": 0,
+            "id": 1187534,
+            "name": "Diego Vegezzi",
+            "profile_path": "/rC9w1ZNpIxkHpnYQi7QbYXjPbqm.jpg",
+            "character": "Marcelo P\u00e9rez del Castillo",
+            "order": 4
+        },
+        {
+            "gender": 0,
+            "id": 3251453,
+            "name": "Esteban Kukuriczka",
+            "profile_path": "/jMZq2uRXBBaXGG060MdyjueUfJI.jpg",
+            "character": "Adolfo 'Fito' Strauch",
+            "order": 5
+        },
+        {
+            "gender": 0,
+            "id": 2348658,
+            "name": "Francisco Romero",
+            "profile_path": "/nbGMWqykn203hKxZCdFxHKoNbkU.jpg",
+            "character": "Daniel Fern\u00e1ndez Strauch",
+            "order": 6
+        },
+        {
+            "gender": 0,
+            "id": 1350179,
+            "name": "Rafael Federman",
+            "profile_path": "/ig2mTx7y547vhHfkuL73EwmkJBS.jpg",
+            "character": "Eduardo Strauch Urioste",
+            "order": 7
+        },
+        {
+            "gender": 0,
+            "id": 2709426,
+            "name": "Felipe Gonz\u00e1lez Ota\u00f1o",
+            "profile_path": "/hnPjpV486QF01B8f7ibw9IM8EEU.jpg",
+            "character": "Carlitos P\u00e1ez",
+            "order": 8
+        },
+        {
+            "gender": 0,
+            "id": 3330824,
+            "name": "Agust\u00edn Della Corte",
+            "profile_path": "/givwCtNlqBxPpOwB7LxDWjtbZqX.jpg",
+            "character": "Antonio 'Tintin' Vizint\u00edn",
+            "order": 9
+        },
+        {
+            "gender": 0,
+            "id": 1655736,
+            "name": "Valentino Alonso",
+            "profile_path": "/jilSNzIBENSjAphzpiN5tLV09xj.jpg",
+            "character": "Alfredo 'Pancho' Delgado",
+            "order": 10
+        },
+        {
+            "gender": 2,
+            "id": 3084635,
+            "name": "Simon Hempe",
+            "profile_path": "/cLaIshUXeuCTRYh7uKNIP0Gyzof.jpg",
+            "character": "Jos\u00e9 Luis 'Coche' Inciarte",
+            "order": 11
+        },
+        {
+            "gender": 0,
+            "id": 1803969,
+            "name": "Fernando Contigiani Garc\u00eda",
+            "profile_path": "/lKsSvufmQrx4z5a480NNjgfv23F.jpg",
+            "character": "Arturo Nogueira",
+            "order": 12
+        },
+        {
+            "gender": 0,
+            "id": 3330825,
+            "name": "Benjam\u00edn Segura",
+            "profile_path": null,
+            "character": "Rafael 'Vasco' Echevarren",
+            "order": 13
+        },
+        {
+            "gender": 0,
+            "id": 3330826,
+            "name": "Luciano Chatton",
+            "profile_path": null,
+            "character": "Pedro Algorta",
+            "order": 14
+        },
+        {
+            "gender": 0,
+            "id": 3330827,
+            "name": "Agust\u00edn Berruti",
+            "profile_path": null,
+            "character": "Bobby Fran\u00e7ois",
+            "order": 15
+        },
+        {
+            "gender": 0,
+            "id": 3330828,
+            "name": "Juan Caruso",
+            "profile_path": "/2H0lwBU2fLNnUzq2tJIBXeGRYcM.jpg",
+            "character": "\u00c1lvaro Mangino",
+            "order": 16
+        },
+        {
+            "gender": 0,
+            "id": 3088129,
+            "name": "Rocco Posca",
+            "profile_path": "/kUXwcJ4ejINLQYYscBcOoIgC3bM.jpg",
+            "character": "Ramon 'Moncho' Sabella",
+            "order": 17
+        },
+        {
+            "gender": 0,
+            "id": 3330829,
+            "name": "Andy Pruss",
+            "profile_path": "/xjBzdU10QOoQ7cCCIdp22gPVeOo.jpg",
+            "character": "Roy Harley",
+            "order": 18
+        },
+        {
+            "gender": 2,
+            "id": 1086358,
+            "name": "Esteban Bigliardi",
+            "profile_path": "/s9GB7XRNO8Z75JhomNW4KZoZdMJ.jpg",
+            "character": "Javier Methol",
+            "order": 19
+        }
+    ],
+    "keywords": {
+        "keywords": [
+            {
+                "id": 10084,
+                "name": "rescue"
+            },
+            {
+                "id": 6054,
+                "name": "friendship"
+            },
+            {
+                "id": 818,
+                "name": "based on novel or book"
+            },
+            {
+                "id": 6157,
+                "name": "prayer"
+            },
+            {
+                "id": 1228,
+                "name": "1970s"
+            },
+            {
+                "id": 9672,
+                "name": "based on true story"
+            },
+            {
+                "id": 7912,
+                "name": "rugby"
+            },
+            {
+                "id": 7992,
+                "name": "uruguay"
+            },
+            {
+                "id": 15354,
+                "name": "struggle for survival"
+            },
+            {
+                "id": 159212,
+                "name": "mountain climbing"
+            },
+            {
+                "id": 191724,
+                "name": "andes mountains"
+            },
+            {
+                "id": 192772,
+                "name": "historical drama"
+            },
+            {
+                "id": 249530,
+                "name": "plane crash"
+            }
+        ]
+    }
+}]
