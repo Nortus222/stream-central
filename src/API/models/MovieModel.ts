@@ -15,6 +15,7 @@ class MovieModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
+                _id: Mongoose.Schema.Types.ObjectId,
                 budget: Number,
                 genres: [
                     {
@@ -81,7 +82,7 @@ class MovieModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IMovieModel>("Movies", this.schema);  
+            this.model = Mongoose.model<IMovieModel>("movies", this.schema); 
         }
         catch (e) {
             console.error(e);        
@@ -100,8 +101,8 @@ class MovieModel {
         }
     }
 
-    public async retrieveMovieById(response: any, tmdb_id: number) {
-        var query = this.model.find({ tmdb_id: tmdb_id });
+    public async retrieveMovieById(response: any, id: string) {
+        var query = this.model.find({ _id: id });
 
         try {
             const item = await query.exec();

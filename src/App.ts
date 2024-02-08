@@ -11,6 +11,11 @@ class App {
   // ref to Express instance
   public expressApp: express.Application;
   public Movies: MovieModel;
+  public Users: UsertModel;
+  public Favorites: FavoritesModel;
+  public MovieGenres: MovieGenreModel;
+  // public Recommendations: ReccomendationSetModel;
+
 
   //Run configuration methods on the Express instance.
   constructor(mongoDBConnection:string)
@@ -19,6 +24,10 @@ class App {
     this.middleware();
     this.routes();
     this.Movies = new MovieModel(mongoDBConnection);
+    this.Users = new UsertModel(mongoDBConnection);
+    this.Favorites = new FavoritesModel(mongoDBConnection);
+    this.MovieGenres = new MovieGenreModel(mongoDBConnection);
+    // this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
   }
 
   // Configure Express middleware.
@@ -37,7 +46,7 @@ class App {
     let router = express.Router();
 
     router.get('/movies/:movieId', async (req, res) => {
-      var id = Number(req.params.movieId);
+      var id = req.params.movieId;
       console.log('Query single movie with id: ' + id);
       await this.Movies.retrieveMovieById(res, id);
     });
@@ -51,6 +60,49 @@ class App {
       console.log('Query the number of movie elements in db');
       await this.Movies.retrieveMovieCount(res);
     });
+
+    router.get('/users/:userId', async (req, res) => {
+      var id = req.params.userId;
+      console.log('Query single user with id: ' + id);
+      await this.Users.retrieveUser(res, id);
+    });
+
+    router.get('/users', async (req, res) => {
+      console.log('Query All users');
+      await this.Users.retrieveAllUsers(res);
+    });
+
+    router.post('/users', async (req, res) => {
+      var userId = req.body.userId;
+      var password = req.body.password;
+      var loginStatus = req.body.loginStatus;
+      var email = req.body.email;
+      console.log('Create user with id: ' + userId);
+      await this.Users.createUser(res, userId, password, loginStatus, email);
+    });
+
+    router.get('/favorites/:userId', async (req, res) => {
+      var id = req.params.userId;
+      console.log('Query single favorites list for user with id: ' + id);
+      await this.Favorites.retrieveFavorites(res, id);
+    });
+
+    router.post('/favorites', async (req, res) => {
+      console.log(req.headers);
+      var userId = req.headers.userid.toString();
+      var movieId = req.headers.movieid.toString();
+      console.log('Add movie with id: ' + movieId + ' to favorites list of user with id: ' + userId);
+      await this.Favorites.addMovieToFavorites(res, userId, movieId);
+    });
+
+    router.delete('/favorites', async (req, res) => {
+      var userId = req.headers.userid.toString();
+      var movieId = req.headers.movieid.toString();
+      console.log('Remove movie with id: ' + movieId + ' from favorites list of user with id: ' + userId);
+      await this.Favorites.removeMovieFromFavorites(res, userId, movieId);
+    });
+
+
 
     this.expressApp.use('/', router);
   }

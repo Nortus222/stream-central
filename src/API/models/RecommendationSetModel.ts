@@ -21,7 +21,8 @@ class ReccomendationSetModel {
                     movieId: String,
                     movieTitle: String,    
                 }],
-            }
+            },
+            { collection: "recommendationSets" }
         );
     }
 
@@ -31,7 +32,7 @@ class ReccomendationSetModel {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IRecommendationSetModel>("Task", this.schema);    
+            this.model = Mongoose.model<IRecommendationSetModel>("recommendationSets", this.schema);    
         }
         catch (e) {
             console.error(e);        

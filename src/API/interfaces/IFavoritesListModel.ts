@@ -1,7 +1,8 @@
 import Mongoose = require("mongoose");
 
 interface IFavoritesModel extends Mongoose.Document {
-    userId: string;
-    movies: [Number];
+    _id: Mongoose.Types.ObjectId;
+    userId: Mongoose.Types.ObjectId;
+    movies: Mongoose.Types.ObjectId[];
 }
 export {IFavoritesModel};
