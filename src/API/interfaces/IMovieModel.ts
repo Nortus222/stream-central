@@ -47,5 +47,14 @@ interface IMovieModel extends Mongoose.Document {
             name: string;
         }[];
     };
+    // ratings: [{
+    //     sourceId: string;
+    //     sourceName: string;
+    //     rating: number;
+    // }];
+    // streamingServiceProviders: [{
+    //     name: string;
+    //     status: string;   // "Paid no ads", "Paid ads", "Free ads", "Free no ads"
+    // }];
 }
 export {IMovieModel};
