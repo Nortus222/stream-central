@@ -73,12 +73,11 @@ class App {
     });
 
     router.post('/users', async (req, res) => {
-      var userId = req.body.userId;
       var password = req.body.password;
       var loginStatus = req.body.loginStatus;
       var email = req.body.email;
-      console.log('Create user with id: ' + userId);
-      await this.Users.createUser(res, userId, password, loginStatus, email);
+      console.log('Create user');
+      await this.Users.createUser(res, password, loginStatus, email);
     });
 
     router.get('/favorites/:userId', async (req, res) => {

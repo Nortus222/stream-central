@@ -37,40 +37,43 @@ class UsertModel {
         }
     }
 
-    public async createUser(response: any, id: string, password: string, loginStatus: boolean, email: string) {
-        var query = this.model.create({ id: id, password: password, loginStatus: loginStatus, email: email });
+    public async createUser(response: any, password: string, loginStatus: boolean, email: string) {
+        var query = this.model.create({ password: password, loginStatus: loginStatus, email: email });
         try {
             const user = await query;
-            response.json(user);
+            response.status(200).json(user);
         } catch (e) {
             console.error(e);
+            response.status(500).send();
         }
     }
 
     public async retrieveUser(response: any, id: string) {
-        var query = this.model.find({ id: id });
+        var query = this.model.find({ _id: id });
 
         try {
             const user = await query.exec();
-            response.json(user);
+            response.status(200).json(user);
         }
         catch (e) {
             console.error(e);
+            response.status(500).send();
         }
     }
 
     public async updateUser(response: any, id: string, password: string, loginStatus: boolean, email: string) {
         var query = this.model.findOneAndUpdate(
-            { id: id },
+            { _id: id },
             { password: password, loginStatus: loginStatus, email: email },
             { new: true },
         );
 
         try {
             const updatedUser = await query.exec();
-            response.json(updatedUser);
+            response.status(200).json(updatedUser);
         } catch (e) {
             console.error(e);
+            response.status(500).send();
         }
     }
 
@@ -79,9 +82,10 @@ class UsertModel {
 
         try {
             const deletedUser = await query.exec();
-            response.json(deletedUser);
+            response.status(200).json(deletedUser);
         } catch (e) {
             console.error(e);
+            response.status(500).send();
         }
     }
 
@@ -90,10 +94,41 @@ class UsertModel {
 
         try {
             const items = await query.exec();
-            response.json(items);
+            response.status(200).json(items);
         }
         catch (e) {
             console.error(e);
+            response.status(500).send();
+        }
+    }
+
+    public async getPassword(response: any, userId: string) {
+        var query = this.model.findOne({_id: userId});
+        try {
+            const user = await query.exec();
+            if (user) {
+                response.status(200).json({password: user.password});
+            } else {
+                response.status(404).send();
+            }
+        } catch (error) {
+            response.status(500).send();
+        }
+    }
+
+    public async changePassword(response: any, userId: string, newPassword: string) {
+        var query = this.model.findOne({_id: userId});
+        try {
+            let user = await query.exec();
+            if (user) {
+                user.password = newPassword;
+                await user.save();
+                response.status(204).send();
+            } else {
+                response.status(404).send();
+            }
+        } catch (error) {
+            response.status(500).send();
         }
     }
 }
