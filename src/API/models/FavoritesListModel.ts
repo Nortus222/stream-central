@@ -96,48 +96,6 @@ class FavoritesModel {
             response.status(500).send();
         }
     }
-
-    public async addMovieToFavorites(response: any, userId: string, movieId: string) {
-        var query = this.model.findOneAndUpdate(
-            { userId: userId },
-            { $push: { movies: movieId } },
-            { new: true },
-        );
-
-        try {
-            const updatedFavorites = await query.exec();
-            response.json(updatedFavorites);
-        } catch (e) {
-            console.error(e);
-        }
-    }
-
-    public async removeMovieFromFavorites(response: any, userId: string, movieId: string) {
-        var query = this.model.findOneAndUpdate(
-            { userId: userId },
-            { $pull: { movies: movieId } },
-            { new: true },
-        );
-
-        try {
-            const updatedFavorites = await query.exec();
-            response.json(updatedFavorites);
-        } catch (e) {
-            console.error(e);
-        }
-    }
-
-    public async retrieveFavorites(response: any, userId: string) {
-        var query = this.model.findOne({ userId: userId }).populate('movies');
-
-        try {
-            const items = await query.exec();
-            response.json(items);
-        }
-        catch (e) {
-            console.error(e);
-        }
-    }
 }
 export {FavoritesModel};
 
