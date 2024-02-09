@@ -15,7 +15,7 @@ class UsertModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Types.ObjectId,
+                id: String,
                 password: String,
                 loginStatus: Boolean,
                 email: String,

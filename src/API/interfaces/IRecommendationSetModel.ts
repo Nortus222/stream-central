@@ -1,11 +1,8 @@
 import Mongoose = require("mongoose");
 
 interface IRecommendationSetModel extends Mongoose.Document {
-    recommendationSetId: string;
+    id: string;
     userId: string;
-    recommendedMovies: [{
-        movieId: string;
-        movieTitle: string;    
-    }];
+    recommendedMovies: string[];
 }
 export {IRecommendationSetModel};

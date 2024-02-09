@@ -1,4 +1,4 @@
-import * as Mongoose from "mongoose";
+import mongoose, * as Mongoose from "mongoose";
 import { IFavoritesModel } from "../interfaces/IFavoritesListModel";
 
 class FavoritesModel {
@@ -15,9 +15,9 @@ class FavoritesModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Schema.Types.ObjectId,
-                userId: Mongoose.Types.ObjectId,
-                movies: [{type: Mongoose.Schema.Types.ObjectId, ref: 'movies'},],
+                id: { type: String, required: true },
+                userId: { type: String, required: true },
+                movies: [String],
             }, {collection: 'favorites'}
         );
     }
@@ -47,9 +47,9 @@ class FavoritesModel {
             
             // If the user doesn't have a favorites list, create one
             if (!record) {
-                const newRecord = new this.model({ userId: userId, movies: [movieId] });
+                const newRecord = new this.model({userId: userId, movies: [movieId] });
                 await newRecord.save();
-                response.status(201).json(newRecord);
+                response.json(newRecord);
                 return;
             }
             
@@ -73,7 +73,7 @@ class FavoritesModel {
 
         try {
             const updatedFavorites = await query.exec();
-            response.status(200).json(updatedFavorites);
+            response.json(updatedFavorites);
         } catch (e) {
             console.error(e);
             response.status(500).send();
@@ -86,7 +86,7 @@ class FavoritesModel {
         try {
             const items = await query.exec();
             if (items) {
-                response.status(200).json(items);
+                response.json(items);
             } else {
                 response.status(404).send();
             }

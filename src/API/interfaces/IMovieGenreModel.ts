@@ -1,9 +1,9 @@
 import Mongoose = require("mongoose");
 
 interface IMovieGenreModel extends Mongoose.Document {
-    _id: Mongoose.Types.ObjectId;
+    id: string;
     tmdb_id: Number;
     genreName: string;
-    movies: [Number]; //TODO: use _id
+    movies: [Number];
 }
 export {IMovieGenreModel};
