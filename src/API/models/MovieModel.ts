@@ -1,5 +1,6 @@
 import * as Mongoose from "mongoose";
 import { IMovieModel } from "../interfaces/IMovieModel";
+import { v4 as uuidv4 } from 'uuid'
 
 class MovieModel {
     public schema: any;
@@ -16,6 +17,10 @@ class MovieModel {
         this.schema = new Mongoose.Schema(
             {
                 _id: Mongoose.Schema.Types.ObjectId,
+                movieId: {
+                    type: String,
+                    unique: true,
+                },
                 budget: Number,
                 genres: [
                     {
@@ -104,6 +109,19 @@ class MovieModel {
         }
     }
 
+    public async createMovie(response: any, movieData: any) {
+        const userId = uuidv4();
+        movieData.userId = userId;
+        var query = this.model.create(movieData);
+        try {
+            const movie = await query.exec();
+            response.status(200).json(movie);
+        } catch (e) {
+            console.error(e);
+            response.status(500).send();
+        }
+    }
+
     public async retrieveAllMovies(response: any) {
         var query = this.model.find({});
 
@@ -121,8 +139,8 @@ class MovieModel {
         }
     }
 
-    public async retrieveMovieById(response: any, id: string) {
-        var query = this.model.findOne({ _id: id });
+    public async retrieveMovieById(response: any, movieId: string) {
+        var query = this.model.findOne({ movieId: movieId });
 
         try {
             const item = await query.exec();
@@ -240,7 +258,7 @@ class MovieModel {
 
     // Delete functions
     public async deleteMovie(response: any, movieId: string) {
-        var query = this.model.findOne({_id: movieId});
+        var query = this.model.findOne({ movieId: movieId});
         try {
             let movie = await query.exec();
             if (movie) {
