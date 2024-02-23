@@ -3,24 +3,19 @@ div.scroll-container {
     overflow: auto;
     white-space: nowrap;
     padding: 10px;
-  }
+}
   
   div.scroll-container img {
     padding: 10px;
   }
 
-.card-deck-scrollable{
-    @extend .card-deck;
-    flex-direction: row;
-  
-    & > .card{
-      @extend .mx-3;
-      flex: 0 0 40% !important;/*Change to any size you want*/
-      max-width: 40%;
-    }
-  }
-
-.bg-info {
-    background-color: #002fff;
+.selector-for-some-widget {
+    box-sizing: content-box;
+} 
+body {
+    background-color: #170B3B;
 }
 
+nav {
+    background-color: #74112F;
+}
