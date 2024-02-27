@@ -1,8 +1,7 @@
 import Mongoose = require("mongoose");
 
 interface IMovieModel extends Mongoose.Document {
-    _id: Mongoose.Types.ObjectId;
-    movieId: string;
+    id: string;
     budget: number;
     genres: {
         id: number;

@@ -16,11 +16,7 @@ class MovieModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Schema.Types.ObjectId,
-                movieId: {
-                    type: String,
-                    unique: true,
-                },
+                id: { type: String, required: true },
                 budget: Number,
                 genres: [
                     {
@@ -258,16 +254,13 @@ class MovieModel {
 
     // Delete functions
     public async deleteMovie(response: any, movieId: string) {
-        var query = this.model.findOne({ movieId: movieId});
+        var query = this.model.deleteOne({_id: movieId});
+
         try {
             let movie = await query.exec();
-            if (movie) {
-                movie.deleteOne({_id: movieId});
-                response.status(200);
-            } else {
-                response.status(404).send();
-            }
-        } catch (error) {
+            response.status(200);
+        } catch (e) {
+            console.log(e);
             response.status(500).send();
         }
     }

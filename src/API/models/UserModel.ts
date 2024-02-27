@@ -16,11 +16,7 @@ class UserModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Types.ObjectId,
-                userId: {
-                    type: String,
-                    unique: true,
-                },
+                id: String,
                 password: String,
                 loginStatus: Boolean,
                 email: String,

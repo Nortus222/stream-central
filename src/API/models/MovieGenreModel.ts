@@ -16,11 +16,7 @@ class MovieGenreModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Schema.Types.ObjectId,
-                genreId: {
-                    type: String,
-                    unique: true
-                },
+                id: { type: String, required: true },
                 tmdb_id: Number,
                 genreName: String,
                 movies: [String] ,
