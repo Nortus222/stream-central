@@ -1,7 +1,8 @@
 import * as Mongoose from "mongoose";
 import { IUserModel } from "../interfaces/IUserModel";
+import { v4 as uuidv4 } from "uuid"
 
-class UsertModel {
+class UserModel {
     public schema: any;
     public model: any;
     public dbConnectionString: string;
@@ -38,7 +39,8 @@ class UsertModel {
     }
 
     public async createUser(response: any, password: string, loginStatus: boolean, email: string) {
-        var query = this.model.create({ password: password, loginStatus: loginStatus, email: email });
+        const userId = uuidv4();
+        var query = this.model.create({ userId: userId, password: password, loginStatus: loginStatus, email: email });
         try {
             const user = await query;
             response.status(200).json(user);
@@ -48,8 +50,8 @@ class UsertModel {
         }
     }
 
-    public async retrieveUser(response: any, id: string) {
-        var query = this.model.find({ _id: id });
+    public async retrieveUser(response: any, userId: string) {
+        var query = this.model.find({ userId: userId });
 
         try {
             const user = await query.exec();
@@ -61,9 +63,9 @@ class UsertModel {
         }
     }
 
-    public async updateUser(response: any, id: string, password: string, loginStatus: boolean, email: string) {
+    public async updateUser(response: any, userId: string, password: string, loginStatus: boolean, email: string) {
         var query = this.model.findOneAndUpdate(
-            { _id: id },
+            { userId: userId },
             { password: password, loginStatus: loginStatus, email: email },
             { new: true },
         );
@@ -77,8 +79,8 @@ class UsertModel {
         }
     }
 
-    public async deleteUser(response: any, id: string) {
-        var query = this.model.findOneAndDelete({ id: id });
+    public async deleteUser(response: any, userId: string) {
+        var query = this.model.findOneAndDelete({ userId: userId });
 
         try {
             const deletedUser = await query.exec();
@@ -103,7 +105,7 @@ class UsertModel {
     }
 
     public async getPassword(response: any, userId: string) {
-        var query = this.model.findOne({_id: userId});
+        var query = this.model.findOne({ userId: userId});
         try {
             const user = await query.exec();
             if (user) {
@@ -117,7 +119,7 @@ class UsertModel {
     }
 
     public async changePassword(response: any, userId: string, newPassword: string) {
-        var query = this.model.findOne({_id: userId});
+        var query = this.model.findOne({ userId: userId});
         try {
             let user = await query.exec();
             if (user) {
@@ -132,4 +134,4 @@ class UsertModel {
         }
     }
 }
-export {UsertModel};
+export {UserModel};

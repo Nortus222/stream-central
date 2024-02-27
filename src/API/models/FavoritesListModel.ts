@@ -1,5 +1,6 @@
 import mongoose, * as Mongoose from "mongoose";
 import { IFavoritesModel } from "../interfaces/IFavoritesListModel";
+import { v4 as uuidv4 } from 'uuid'
 
 class FavoritesModel {
     public schema: any;
@@ -32,6 +33,18 @@ class FavoritesModel {
         }
         catch (e) {
             console.error(e);     
+        }
+    }
+
+    public async createFavoritesList(response: any, userId: string) {
+        const favoritesListId = uuidv4();
+        var query = this.model.create({ userId: userId, favoritesListId : favoritesListId});
+        try {
+            const favoritesList = await query.exec();
+            response.status(200).json(favoritesList);
+        } catch (e) {
+            console.log(e);
+            response.status(500).send();
         }
     }
 
