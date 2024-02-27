@@ -16,7 +16,7 @@ class MovieModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                id: { type: String, required: true },
+                tmdb_id: { type: Number, required: true },
                 budget: Number,
                 genres: [
                     {
@@ -24,7 +24,6 @@ class MovieModel {
                         name: String
                     }
                 ],
-                tmdb_id: Number,
                 imdb_id: String,
                 original_language: String,
                 original_title: String,
@@ -72,21 +71,41 @@ class MovieModel {
                         }
                     ]
                 },
-                // ratings: [{
-                //     sourceId: {
-                //         type: String,
-                //     },
-                //     sourceName: {
-                //         type: String,
-                //     },
-                //     rating: {
-                //         type: Number,
-                //     },
-                // }],
-                // streamingServiceProviders: [{
-                //     name: String,
-                //     status: String,
-                // }],
+                ratings: [
+                    {
+                        source:  String,
+                        value:  Number,
+                        score:  Number,
+                        votes:  Number,
+                        popular:  Number
+                    }
+                ],
+                streams: [
+                    {
+                        id:  Number,
+                        name:  String,
+                    }
+                ],
+                watch_providers: [
+                    {
+                        id:  Number,
+                        name:  String,
+                    }
+                ],
+                trailer: String,
+                poster: String,
+                backdrop: String,
+                streamingInfo: [
+                    {
+                        service: String,
+                        streamingType: String,
+                        quality: String,
+                        link: String,
+                        videoLink: String,
+                        leaving: Number,
+                        availableSince: Number,
+                    }
+                ]
             },
             { collection: "movies" }
         );
@@ -105,50 +124,34 @@ class MovieModel {
         }
     }
 
-    public async createMovie(response: any, movieData: any) {
-        const userId = uuidv4();
-        movieData.userId = userId;
-        var query = this.model.create(movieData);
-        try {
-            const movie = await query.exec();
-            response.status(200).json(movie);
-        } catch (e) {
-            console.error(e);
-            response.status(500).send();
-        }
-    }
-
     public async retrieveAllMovies(response: any) {
         var query = this.model.find({});
 
         try {
             const items = await query.exec();
-            if (items) {
-                response.status(200).json(items);
-            } else{
-                response.status(404).send();
-            }
+            
+            response.json(items);
+           
         }
         catch (e) {
             console.error(e);
-            response.status(500).send();
+        
         }
     }
 
     public async retrieveMovieById(response: any, movieId: string) {
-        var query = this.model.findOne({ movieId: movieId });
+        const movieIdNumber = Number(movieId);
+        var query = this.model.findOne({ tmdb_id: movieIdNumber });
 
         try {
             const item = await query.exec();
-            if (item) {
-                response.status(200).json(item);
-            } else {
-                response.status(404).send();
-            }
+      
+            response.json(item);
+           
         }
         catch (e) {
             console.error(e);
-            response.status(500).send();
+  
         }
     }
 
@@ -163,109 +166,6 @@ class MovieModel {
             console.error(e);
         }
     }
-
-    // public async getMovieRatings(response: any, movieId: string) {
-    //     var query = this.model.findOne({movieId: movieId});
-    //     try {
-    //         const movie = await query.exec();
-    //         if (movie) {
-    //             response.status(200).json(movie.movieRatings);
-    //         } else {
-    //             response.status(404).send();
-    //         }
-    //     } catch (error) {
-    //         response.status(500).send();
-    //     }
-    // }
-
-    // public async getMovieImage(response: any, movieId: string) {
-    //     var query = this.model.findOne({movieId: movieId});
-    //     try {
-    //         const movie = await query.exec();
-    //         if (movie) {
-    //             response.status(200).json({imageFileName: movie.imageFileName});
-    //         } else {
-    //             response.status(404).send();
-    //         }
-    //     } catch (error) {
-    //         response.status(500).send();
-    //     }
-    // }
-
-    // public async getStreamingService(response: any, movieId: string) {
-    //     var query = this.model.findOne({movieId: movieId});
-    //     try {
-    //         const movie = await query.exec();
-    //         if (movie) {
-    //             response.status(200).json(movie.streamingServiceProviders);
-    //         } else {
-    //             response.status(404).send();
-    //         }
-    //     } catch (error) {
-    //         response.status(500).send();
-    //     }
-    // }
-
-    // public async getMovieTitle(response: any, movieId: string) {
-    //     var query = this.model.findOne({movieId: movieId});
-    //     try {
-    //         const movie = await query.exec();
-    //         if (movie) {
-    //             response.status(200).json({movieTitle: movie.movieTitle});
-    //         } else {
-    //             response.status(404).send();
-    //         }
-    //     } catch (error) {
-    //         response.status(500).send();
-    //     }
-    // }
-
-    // Update functions
-    // public async updateRating(response: any, movieId: string, ratingProvider: string, newRating: number) {
-    //     var query = this.model.findOne({movieId: movieId});
-    //     try {
-    //         let movie = await query.exec();
-    //         if (movie) {
-    //             movie.streamingServiceProviders.push({source: ratingProvider, rating: newRating});
-    //             await movie.save();
-    //             response.status(200);
-    //         } else {
-    //             response.status(404).send();
-    //         }
-    //     } catch (error) {
-    //         response.status(500).send();
-    //     }
-    // }
-
-    // public async updateGrossing(response: any, movieId: string, newAmount: number) {
-    //     var query = this.model.findOne({_id: movieId});
-    //     try {
-    //         let movies = await query.exec();
-    //         if (movies) {
-    //             movies.psuh({gross: newAmount});
-    //             response.status(200);
-    //         } else {
-    //             response.status(404).send();
-    //         }
-    //     } catch (error) {
-    //         response.status(500).send();
-    //     }
-    // }
-
-    // Delete functions
-    public async deleteMovie(response: any, movieId: string) {
-        var query = this.model.deleteOne({_id: movieId});
-
-        try {
-            let movie = await query.exec();
-            response.status(200);
-        } catch (e) {
-            console.log(e);
-            response.status(500).send();
-        }
-    }
-    
-
 }
 export {MovieModel};
 

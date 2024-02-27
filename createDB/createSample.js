@@ -27,11 +27,13 @@ usersCollection.deleteMany({})
 
 usersCollection.insertMany([
   {
+    "id": "1",
     "username": "user1",
     "password": "password1",
     "email": "test1@gmail.com",
   },
   {
+    "id": "2",
     "username": "user2",
     "password": "password2",
     "email": "test2@gmail.com",
@@ -43,12 +45,10 @@ db.createCollection('favorites')
 favoritesCollection = db.getCollection("favorites")
 favoritesCollection.deleteMany({})
 
-const movies = moviesCollection.find({},).limit(3).toArray();
-const user = usersCollection.findOne({},);
-
 favoritesCollection.insertMany([
   {
-    "userId": user._id,
-    "movies": [movies[0]._id, movies[2]._id],
+    "id": "111",
+    "userId": "2",
+    "movies": [969492, 1096197],
   },
 ]);

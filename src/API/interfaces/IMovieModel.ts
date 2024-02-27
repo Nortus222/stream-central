@@ -1,60 +1,96 @@
 import Mongoose = require("mongoose");
 
 interface IMovieModel extends Mongoose.Document {
-    id: string;
-    budget: number;
-    genres: {
-        id: number;
-        name: string;
-    }[];
-    tmdb_id: number;
-    imdb_id: string;
-    original_language: string;
-    original_title: string;
-    overview: string;
-    popularity: number;
-    poster_path: string;
-    production_countries: {
-        iso_3166_1: string;
-        name: string;
-    }[];
-    release_date: string;
-    revenue: number;
-    runtime: number;
-    spoken_languages: {
-        english_name: string;
-        iso_639_1: string;
-        name: string;
-    }[];
-    status: string;
-    tagline: string;
-    title: string;
-    vote_average: number;
-    vote_count: number;
+    tmdb_id: { type: Number, required: true },
+    budget: Number,
+    genres: [
+        {
+            id: Number,
+            name: String
+        }
+    ],
+    imdb_id: String,
+    original_language: String,
+    original_title: String,
+    overview: String,
+    popularity: Number,
+    poster_path: String,
+    production_countries: [
+        {
+            iso_3166_1: String,
+            name: String
+        }
+    ],
+    release_date: String,
+    revenue: Number,
+    runtime: Number,
+    spoken_languages: [
+        {
+            english_name: String,
+            iso_639_1: String,
+            name: String
+        }
+    ],
+    status: String,
+    tagline: String,
+    title: String,
+    vote_average: Number,
+    vote_count: Number,
     casts: {
-        cast: {
-            gender: number;
-            id: number;
-            name: string;
-            profile_path: string;
-            character: string;
-            order: number;
-        }[];
-    };
+        cast: [
+            {
+                gender: Number,
+                id: Number,
+                name: String,
+                profile_path: String,
+                character: String,
+                order: Number
+            }
+        ],
+    },
     keywords: {
-        keywords: {
-            id: number;
-            name: string;
-        }[];
-    };
-    // ratings: [{
-    //     sourceId: string;
-    //     sourceName: string;
-    //     rating: number;
-    // }];
-    // streamingServiceProviders: [{
-    //     name: string;
-    //     status: string;   // "Paid no ads", "Paid ads", "Free ads", "Free no ads"
-    // }];
+        keywords: [
+            {
+                id: Number,
+                name: String
+            }
+        ]
+    },
+    ratings: [
+        {
+            source:  String,
+            value:  Number,
+            score:  Number,
+            votes:  Number,
+            popular:  Number
+        }
+    ],
+    streams: [
+        {
+            id:  Number,
+            name:  String,
+        }
+    ],
+    watch_providers: [
+        {
+            id:  Number,
+            name:  String,
+        }
+    ],
+    trailer: String,
+    poster: String,
+    backdrop: String,
+    streamingInfo: [
+        {
+            service: String,
+            streamingType: String,
+            quality: String,
+            link: String,
+            videoLink: String,
+            leaving: Number,
+            availableSince: Number,
+        }
+    ]
+    
 }
 export {IMovieModel};

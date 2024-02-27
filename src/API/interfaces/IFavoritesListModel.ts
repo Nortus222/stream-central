@@ -3,6 +3,6 @@ import Mongoose = require("mongoose");
 interface IFavoritesModel extends Mongoose.Document {
     id: string
     userId: string;
-    movies: string[];
+    movies: Number[];
 }
 export {IFavoritesModel};
