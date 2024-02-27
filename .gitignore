@@ -130,3 +130,8 @@ db/
 .yarn/install-state.gz
 .pnp.*
 package-lock.json
+__azurite*.json
+__blobstorage__
+__queuestorage__
+
+*/__pycache__/
