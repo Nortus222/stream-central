@@ -8,7 +8,7 @@ const routes: Routes = [
   { path: '',  component: HomepageComponent },
   { path: 'movies',  component: MovieComponent },
   { path: 'movies/:movieId',  component: MovieComponent },
-  { path: 'favorites',  component: MovieComponent },
+  { path: 'favorites',  component: FavoriteslistComponent },
   { path: 'favorites/:favoritesId',  component: MovieComponent },
 ];
 
