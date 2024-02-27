@@ -1,5 +1,6 @@
 import * as Mongoose from "mongoose";
 import { IMovieGenreModel } from "../interfaces/IMovieGenreModel";
+import { v4 as uuidv4 } from 'uuid'
 
 class MovieGenreModel {
     public schema: any;
@@ -18,7 +19,7 @@ class MovieGenreModel {
                 id: { type: String, required: true },
                 tmdb_id: Number,
                 genreName: String,
-                movies: [Number] ,
+                movies: [String] ,
             }, {collection: 'movieGenres'}
         );
     }
@@ -36,8 +37,21 @@ class MovieGenreModel {
         }
     }
 
+    public async createGenre(response: any, genreInfo: any) {
+        const genreId = uuidv4();
+        genreInfo.genreId = genreId;
+        var query = this.model.create(genreInfo);
+        try {
+            const genre = query.exec();
+            response.status(200).json(genre);
+        } catch (e) {
+            response.status(500).send();
+        }
+    }
+
+
     public async getAllMoviesInGenre(response: any, genreId: string) {
-        var query = this.model.findOne({_id: genreId});
+        var query = this.model.findOne({ genreId: genreId});
         try {
             const genre = await query.exec();
             if (genre) {
@@ -51,7 +65,7 @@ class MovieGenreModel {
     }
 
     public async getNumberMoviesInGenre(response: any, genreId: string) {
-        var query = this.model.findOne({_id: genreId});
+        var query = this.model.findOne({ genreId: genreId});
         try {
             const genre = await query.exec();
             if (genre) {
@@ -65,7 +79,7 @@ class MovieGenreModel {
     }
 
     public async addMovieToGenre(response: any, genreId: string, movieId: string) {
-        var query = this.model.findOne({_id: genreId});
+        var query = this.model.findOne({ genreId : genreId});
         try {
             let genre = await query.exec();
             if (genre) {
@@ -81,11 +95,11 @@ class MovieGenreModel {
     }
 
     public async removeMovieFromGenre(response: any, genreId: string, movieId: string) {
-        var query = this.model.findOne({_id: genreId});
+        var query = this.model.findOne({ genreId: genreId});
         try {
             let genre = await query.exec();
             if (genre) {
-                genre.movies = genre.movies.filter((movie_id: Number) => movie_id !== Number(movieId));
+                genre.movies = genre.movies.filter((movie_id: String) => movie_id !== movieId);
                 await genre.save();
                 response.status(200).json(genre);
             } else {
@@ -97,11 +111,11 @@ class MovieGenreModel {
     }
 
     public async deleteGenre(response: any, genreId: string) {
-        var query = this.model.findOne({_id: genreId});
+        var query = this.model.findOne({genreId: genreId});
         try {
             const genre = await query.exec();
             if (genre) {
-                await this.model.deleteOne({_id: genreId});
+                await this.model.deleteOne({genreId: genreId});
                 response.status(200).send();
             } else {
                 response.status(404).send();
