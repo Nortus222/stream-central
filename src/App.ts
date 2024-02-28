@@ -4,14 +4,14 @@ import { FavoritesModel } from './API/models/FavoritesListModel';
 import { MovieGenreModel } from './API/models/MovieGenreModel';
 import { MovieModel } from './API/models/MovieModel';
 import { ReccomendationSetModel } from './API/models/RecommendationSetModel';
-import { UsertModel } from './API/models/UserModel';
+import { UserModel } from './API/models/UserModel';
 
 class App {
 
   // ref to Express instance
   public expressApp: express.Application;
   public Movies: MovieModel;
-  public Users: UsertModel;
+  public Users: UserModel;
   public Favorites: FavoritesModel;
   public MovieGenres: MovieGenreModel;
   // public Recommendations: ReccomendationSetModel;
@@ -24,7 +24,7 @@ class App {
     this.middleware();
     this.routes();
     this.Movies = new MovieModel(mongoDBConnection);
-    this.Users = new UsertModel(mongoDBConnection);
+    this.Users = new UserModel(mongoDBConnection);
     this.Favorites = new FavoritesModel(mongoDBConnection);
     this.MovieGenres = new MovieGenreModel(mongoDBConnection);
     // this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
