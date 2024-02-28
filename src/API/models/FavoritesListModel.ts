@@ -16,16 +16,9 @@ class FavoritesModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Schema.Types.ObjectId,
-                favoritesListId: {
-                    type: String,
-                    unique: true,
-                },
-                userId: { 
-                    type: String,
-                    unique: true,
-                },
-                movies: [{type: String, ref: 'movies'},],
+                id: { type: String, required: true },
+                userId: { type: String, required: true },
+                movies: [Number],
             }, {collection: 'favorites'}
         );
     }
@@ -45,19 +38,19 @@ class FavoritesModel {
 
     public async createFavoritesList(response: any, userId: string) {
         const favoritesListId = uuidv4();
-        var query = this.model.create({ userId: userId, favoritesListId : favoritesListId});
+        var query = this.model.create({ userId: userId, id: favoritesListId});
         try {
             const favoritesList = await query.exec();
-            response.status(200).json(favoritesList);
+            response.json(favoritesList);
         } catch (e) {
-            console.log(e);
-            response.status(500).send();
+            console.error(e);
         }
     }
 
-    public async addMovieToFavorites(response: any, userId: string, movieId: string) {
+    public async addMovieToFavorites(response: any, userId: string, tmdbId: string) {
         try {
-            const record = await this.model.findOne({ userId: userId });
+            const record = await this.model.findOne({userId: userId });
+            const movieId = Number(tmdbId);
             
             // Check if the movie is already in the favorites list
             if (record && record.movies.includes(movieId)) {
@@ -67,9 +60,9 @@ class FavoritesModel {
             
             // If the user doesn't have a favorites list, create one
             if (!record) {
-                const newRecord = new this.model({ userId: userId, movies: [movieId] });
+                const newRecord = new this.model({id: uuidv4(), userId: userId, movies: [movieId] });
                 await newRecord.save();
-                response.status(201).json(newRecord);
+                response.json(newRecord);
                 return;
             }
             
@@ -80,11 +73,11 @@ class FavoritesModel {
             response.json(record);
         } catch (e) {
             console.error(e);
-            response.status(500).send();
         }
     }
 
-    public async removeMovieFromFavorites(response: any, userId: string, movieId: string) {
+    public async removeMovieFromFavorites(response: any, userId: string, tmdbId: string) {
+        const movieId = Number(tmdbId);
         var query = this.model.findOneAndUpdate(
             { userId: userId },
             { $pull: { movies: movieId } },
@@ -93,27 +86,25 @@ class FavoritesModel {
 
         try {
             const updatedFavorites = await query.exec();
-            response.status(200).json(updatedFavorites);
+            response.json(updatedFavorites);
         } catch (e) {
             console.error(e);
-            response.status(500).send();
         }
     }
 
     public async retrieveFavorites(response: any, userId: string) {
-        var query = this.model.findOne({ userId: userId }).populate('movies');
+        var query = this.model.findOne({ userId: userId });
 
         try {
             const items = await query.exec();
             if (items) {
-                response.status(200).json(items);
+                response.json(items);
             } else {
                 response.status(404).send();
             }
         }
         catch (e) {
             console.error(e);
-            response.status(500).send();
         }
     }
 }

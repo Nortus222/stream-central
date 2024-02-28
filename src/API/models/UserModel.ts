@@ -16,13 +16,8 @@ class UserModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                _id: Mongoose.Types.ObjectId,
-                userId: {
-                    type: String,
-                    unique: true,
-                },
+                id: String,
                 password: String,
-                loginStatus: Boolean,
                 email: String,
             },
             { collection: "users" }
@@ -42,28 +37,15 @@ class UserModel {
         }
     }
 
-    public async createUser(response: any, password: string, loginStatus: boolean, email: string) {
+    public async createUser(response: any, userData: any) {
         const userId = uuidv4();
-        var query = this.model.create({ userId: userId, password: password, loginStatus: loginStatus, email: email });
+        userData.id = userId;
+        var query = this.model.create(userData);
         try {
             const user = await query;
-            response.status(200).json(user);
+            response.json(user);
         } catch (e) {
             console.error(e);
-            response.status(500).send();
-        }
-    }
-
-    public async retrieveUser(response: any, userId: string) {
-        var query = this.model.find({ userId: userId });
-
-        try {
-            const user = await query.exec();
-            response.status(200).json(user);
-        }
-        catch (e) {
-            console.error(e);
-            response.status(500).send();
         }
     }
 
@@ -76,10 +58,9 @@ class UserModel {
 
         try {
             const updatedUser = await query.exec();
-            response.status(200).json(updatedUser);
+            response.json(updatedUser);
         } catch (e) {
             console.error(e);
-            response.status(500).send();
         }
     }
 
@@ -88,54 +69,11 @@ class UserModel {
 
         try {
             const deletedUser = await query.exec();
-            response.status(200).json(deletedUser);
+            response.json(deletedUser);
         } catch (e) {
             console.error(e);
-            response.status(500).send();
         }
     }
 
-    public async retrieveAllUsers(response: any) {
-        var query = this.model.find({});
-
-        try {
-            const items = await query.exec();
-            response.status(200).json(items);
-        }
-        catch (e) {
-            console.error(e);
-            response.status(500).send();
-        }
-    }
-
-    public async getPassword(response: any, userId: string) {
-        var query = this.model.findOne({ userId: userId});
-        try {
-            const user = await query.exec();
-            if (user) {
-                response.status(200).json({password: user.password});
-            } else {
-                response.status(404).send();
-            }
-        } catch (error) {
-            response.status(500).send();
-        }
-    }
-
-    public async changePassword(response: any, userId: string, newPassword: string) {
-        var query = this.model.findOne({ userId: userId});
-        try {
-            let user = await query.exec();
-            if (user) {
-                user.password = newPassword;
-                await user.save();
-                response.status(204).send();
-            } else {
-                response.status(404).send();
-            }
-        } catch (error) {
-            response.status(500).send();
-        }
-    }
 }
 export {UserModel};

@@ -61,23 +61,10 @@ class App {
       await this.Movies.retrieveMovieCount(res);
     });
 
-    router.get('/users/:userId', async (req, res) => {
-      var id = req.params.userId;
-      console.log('Query single user with id: ' + id);
-      await this.Users.retrieveUser(res, id);
-    });
-
-    router.get('/users', async (req, res) => {
-      console.log('Query All users');
-      await this.Users.retrieveAllUsers(res);
-    });
-
     router.post('/users', async (req, res) => {
-      var password = req.body.password;
-      var loginStatus = req.body.loginStatus;
-      var email = req.body.email;
+      var jsonObj = req.body;
       console.log('Create user');
-      await this.Users.createUser(res, password, loginStatus, email);
+      await this.Users.createUser(res, jsonObj);
     });
 
     router.get('/favorites/:userId', async (req, res) => {
@@ -86,17 +73,16 @@ class App {
       await this.Favorites.retrieveFavorites(res, id);
     });
 
-    router.post('/favorites', async (req, res) => {
-      console.log(req.headers);
-      var userId = req.headers.userid.toString();
-      var movieId = req.headers.movieid.toString();
+    router.post('/favorites/:userId/:movieId', async (req, res) => {
+      var userId = req.params.userId.toString();
+      var movieId = req.params.movieId.toString();
       console.log('Add movie with id: ' + movieId + ' to favorites list of user with id: ' + userId);
       await this.Favorites.addMovieToFavorites(res, userId, movieId);
     });
 
-    router.delete('/favorites', async (req, res) => {
-      var userId = req.headers.userid.toString();
-      var movieId = req.headers.movieid.toString();
+    router.delete('/favorites/:userId/:movieId', async (req, res) => {
+      var userId = req.params.userId.toString();
+      var movieId = req.params.movieId.toString();
       console.log('Remove movie with id: ' + movieId + ' from favorites list of user with id: ' + userId);
       await this.Favorites.removeMovieFromFavorites(res, userId, movieId);
     });

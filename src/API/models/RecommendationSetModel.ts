@@ -15,12 +15,9 @@ class ReccomendationSetModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                recommendationSetId: String,
+                id: String,
                 userId: String,
-                recommendedMovies: [{
-                    movieId: String,
-                    movieTitle: String,    
-                }],
+                recommendedMovies: [String],
             },
             { collection: "recommendationSets" }
         );
