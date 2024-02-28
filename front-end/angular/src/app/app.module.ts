@@ -5,6 +5,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { FavoriteslistComponent } from './favoriteslist/favoriteslist.component';
 import { MovieComponent } from './movie/movie.component';
 
@@ -16,7 +17,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     AppComponent,
     HomepageComponent,
     FavoriteslistComponent,
-    MovieComponent
+    MovieComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

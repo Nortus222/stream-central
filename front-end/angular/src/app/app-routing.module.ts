@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomepageComponent } from './homepage/homepage.component';
 import { FavoriteslistComponent } from './favoriteslist/favoriteslist.component';
 import { MovieComponent } from './movie/movie.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 const routes: Routes = [
   { path: '',  component: HomepageComponent },
