@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { MovieproxyService } from '../movieproxy.service';
 import { Observable } from 'rxjs';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-favoriteslist',
@@ -9,12 +12,22 @@ import { Observable } from 'rxjs';
 })
 export class FavoriteslistComponent {
 
-  // listObservable: Observable<any>[];
+  displayedColumns: string[] = ['title', 'year', 'rating', 'genre', 'director', 'actors', 'plot', 'poster', 'remove'];
+  dataSource = new MatTableDataSource<any>();
 
-  // constructor(proxy$: MovieproxyService) {
-  //   this.listObservable = proxy$.getFavorites();
-  // }
+  constructor(private router: Router, proxy$: MovieproxyService) {
+    // proxy$.getFavorites().subscribe( (result: any[]) => 
+    // {
+    //   this.dataSource = new MatTableDataSource<any>(result);
+    //   //this.dataSource.sort = this.sort;
+    //   console.log("retrieved data from server.");
+    // });
+  }
 
-  // ngOnInit() {
-  // }
+  ngOnInit() {
+  }
+
+  clickEvent(): void {
+    this.router.navigate(['']);
+  }
 }
