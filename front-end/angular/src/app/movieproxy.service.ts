@@ -6,12 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class MovieproxyService {
 
-  hostUrl:string = 'http://localhost:8080/';
+  hostUrl:string = 'http://localhost:8080';
 
   constructor(private httpClient: HttpClient) { }
 
   getMovie(movieId: string) {
-    return this.httpClient.get( this.hostUrl + '/movies/' + movieId);
+    return this.httpClient.get( this.hostUrl + '/movies' + movieId);
   }
 
   getMovies() {

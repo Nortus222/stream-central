@@ -16,18 +16,16 @@ export class FavoriteslistComponent {
   dataSource = new MatTableDataSource<any>();
 
   constructor(private router: Router, proxy$: MovieproxyService) {
-    // proxy$.getFavorites().subscribe( (result: any[]) => 
-    // {
-    //   this.dataSource = new MatTableDataSource<any>(result);
-    //   //this.dataSource.sort = this.sort;
-    //   console.log("retrieved data from server.");
-    // });
+    proxy$.getFavorites("2").subscribe((res: any) => {
+      console.log(res);
+      this.dataSource.data = res;
+    }); 
   }
 
   ngOnInit() {
   }
 
   clickEvent(): void {
-    this.router.navigate(['']);
+    this.router.navigate(['/favorites/969492']);
   }
 }
