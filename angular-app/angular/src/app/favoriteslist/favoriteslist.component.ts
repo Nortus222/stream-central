@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { MovieproxyService } from '../movieproxy.service';
 import { Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
 import { Router } from '@angular/router';
 
 @Component({
