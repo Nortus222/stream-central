@@ -37,24 +37,28 @@ def main(mytimer: func.TimerRequest) -> None:
 
     for movie in fetch_popular_movies():
         try:
+
+            #check if the movie is alraedy in db
+            if collection.find_one({'tmdb_id': movie['tmdb_id']}):
+                logging.info(f'movie {movie["title"]} already in db')
+                continue
+
             ratings = get_ratings_imdb(movie)
             movie.update(ratings)
             streaming = fetch_movie_streams(movie['imdb_id'])
             movie.update(streaming)
 
-            res = collection.find_one_and_update({'imdb_id': movie['imdb_id']}, {'$set': movie}, upsert=True)
-            
-            if (res == None):
-                collection.insert_one(movie)
+            collection.find_one_and_update({'imdb_id': movie['imdb_id']}, {'$set': movie})
 
             logging.info(f'movie {movie["title"]} added to db')
         except Exception as e:
             logging.error(e)
+            return
         
         if ((datetime.datetime.now() - start_time).total_seconds() > 240):
             break
 
-        if (iteration_count > 50):
+        if (iteration_count > 20):
             break
         
         iteration_count += 1

@@ -34,24 +34,29 @@ def main(mytimer: func.TimerRequest) -> None:
 
     for show in fetch_popular_tv_shows():
         try:
+
+            #check if the movie is alraedy in db
+            if collection.find_one({'tmdb_id': show['tmdb_id']}):
+                logging.info(f'show {show["original_name"]} already in db')
+                continue
+
+
             ratings = get_ratings_tmdb(show['tmdb_id'], show['type'])
             show.update(ratings)
             streaming = fetch_streams_tmdb(show['tmdb_id'], show['type'])
             show.update(streaming)
 
             res = collection.find_one_and_update({'tmdb_id': show['tmdb_id']}, {'$set': show}, upsert=True)
-            
-            if (res == None):
-                collection.insert_one(show)
 
             logging.info(f'show {show["original_name"]} added to db')
         except Exception as e:
             logging.error(e)
+            return
         
         if ((datetime.datetime.now() - start_time).total_seconds() > 240):
             break
 
-        if (iteration_count > 50):
+        if (iteration_count > 20):
             break
         
         iteration_count += 1
