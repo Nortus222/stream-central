@@ -38,15 +38,17 @@ jobs:
           pip install -r requirements.txt
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: |
+          cd azure_functions
+          zip release.zip ./* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: python-app
           path: |
-            release.zip
-            !venv/
+            azure_functions/release.zip
+            !azure_functions/venv/
 
   deploy:
     runs-on: ubuntu-latest
