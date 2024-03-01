@@ -40,15 +40,15 @@ jobs:
       - name: Zip artifact for deployment
         run: |
           cd azure_functions
-          zip release.zip ./* -r
+          zip ../release.zip ./* -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
           name: python-app
           path: |
-            azure_functions/release.zip
-            !azure_functions/venv/
+            release.zip
+            !venv/
 
   deploy:
     runs-on: ubuntu-latest
