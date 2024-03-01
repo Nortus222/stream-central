@@ -26,10 +26,11 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: get .env file
+      - name: get .env files
         run: |
           cd azure_functions
-          echo ${{ secrets.ENV_FILE }} | base64 -d > .env
+          echo ${{ secrets.ENV_FILE }} | base64 -d > FetchMovies/.env
+          echo ${{ secrets.ENV_FILE }} | base64 -d > FetchTVShows/.env
 
       - name: Create and start virtual environment
         run: |
