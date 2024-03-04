@@ -16,7 +16,7 @@ export class MovieComponent {
   
     constructor(private route: ActivatedRoute, private movie$: MovieproxyService) {
       // this.movieId = this.route.snapshot.params['movieId'];
-        this.movie$.getMovie(this.movieId).subscribe((res: any) => {
+        this.movie$.getMovieById(this.movieId).subscribe((res: any) => {
           this.title = res.title;
           this.description = res.description;
       });

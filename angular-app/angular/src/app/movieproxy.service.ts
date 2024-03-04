@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Content } from './content';
 
 @Injectable({
   providedIn: 'root'
@@ -10,12 +11,12 @@ export class MovieproxyService {
 
   constructor(private httpClient: HttpClient) { }
 
-  getMovie(movieId: string) {
-    return this.httpClient.get( this.hostUrl + '/movies' + movieId);
+  getMovieById(movieId: string) {
+    return this.httpClient.get( this.hostUrl + '/movies/' + movieId);
   }
 
   getMovies() {
-    return this.httpClient.get<any[]>( this.hostUrl + '/movies/');
+    return this.httpClient.get<Content[]>( this.hostUrl + '/movies');
   }
 
   getMovieCount() {

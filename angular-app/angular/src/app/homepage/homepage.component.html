@@ -1,18 +1,30 @@
-<body>
-  <section class="main-contents p-4 border-bottom border-info">
+<section class="search-form">
+    <div class="nav-bottom container">
+        <form>
+            <input type="search" placeholder="Search by Title" #filter>
+            <button class="info" type="button" (click)="filterResults(filter.value)">Search</button>
+        </form>
+    </div>
+</section>
+<section class="results p-4 border-bottom border-info">
     <div class="container py-4">
-        <h1 class="section-title"></h1>
+        <h1 class="section-title">Recently Updated</h1>
         <div class="row row-cols-sm-1 row-cols-md-4 row-cols-lg-5 gx-2 gy-2">
-            <div *ngFor="let content of allMovies ;" class="wrapper">
+            <div *ngFor="let content of filteredContents;" class="wrapper">
                 <div class="col">
                     <div class="card">
                         <img src={{content.poster}} class="card-img-top" alt="...">
                     </div>
-                    <div class="card-title"><h3>{{content.title}}</h3></div>
+                    <h2 class="content-title">{{content.title}}</h2>
+                    <button class="btn btn-primary" [routerLink]="['content', content._id]" 
+                    [routerLinkActive]="'active'">Details</button>
                 </div>
             </div>
         </div>
     </div>
-  </section>
-</body>
+</section>
+<!-- <section class="content-listing">
+    <img [src]={{content.poster}} alt="Exterior poster of {{content.title}}">
+    <h2 class="content-title">{{content.title}}</h2>
+</section> -->
 
