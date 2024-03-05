@@ -20,9 +20,8 @@
     "uuid": "^9.0.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node AppServer.js",
-    "build": "tsc"
+    "build": "tsc -p tsconfig.json"
   },
   "author": "",
   "license": "ISC"
