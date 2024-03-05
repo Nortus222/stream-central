@@ -18,12 +18,19 @@
                       <a class="nav-link" routerLink="/favorites">Favorites List</a>
                   </li>
               </ul>
-              <!-- <form class="col col-sm-auto col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+              <form class="col col-sm-auto col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
                   <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-              </form> -->
+              </form>
               <button type="button" class="btn btn-outline-info">Login</button>
           </div>
       </div>
   </nav>
 </div>
-<router-outlet></router-outlet>
+<body>
+    <router-outlet></router-outlet>
+    <footer class="footer">
+        <div class="container-fluid p-5">
+        <p class="text-center">StreamCentral &copy; 2024</p>
+        </div>
+    </footer>
+</body>

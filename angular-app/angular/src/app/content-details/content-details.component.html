@@ -1,2 +1,50 @@
-<p>content-details works!</p>
-<img src={{content.poster}} class="card-img-top" alt="...">
+<div class="container p-4 mx-5 border-info">
+    <section class="card-section">
+        <div class="card bg-transparent text-bg-dark">
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="{{content.poster}}" alt="Movie Poster" class="img-fluid rounded">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body bg-transparent">
+                        <h1 class="content-title">{{content.title}}</h1>
+                        <p> ({{content.release_date | date:'yyyy'}})</p>
+                        <div class="genre-tags mb-5">
+                            <ng-container *ngFor="let genre of content.genres">
+                                <span class="badge rounded-pill text-bg-secondary d-inline-block" style="margin: 3px;">{{ genre.name }}</span>
+                            </ng-container>
+                        </div>
+                        <a href="{{content.trailer}}" target="_blank" class="btn btn-success" aria-label="Watch Trailer">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                            </svg> Watch Trailer
+                        </a>
+                        <button class="btn btn-danger favorite-btn" aria-label="Add to favorites"></button>
+                        <h3><strong class="text-secondary">Ratings:</strong> 
+                            <div *ngFor="let rating of content.ratings" class="d-inline-block">
+                                <button *ngIf="rating.source === 'imdb' || rating.source === 'tomatoes' || rating.source === 'tmdb'" class="btn btn-rating btn-sm">
+                                    {{ rating.source | uppercase }}: {{ rating.value }}
+                                </button>
+                            </div>
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="row content-overview">
+        <h2>Overview</h2>
+        <p>{{content.overview}}</p>
+    </section> -->
+    <section class="card content-details">
+        <h1 class="text-light mb-4">About {{content.title}}</h1>
+        <h2 class="text-light">Overview</h2>
+        <p class="mb-4">{{content.overview}}</p>
+        <p class="mb-2"><strong class="text-secondary">Cast:</strong><ng-container *ngFor="let cast of content.casts">
+            {{ cast.name + ', '}}
+        </ng-container></p>
+        <p><strong class="text-secondary">Genres:</strong> <ng-container *ngFor="let genre of content.genres">
+            {{ genre.name + ', '}}
+        </ng-container></p>
+    </section>
+</div>

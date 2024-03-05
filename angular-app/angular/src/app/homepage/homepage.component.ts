@@ -3,7 +3,6 @@ import { ActivatedRoute} from '@angular/router';
 import { MovieproxyService } from '../movieproxy.service';
 import { RouterModule } from '@angular/router';
 
-
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.component.html',
@@ -16,7 +15,7 @@ export class HomepageComponent {
     constructor(private route: ActivatedRoute, private movie$: MovieproxyService) {
         this.movie$.getMovies().subscribe((res: any) => {
           this.contents = res;
-          this.filteredContents
+          this.filteredContents = res;
           console.log(res);
       });
     }

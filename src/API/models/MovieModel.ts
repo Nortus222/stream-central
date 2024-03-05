@@ -139,25 +139,10 @@ class MovieModel {
         }
     }
 
-    // public async retrieveMovieById(response: any, movieId: string) {
-    //     const movieIdNumber = Number(movieId);
-    //     var query = this.model.findOne({ tmdb_id: movieIdNumber });
-
-    //     try {
-    //         const item = await query.exec();
-      
-    //         response.json(item);
-           
-    //     }
-    //     catch (e) {
-    //         console.error(e);
-  
-    //     }
-    // }
-
     public async retrieveMovieById(response: any, movieId: string) {
         try {
-            const item = await this.model.findOne({ _id: movieId }).exec();
+            const movieIdNumber = Number(movieId);
+            const item = await this.model.findOne({ tmdb_id: movieIdNumber }).exec();
             if (!item) {
                 return response.status(404).send(`No movie found with the given id: ${movieId}`);
             }

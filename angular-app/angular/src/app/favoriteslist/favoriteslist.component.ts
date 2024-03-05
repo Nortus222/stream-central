@@ -20,11 +20,4 @@ export class FavoriteslistComponent {
       this.dataSource.data = res;
     }); 
   }
-
-  ngOnInit() {
-  }
-
-  clickEvent(): void {
-    this.router.navigate(['/favorites/969492']);
-  }
 }

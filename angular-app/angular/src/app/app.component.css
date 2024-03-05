@@ -1,8 +1,18 @@
 .topnav {
-    background-color: #040A18;
-  }
+  background-color: #040A18;
+}
 
 body {
-    background-color: #20243b;
-    font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #1a1e35, #130110);
+  font-family: 'Geneva', sans-serif;
+  color: aliceblue;
+  height: auto;
+}
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #040A18;
+  color: white;
+  text-align: center;
 }

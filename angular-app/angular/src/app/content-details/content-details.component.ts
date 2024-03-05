@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { MovieproxyService } from '../movieproxy.service';
 import { Content } from '../content';
+import { Rating } from '../content';
 
 @Component({
   selector: 'app-content-details',
