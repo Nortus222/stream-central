@@ -69,4 +69,6 @@ node AppServer.js
 #### 7. Run moacha tests
 ```
 mocha --reporter spec test/test.js
+
 ```
+'node_modules\.bin\tsc.cmd' -p 'tsconfig.json'
