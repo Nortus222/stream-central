@@ -31,8 +31,9 @@ def main(mytimer: func.TimerRequest) -> None:
     uri = os.getenv('MONGO_CONNECTION_STRING')
 
     client = MongoClient(uri)
-    
-    collection = client['movies']
+
+    db = client['stream-central-db']
+    collection = db['movies']
 
     for movie in fetch_popular_movies():
         try:

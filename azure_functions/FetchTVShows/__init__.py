@@ -28,7 +28,9 @@ def main(mytimer: func.TimerRequest) -> None:
     uri = os.getenv('MONGO_CONNECTION_STRING')
 
     client = MongoClient(uri)
-    collection = client['tvshows']
+
+    db = client['stream-central-db']
+    collection = db['tvshows']
 
     for show in fetch_popular_tv_shows():
         try:
