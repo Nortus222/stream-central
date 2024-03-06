@@ -65,6 +65,43 @@
             </div>
         </nav>
     </header>
+    <section class="search-form">
+        <div class="nav-bottom container">
+            <form>
+                <input type="search" placeholder="Search by Title" #filter>
+                <button class="info" type="button" (click)="filterResults(filter.value)">Search</button>
+            </form>
+        </div>
+    </section>
+    <section class="content-filter container">
+        <div class="btn-group">
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                All
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item rounded-2" href="#">Action</a></li>
+                <li><a class="dropdown-item rounded-2" href="#">Comedy</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Movies
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item rounded-2" href="#">Action Movies</a></li>
+                <li><a class="dropdown-item rounded-2" href="#">Comedy Movies</a></li>
+            </ul>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
+                Providers
+            </button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item rounded-2" href="#">Netflix</a></li>
+                <li><a class="dropdown-item rounded-2" href="#">Amazon Prime</a></li>
+            </ul>
+        </div>
+    </section>
     <section class="album-contents p-4 border-bottom border-info">
         <div class="container py-4">
             <div id="main"class="row">

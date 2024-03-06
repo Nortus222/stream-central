@@ -2,7 +2,7 @@
     <div class="nav-bottom container">
         <form>
             <input type="search" placeholder="Search by Title" #filter>
-            <button class="info" type="button" (click)="filterResults(filter.value)">Search</button>
+            <button class="btn" type="button" (click)="filterResults(filter.value)">Search</button>
         </form>
     </div>
 </section>
@@ -43,7 +43,7 @@
                     <div class="card">
                         <a [routerLink]="['content', content.tmdb_id]">
                             <img src={{content.poster}} class="card-img-top" alt="...">
-                            <button class="favorite-btn"></button>
+                            <button class="favorite-btn" title="Add to Favorites"></button>
                         </a>
                     </div>
                     <h3 class="content-title">{{content.title}}</h3>
@@ -52,8 +52,4 @@
         </div>
     </div>
 </section>
-<!-- <section class="content-listing">
-    <img [src]={{content.poster}} alt="Exterior poster of {{content.title}}">
-    <h2 class="content-title">{{content.title}}</h2>
-</section> -->
 

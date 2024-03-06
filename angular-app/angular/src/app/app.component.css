@@ -3,7 +3,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #1a1e35, #130110);
+  background: linear-gradient(45deg, teal, #1a1e35);
   font-family: 'Geneva', sans-serif;
   color: aliceblue;
   height: auto;
@@ -15,4 +15,73 @@ body {
   background-color: #040A18;
   color: white;
   text-align: center;
+}
+
+/* Button Styles */
+.favorite-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  background-color: transparent; 
+  color: #ffffff; 
+  border: 2px solid #ffffff;
+  border-radius: 50%; 
+  width: 35px;
+  height: 35px; 
+  line-height: 40px;
+  text-align: center; 
+  font-size: 24px; 
+  cursor: pointer; 
+  transition: background-color 0.2s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorite-btn:hover {
+  background-color: #00ff88b7;
+  transform: scale(1.1); 
+}
+
+.favorite-btn::before {
+  content: '+';
+}
+
+.favorite-btn:focus {
+  outline: none; 
+}
+
+.remove-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px; 
+  background-color: transparent; 
+  color: #ffffff; 
+  border: 2px solid #ffffff;
+  border-radius: 50%; 
+  width: 35px;
+  height: 35px; 
+  line-height: 40px;
+  text-align: center; 
+  font-size: 24px; 
+  cursor: pointer; 
+  transition: background-color 0.2s, transform 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.remove-btn:hover {
+  background-color: #ff0040b7;
+  transform: scale(1.1); 
+}
+
+.remove-btn::before {
+  content: '';
+}
+
+.remove-btn:focus {
+  outline: none; 
 }

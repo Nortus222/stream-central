@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { MovieproxyService } from '../movieproxy.service';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-homepage',

@@ -1,23 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MovieproxyService } from '../movieproxy.service';
-import { Observable } from 'rxjs';
-import { MatTableDataSource } from '@angular/material/table';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-favoriteslist',
   templateUrl: './favoriteslist.component.html',
-  styleUrl: './favoriteslist.component.css'
+  styleUrls: ['./favoriteslist.component.css']
 })
 export class FavoriteslistComponent {
+  contentIds: any = [];
+  favorites: any = [];
 
-  displayedColumns: string[] = ['title', 'year', 'rating', 'genre', 'director', 'actors', 'plot', 'poster', 'remove'];
-  dataSource = new MatTableDataSource<any>();
-
-  constructor(private router: Router, proxy$: MovieproxyService) {
-    proxy$.getFavorites("2").subscribe((res: any) => {
+  constructor(private routess: ActivatedRoute, private contentService: MovieproxyService) {
+    this.contentService.getFavorites("2").subscribe((res: any) => {
+      this.contentIds = res;
       console.log(res);
-      this.dataSource.data = res;
-    }); 
+      this.getMoviesByIds();
+    });
+  }
+
+  getMoviesByIds() { 
+    for (const movieId of this.contentIds.movies) 
+      this.contentService.getMovieById(movieId).subscribe((movie: any) => {
+        console.log(movieId);
+        this.favorites.push(movie);
+        console.log(this.favorites);
+    });
   }
 }
