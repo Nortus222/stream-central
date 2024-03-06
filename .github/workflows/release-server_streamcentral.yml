@@ -32,7 +32,7 @@ jobs:
           npm run buildAngular
 
       - name: Zip artifact for deployment
-        run: zip release.zip angular-app dist node_modules src .env tsconfig.json package.json -r
+        run: zip release.zip dist src .env tsconfig.json package.json -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
