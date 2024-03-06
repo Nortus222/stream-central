@@ -21,13 +21,17 @@ jobs:
         with:
           node-version: '20.x'
 
+      - name: get .env files
+        run: |
+          echo ${{ secrets.ENV_FILE }} | base64 -d > ./.env
+
       - name: npm install, build, and test
         run: |
           npm install
           npm run build --if-present
 
       - name: Zip artifact for deployment
-        run: zip release.zip ./* -r
+        run: zip release.zip angular-app dist node_modules src .env tsconfig.json package.json -r
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
