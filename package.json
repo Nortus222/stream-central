@@ -21,7 +21,8 @@
   },
   "scripts": {
     "start": "node dist/src/AppServer.js",
-    "build": "tsc -p tsconfig.json"
+    "build": "tsc -p tsconfig.json",
+    "buildAngular": "cd angular-app/angular && ng build --configuration production"
   },
   "author": "",
   "license": "ISC"
