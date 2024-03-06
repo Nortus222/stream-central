@@ -7,7 +7,7 @@ import { Content } from './content';
 })
 export class MovieproxyService {
 
-  hostUrl:string = 'http://localhost:8080';
+  hostUrl:string = 'https://streamcentral.azurewebsites.net';
 
   constructor(private httpClient: HttpClient) { }
 
