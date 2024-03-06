@@ -48,7 +48,7 @@ def main(mytimer: func.TimerRequest) -> None:
             streaming = fetch_movie_streams(movie['imdb_id'])
             movie.update(streaming)
 
-            collection.find_one_and_update({'imdb_id': movie['imdb_id']}, {'$set': movie})
+            res = collection.find_one_and_update({'imdb_id': movie['imdb_id']}, {'$set': movie}, upsert=True)
 
             logging.info(f'movie {movie["title"]} added to db')
         except Exception as e:
