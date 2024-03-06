@@ -103,8 +103,8 @@ class App {
 
 
 
-    // this.expressApp.use('/', router);
-    this.expressApp.use('/', express.static(__dirname+'../angular/browser'));
+    this.expressApp.use('/', router);
+    // this.expressApp.use('/', express.static(__dirname+'../angular/browser'));
   }
 }
 export { App }
