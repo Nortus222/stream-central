@@ -35,7 +35,6 @@ jobs:
       - name: Create and start virtual environment
         run: |
           cd azure_functions
-          pwd
           python -m venv venv
           source venv/bin/activate
 
@@ -57,7 +56,7 @@ jobs:
           name: python-app
           path: |
             azure_functions/release.zip
-            !venv/
+            !azure_functions/venv/
 
   deploy:
     runs-on: ubuntu-latest
