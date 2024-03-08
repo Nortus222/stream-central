@@ -19,6 +19,12 @@ export class FavoriteslistComponent {
     });
   }
 
+  removeFromFavorites(contentId: number): void{
+    this.contentService.removeFromFavorites('2', contentId).subscribe((res: any) => {
+      console.log(res);
+    });
+  }
+  
   getMoviesByIds() { 
     for (const movieId of this.contentIds.movies) 
       this.contentService.getMovieById(movieId).subscribe((movie: any) => {

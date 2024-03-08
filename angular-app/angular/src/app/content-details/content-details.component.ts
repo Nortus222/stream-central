@@ -22,4 +22,10 @@ export class ContentDetailsComponent {
       console.log(res);
     });
   }
+
+  addToFavorites(contentId: number): void{
+    this.contentService.addToFavorites('2', contentId).subscribe((res: any) => {
+      console.log(res);
+    });
+  }
 }

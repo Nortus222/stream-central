@@ -38,6 +38,7 @@
 .btn:hover {
   background-color: #00ff88b7;
 }
+
 .trailer-btn {
   border: 2px solid silver;
   padding: 15px 26px;
@@ -49,6 +50,7 @@
 
 .trailer-btn:hover {
   background-color: slategray;
+  transform: scale(1.05);
 }
 
 .favorite-btn {

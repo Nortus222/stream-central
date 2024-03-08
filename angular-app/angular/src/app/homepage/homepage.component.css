@@ -22,6 +22,19 @@
   margin: 10px 0;
 }
 
+/*--filter section--*/
+
+.content-filter {
+  padding: 10px;
+  gap: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+
+}
+
+
 .favorite-btn {
   position: absolute;
   top: 10px;

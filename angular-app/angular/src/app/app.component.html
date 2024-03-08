@@ -1,6 +1,6 @@
 <main>
     <div class="topnav">
-        <nav class="navbar navbar navbar-expand-lg navbar-dark border-bottom border-info">
+        <nav *ngIf="router.url !== '/login'" class="navbar navbar navbar-expand-lg navbar-dark border-bottom border-info">
           <div class="container">
               <a [routerLink]="['']" class="navbar-brand fw-bold text-info">
                 StreamCentral</a>
@@ -12,30 +12,28 @@
                       <li class="nav-item">
                           <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
                       </li>
-                      <li class="nav-item">
+                      <!-- <li class="nav-item">
                           <a class="nav-link" routerLink="/movies">Movies</a>
-                      </li>
+                      </li> -->
                       <li class="nav-item me-5">
                           <a class="nav-link" routerLink="/favorites">Favorites List</a>
                       </li>
                   </ul>
-                  <form class="col col-sm-auto col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                      <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-                  </form>
-                  <!-- <div class="nav-bottom container">
-                    <form>
-                        <input type="search" placeholder="Search by Title" #filter>
-                        <button class="info" type="button" (click)="filterResults(filter.value)">Search</button>
-                    </form>
-                </div> -->
               </div>
+              <div *ngIf="isLoggedIn; else signInButton">
+                <button (click)="logout()">Logout</button>
+              </div>
+              
+              <ng-template #signInButton>
+                <a routerLink="/login">Login</a>
+              </ng-template>
           </div>
-      </nav>
+        </nav>
     </div>
     <body>
         <router-outlet></router-outlet>
-        <footer class="footer">
-            <div class="container-fluid p-5">
+        <footer *ngIf="router.url !== '/login'"class="footer">
+            <div class="container-fluid p-5 border-top border-info">
             <p class="text-center">StreamCentral &copy; 2024</p>
             </div>
         </footer>

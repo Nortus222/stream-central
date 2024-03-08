@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { HomepageComponent } from './homepage/homepage.component';
+import { Router } from '@angular/router';
+import { AuthService } from './auth.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,14 @@ import { HomepageComponent } from './homepage/homepage.component';
 })
 export class AppComponent {
   title = 'stream-central';
+
+  constructor(private authService: AuthService, public router: Router) { }
+
+  get isLoggedIn() {
+    return this.authService.isLoggedIn;
+  }
+
+  logout() {
+    this.authService.logout();
+  }
 }

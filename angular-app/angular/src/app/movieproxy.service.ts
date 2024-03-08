@@ -11,6 +11,14 @@ export class MovieproxyService {
 
   constructor(private httpClient: HttpClient) { }
 
+  addToFavorites(userId: string, movieId: number) {
+    return this.httpClient.post( this.hostUrl + '/favorites/' + userId + '/' + movieId, {});
+  }
+
+  removeFromFavorites(userId: string, movieId: number) {
+    return this.httpClient.delete( this.hostUrl + '/favorites/' + userId + '/' + movieId, {});
+  }
+
   getMovieById(movieId: string) {
     return this.httpClient.get( this.hostUrl + '/movies/' + movieId);
   }

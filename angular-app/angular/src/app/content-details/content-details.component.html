@@ -19,7 +19,7 @@
                         <a class="btn trailer-btn" [href]="content.trailer.startsWith('https://') ? content.trailer : 'https://' + content.trailer" target="_blank" aria-label="Watch Trailer">
                             <i class='bx bxl-youtube text-danger fs-4 align-middle'></i> Watch Trailer
                         </a>
-                        <button class="btn favorite-btn" title="Add to Favorites" aria-label="Add to favorites"></button>
+                        <button class="btn favorite-btn" title="Add to Favorites" aria-label="Add to favorites" (click)="addToFavorites(content.tmdb_id)"></button>
                         <h3><strong class="text-secondary">Ratings:</strong> 
                             <div *ngFor="let rating of content.ratings" class="d-inline-block">
                                 <button *ngIf="rating.source === 'imdb' || rating.source === 'tomatoes' || rating.source === 'tmdb'" class="btn btn-rating btn-sm">

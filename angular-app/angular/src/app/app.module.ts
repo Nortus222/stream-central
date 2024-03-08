@@ -11,6 +11,9 @@ import { MovieproxyService } from './movieproxy.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ContentDetailsComponent } from './content-details/content-details.component';
 import { VideoComponent } from './video/video.component';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -19,8 +22,11 @@ import { VideoComponent } from './video/video.component';
     FavoriteslistComponent,
     ContentDetailsComponent,
     VideoComponent,
+    LoginComponent,
   ],
   imports: [
+    PaginationModule.forRoot(),
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
