@@ -106,7 +106,19 @@ class App {
       console.log('Remove movie with id: ' + movieId + ' from favorites list of user with id: ' + userId);
       await this.Favorites.removeMovieFromFavorites(res, userId, movieId);
     });
+    
+    router.get('/allContent', async (req, res) => {
+      console.log('Query all content');
+      var movies = await this.MoviesMin.retrieveContent();
+      var shows = await this.TVShowsMin.retrieveContent();
 
+      var allContent = []
+      allContent.push(movies);
+      allContent.push(shows);
+      allContent.sort((a, b) => (a.tmdb_id > b.tmdb_id) ? 1 : -1);
+     
+      res.json(allContent);
+    });
 
 
     this.expressApp.use('/', router);

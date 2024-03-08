@@ -26,7 +26,7 @@ class TVShowModelMin {
             useNewUrlParser: true, 
             useUnifiedTopology: true
         } as Mongoose.ConnectOptions);
-        this.model = Mongoose.model<ITVShowModelMin>("tvshows", this.schema); 
+        this.model = Mongoose.model<ITVShowModelMin>("tvshowsmin", this.schema); 
     }
     catch (e) {
         console.error(e);        
@@ -46,6 +46,21 @@ class TVShowModelMin {
     
     }
   }
+
+
+  public async retrieveContent() {
+    var query = this.model.find({});
+
+    try {
+        const items = await query.exec();
+        return items;
+    }
+    catch (e) {
+        console.error(e);
+    }
+  }
+
+
 
 }
 export { TVShowModelMin };
