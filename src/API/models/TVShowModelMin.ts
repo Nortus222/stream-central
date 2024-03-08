@@ -47,6 +47,7 @@ class TVShowModelMin {
     }
   }
 
+
   public async retrieveContent() {
     var query = this.model.find({});
 
@@ -58,6 +59,7 @@ class TVShowModelMin {
         console.error(e);
     }
   }
+
 
 }
 export { TVShowModelMin };

@@ -41,7 +41,6 @@ class MovieModelMin {
 
         try {
             const items = await query.exec();
-            console.log(items);
             
             response.json(items);
         }
@@ -63,6 +62,7 @@ class MovieModelMin {
         
         }
     }
+
 }
 export {MovieModelMin};
 
