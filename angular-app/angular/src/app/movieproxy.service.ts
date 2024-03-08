@@ -7,7 +7,7 @@ import { Content } from './content';
 })
 export class MovieproxyService {
 
-  hostUrl:string = 'http://localhost:8080';
+  hostUrl:string = 'https://streamcentral.azurewebsites.net';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,4 +26,12 @@ export class MovieproxyService {
   getFavorites(userId: string) {
     return this.httpClient.get( this.hostUrl + '/favorites/' + userId);
   }
+
+  getTVShows() {
+    return this.httpClient.get( this.hostUrl + '/tvshows');
+  }
+  getTVShowById(tvshowId: string) {
+    return this.httpClient.get( this.hostUrl + '/tvshows/' + tvshowId);
+  }
+  
 }

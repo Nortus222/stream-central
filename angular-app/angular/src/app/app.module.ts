@@ -10,13 +10,17 @@ import { FavoriteslistComponent } from './favoriteslist/favoriteslist.component'
 import { MovieproxyService } from './movieproxy.service';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { ContentDetailsComponent } from './content-details/content-details.component';
+import { MoviesComponent } from './movies/movies.component';
+import { TVShowsComponent } from './tvshows/tvshows.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
     FavoriteslistComponent,
-    ContentDetailsComponent
+    ContentDetailsComponent,
+    MoviesComponent,
+    TVShowsComponent
   ],
   imports: [
     BrowserModule,

@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 
 keys_save = ('budget', 'genres', 'id', 'imdb_id', 'original_language', 'original_title', 'overview', 'popularity', 'production_countries', 'release_date', 'revenue', 'runtime', 'spoken_languages', 'status', 'tagline', 'title', 'casts',  'keywords')
 cast_keys_save = ('id', 'gender', 'name', 'profile_path', 'character', 'order') 
-tv_keys_save = ('id', 'genres', 'first_air_date', 'homepage', 'last_air_date', 'number_of_episodes', 'number_of_seasons', 'origin_country', 'original_name', 'overview', 'popularity', 'status', 'casts', 'keywords')
+tv_keys_save = ('id', 'genres', 'first_air_date', 'homepage', 'last_air_date', 'number_of_episodes', 'number_of_seasons', 'origin_country', 'name', 'overview', 'popularity', 'status', 'casts', 'keywords')
 
 def get_popular_movies_sample():
   tmdb = init_tmdb()
