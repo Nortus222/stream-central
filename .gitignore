@@ -135,3 +135,4 @@ __blobstorage__
 __queuestorage__
 
 */__pycache__/
+.DS_Store
