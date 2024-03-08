@@ -12,6 +12,10 @@ export class AuthService {
     }
   }
 
+  signup(username: string, password: string, email: string) {
+    // logic to create a new user
+  }
+
   logout() {
     this.isLoggedIn = false;
   }
