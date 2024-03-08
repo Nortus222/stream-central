@@ -26,4 +26,12 @@ export class MovieproxyService {
   getFavorites(userId: string) {
     return this.httpClient.get( this.hostUrl + '/favorites/' + userId);
   }
+
+  getTVShows() {
+    return this.httpClient.get( this.hostUrl + '/tvshows');
+  }
+  getTVShowById(tvshowId: string) {
+    return this.httpClient.get( this.hostUrl + '/tvshows/' + tvshowId);
+  }
+  
 }

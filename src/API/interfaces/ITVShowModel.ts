@@ -19,6 +19,7 @@ interface ITVShowModel extends Mongoose.Document {
   number_of_seasons: Number;
   origin_country: string[];
   original_name: string;
+  name: string;
   overview: string;
   popularity:  Number;
   poster: string;

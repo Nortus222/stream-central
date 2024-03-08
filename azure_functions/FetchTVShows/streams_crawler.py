@@ -73,19 +73,22 @@ def fetch_streams_tmdb(tmdb_id, type):
 def parse_response(response):
   data = response.json()
 
-  dict = {}
+  if ('result' not in data.keys() or data['result'] == None):
+    return dict(streamingInfo=[])
+
+  dictionary = {}
 
   info = data['result']['streamingInfo']
 
   if ('us' not in info.keys() or info['us'] == None):
-    dict['streamingInfo'] = []
+    dictionary['streamingInfo'] = []
   else:
-    dict['streamingInfo'] = info['us']
+    dictionary['streamingInfo'] = info['us']
 
   result = {}
   result['streamingInfo'] = []
 
-  for stremin in dict['streamingInfo']:
+  for stremin in dictionary['streamingInfo']:
     
     p = {}
     for key in stremin:
