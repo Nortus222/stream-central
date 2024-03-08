@@ -13,7 +13,7 @@ export class HomepageComponent {
     filteredContents: any = [];
 
     constructor(private route: ActivatedRoute, private movie$: MovieproxyService) {
-        this.movie$.getMovies().subscribe((res: any) => {
+        this.movie$.getAllContent().subscribe((res: any) => {
           this.contents = res;
           this.filteredContents = res;
           console.log(res);
