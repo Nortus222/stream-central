@@ -131,7 +131,6 @@ class MovieModel {
             const items = await query.exec();
             
             response.json(items);
-           
         }
         catch (e) {
             console.error(e);
