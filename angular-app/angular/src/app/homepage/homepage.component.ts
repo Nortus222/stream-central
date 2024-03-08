@@ -59,5 +59,18 @@ export class HomepageComponent {
       this.setPage(this.page);
     }
 
+    filterByGenre(genre: string) {
+      if (!genre) 
+        this.filteredContents = this.contents;
+      else {
+        this.filteredContents = this.contents.filter((content: any) => {
+          return content.genre.toLowerCase().includes(genre.toLowerCase());
+        });
+      }
+      
+      this.page = 1;
+      this.setPage(this.page);
+    }
+
     ngOnInit(): void {}
 }

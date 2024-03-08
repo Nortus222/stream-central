@@ -5,17 +5,17 @@
             All
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
-            <li><a class="dropdown-item rounded-2" href="#">Action</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Animation</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Comedy</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Drama</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Fantasy</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Horror</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Mystery</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Romance</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Sci-Fi</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">Thriller</a></li>
-            <li><a class="dropdown-item rounded-2" href="#">More</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('action')">Action</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('animation')">Animation</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('comedy')">Comedy</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('drama')">Drama</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('fantasy')">Fantasy</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('horror')">Horror</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('mystery')">Mystery</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('romance')">Romance</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('sci-fi')">Sci-Fi</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('thriller')">Thriller</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByGenre('more')">More</a></li>
         </ul>
     </div>
     <div class="btn-group">
@@ -56,8 +56,8 @@
     </section>
 </section>
 <section class="results p-4 border-bottom border-info">
-    <div *ngIf="filteredContents.length == 0" class="no-favorites text-center">
-        <h2>No results containing you search terms.</h2>
+    <div *ngIf="filteredContents.length == 0" class="no-favorites text-center" style="height: 100vh;">
+        <h1>No results containing you search terms.</h1>
         <p>Try different keywords</p>
         <p>Try searching for a movie or TV show by title</p>
         <p>Looking for a movie or TV show?</p>
