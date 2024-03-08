@@ -140,18 +140,15 @@ class MovieModel {
     }
 
     public async retrieveMovieById(response: any, movieId: string) {
-        const movieIdNumber = Number(movieId);
-        var query = this.model.findOne({ tmdb_id: movieIdNumber });
-
         try {
-            const item = await query.exec();
-      
+            const movieIdNumber = Number(movieId);
+            const item = await this.model.findOne({ tmdb_id: movieIdNumber }).exec();
+            if (!item) {
+                return response.status(404).send(`No movie found with the given id: ${movieId}`);
+            }
             response.json(item);
-           
-        }
-        catch (e) {
+        } catch (e) {
             console.error(e);
-  
         }
     }
 
