@@ -138,6 +138,32 @@ class MovieModel {
         }
     }
 
+    public async retrieveAllMoviesMin(response: any) {
+        var query = this.model.find({}).select('tmdb_id title poster');
+
+        try {
+            const items = await query.exec();
+            
+            response.json(items);
+        }
+        catch (e) {
+            console.error(e);
+        
+        }
+    }
+
+    public async retrieveContent() {
+        var query = this.model.find({}).select('tmdb_id title poster');
+
+        try {
+            const items = await query.exec();
+            return items;
+        }
+        catch (e) {
+            console.error(e);
+        }
+    }
+
     public async retrieveMovieById(response: any, movieId: string) {
         try {
             const movieIdNumber = Number(movieId);

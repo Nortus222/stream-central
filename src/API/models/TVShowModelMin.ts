@@ -61,6 +61,5 @@ class TVShowModelMin {
   }
 
 
-
 }
 export { TVShowModelMin };

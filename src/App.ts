@@ -18,8 +18,8 @@ class App {
   public Favorites: FavoritesModel;
   public MovieGenres: MovieGenreModel;
   public TVShows: TVShowModel;
-  public TVShowsMin: TVShowModelMin;
-  public MoviesMin: MovieModelMin;
+  // public TVShowsMin: TVShowModelMin;
+  // public MoviesMin: MovieModelMin;
   // public Recommendations: ReccomendationSetModel;
 
 
@@ -34,8 +34,8 @@ class App {
     this.Favorites = new FavoritesModel(mongoDBConnection);
     this.MovieGenres = new MovieGenreModel(mongoDBConnection);
     this.TVShows = new TVShowModel(mongoDBConnection);
-    this.TVShowsMin = new TVShowModelMin(mongoDBConnection);
-    this.MoviesMin = new MovieModelMin(mongoDBConnection);
+    // this.TVShowsMin = new TVShowModelMin(mongoDBConnection);
+    // this.MoviesMin = new MovieModelMin(mongoDBConnection);
     // this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
   }
 
@@ -62,7 +62,7 @@ class App {
 
     router.get('/movies/', async (req, res) => {
       console.log('Query All movies');
-      await this.MoviesMin.retrieveAllMovies(res);
+      await this.Movies.retrieveAllMoviesMin(res);
     });
 
     router.get('/moviesCount', async (req, res) => {
@@ -72,7 +72,7 @@ class App {
 
     router.get('/tvshows', async (req, res) => {
       console.log('Query All tvshows');
-      await this.TVShowsMin.retrieveAllTVShows(res);
+      await this.TVShows.retrieveAllTVShows(res);
     });
 
     router.get('/tvshows/:tvshowId', async (req, res) => {
@@ -109,13 +109,11 @@ class App {
     
     router.get('/allContent', async (req, res) => {
       console.log('Query all content');
-      var movies = await this.MoviesMin.retrieveContent();
-      var shows = await this.TVShowsMin.retrieveContent();
+      var movies = await this.Movies.retrieveContent();
+      var shows = await this.TVShows.retrieveContent();
 
-      var allContent = []
-      allContent.push(movies);
-      allContent.push(shows);
-      allContent.sort((a, b) => (a.tmdb_id > b.tmdb_id) ? 1 : -1);
+      var allContent = [...movies, ...shows]
+      allContent.sort((a, b) => (a['tmdb_id'] > b['tmdb_id']) ? 1 : -1);
      
       res.json(allContent);
     });
