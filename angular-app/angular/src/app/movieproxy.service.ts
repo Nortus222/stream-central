@@ -30,8 +30,13 @@ export class MovieproxyService {
   getTVShows() {
     return this.httpClient.get( this.hostUrl + '/tvshows');
   }
+
   getTVShowById(tvshowId: string) {
     return this.httpClient.get( this.hostUrl + '/tvshows/' + tvshowId);
+  }
+
+  getAllContent() {
+    return this.httpClient.get( this.hostUrl + '/allContent');
   }
   
 }

@@ -29,7 +29,7 @@ class MovieModelMin {
                 useNewUrlParser: true, 
                 useUnifiedTopology: true
             } as Mongoose.ConnectOptions);
-            this.model = Mongoose.model<IMovieModelMin>("movies", this.schema); 
+            this.model = Mongoose.model<IMovieModelMin>("moviesmin", this.schema); 
         }
         catch (e) {
             console.error(e);        
@@ -41,8 +41,22 @@ class MovieModelMin {
 
         try {
             const items = await query.exec();
+            console.log(items);
             
             response.json(items);
+        }
+        catch (e) {
+            console.error(e);
+        
+        }
+    }
+
+    public async retrieveContent() {
+        var query = this.model.find({});
+
+        try {
+            const items = await query.exec();
+            return items;
         }
         catch (e) {
             console.error(e);
