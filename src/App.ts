@@ -6,6 +6,8 @@ import { MovieModel } from './API/models/MovieModel';
 import { ReccomendationSetModel } from './API/models/RecommendationSetModel';
 import { UserModel } from './API/models/UserModel';
 import { TVShowModel } from './API/models/TVShowModel';
+import { TVShowModelMin } from './API/models/TVShowModelMin';
+import { MovieModelMin } from './API/models/MovieModelMin';
 
 class App {
 
@@ -16,6 +18,8 @@ class App {
   public Favorites: FavoritesModel;
   public MovieGenres: MovieGenreModel;
   public TVShows: TVShowModel;
+  public TVShowsMin: TVShowModelMin;
+  public MoviesMin: MovieModelMin;
   // public Recommendations: ReccomendationSetModel;
 
 
@@ -30,6 +34,8 @@ class App {
     this.Favorites = new FavoritesModel(mongoDBConnection);
     this.MovieGenres = new MovieGenreModel(mongoDBConnection);
     this.TVShows = new TVShowModel(mongoDBConnection);
+    this.TVShowsMin = new TVShowModelMin(mongoDBConnection);
+    this.MoviesMin = new MovieModelMin(mongoDBConnection);
     // this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
   }
 
@@ -56,7 +62,7 @@ class App {
 
     router.get('/movies/', async (req, res) => {
       console.log('Query All movies');
-      await this.Movies.retrieveAllMovies(res);
+      await this.MoviesMin.retrieveAllMovies(res);
     });
 
     router.get('/moviesCount', async (req, res) => {
@@ -66,7 +72,7 @@ class App {
 
     router.get('/tvshows', async (req, res) => {
       console.log('Query All tvshows');
-      await this.TVShows.retrieveAllTVShows(res);
+      await this.TVShowsMin.retrieveAllTVShows(res);
     });
 
     router.get('/tvshows/:tvshowId', async (req, res) => {

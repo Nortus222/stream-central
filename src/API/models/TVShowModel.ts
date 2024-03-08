@@ -31,6 +31,7 @@ class TVShowModel {
       number_of_seasons: Number,
       origin_country: [String],
       original_name: String,
+      name: String,
       overview: String,
       popularity: Number,
       poster: String,
