@@ -5,6 +5,8 @@ import { MovieGenreModel } from './API/models/MovieGenreModel';
 import { MovieModel } from './API/models/MovieModel';
 import { ReccomendationSetModel } from './API/models/RecommendationSetModel';
 import { UserModel } from './API/models/UserModel';
+import * as passport from 'passport'
+import * as passportFacebook from 'passport-facebook'
 
 class App {
 
@@ -39,11 +41,37 @@ class App {
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
       next();
     });
+
+    this.expressApp.use(passport.initialize());
+
+    passport.use(new passportFacebook.FacebookStrategy({
+      clientID: 395834456512495,
+      clientSecret: "73b168365d93c17f6d33c0661f45e37c",
+      callbackURL: "http://localhost:3000/auth/facebook/callback"
+    },
+
+    function(accessToken, refreshToken, profile, cb) {
+      passportFacebook.User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+        return cb(err, user);
+      });
+    }
+  ));
   }
 
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
+
+    // Passport Facebook SSO
+    router.get('/auth/facebook',
+    passport.authenticate('facebook'));
+
+    router.get('/auth/facebook/callback',
+      passport.authenticate('facebook', { failureRedirect: '/login' }),
+      function(req, res) {
+        // Successful authentication, redirect home.
+        res.redirect('/');
+    });
 
     router.get('/movies/:movieId', async (req, res) => {
       var id = req.params.movieId;
