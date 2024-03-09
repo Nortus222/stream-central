@@ -7,7 +7,8 @@ import { ReccomendationSetModel } from './API/models/RecommendationSetModel';
 import { UserModel } from './API/models/UserModel';
 import * as passport from 'passport'
 import * as passportFacebook from 'passport-facebook'
-
+import * as mongoose from 'mongoose'
+import * as mongodb from 'mongodb'
 class App {
 
   // ref to Express instance
@@ -50,7 +51,7 @@ class App {
       callbackURL: "http://localhost:3000/auth/facebook/callback"
     },
 
-    function(accessToken, refreshToken, profile, cb) {
+    function verify(accessToken, refreshToken, profile, cb) {
       passportFacebook.User.findOrCreate({ facebookId: profile.id }, function (err, user) {
         return cb(err, user);
       });
@@ -64,7 +65,7 @@ class App {
 
     // Passport Facebook SSO
     router.get('/auth/facebook',
-    passport.authenticate('facebook'));
+      passport.authenticate('facebook'));
 
     router.get('/auth/facebook/callback',
       passport.authenticate('facebook', { failureRedirect: '/login' }),

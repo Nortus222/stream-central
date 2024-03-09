@@ -43,6 +43,8 @@ var FavoritesListModel_1 = require("./API/models/FavoritesListModel");
 var MovieGenreModel_1 = require("./API/models/MovieGenreModel");
 var MovieModel_1 = require("./API/models/MovieModel");
 var UserModel_1 = require("./API/models/UserModel");
+var passport = require("passport");
+var passportFacebook = require("passport-facebook");
 var App = /** @class */ (function () {
     // public Recommendations: ReccomendationSetModel;
     //Run configuration methods on the Express instance.
@@ -65,11 +67,27 @@ var App = /** @class */ (function () {
             res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
             next();
         });
+        this.expressApp.use(passport.initialize());
+        passport.use(new passportFacebook.FacebookStrategy({
+            clientID: 395834456512495,
+            clientSecret: "73b168365d93c17f6d33c0661f45e37c",
+            callbackURL: "http://localhost:3000/auth/facebook/callback"
+        }, function verify(accessToken, refreshToken, profile, cb) {
+            passportFacebook.User.findOrCreate({ facebookId: profile.id }, function (err, user) {
+                return cb(err, user);
+            });
+        }));
     };
     // Configure API endpoints.
     App.prototype.routes = function () {
         var _this = this;
         var router = express.Router();
+        // Passport Facebook SSO
+        router.get('/auth/facebook', passport.authenticate('facebook'));
+        router.get('/auth/facebook/callback', passport.authenticate('facebook', { failureRedirect: '/login' }), function (req, res) {
+            // Successful authentication, redirect home.
+            res.redirect('/');
+        });
         router.get('/movies/:movieId', function (req, res) { return __awaiter(_this, void 0, void 0, function () {
             var id;
             return __generator(this, function (_a) {
