@@ -11,7 +11,8 @@ import { FavoritesComponent } from './favorites/favorites.component';
 import { ContentproxyService } from './contentproxy.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service';
-import { LoginComponent } from './login/login.component';
+import { TvshowsComponent } from './tvshows/tvshows.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     ContentDetailsComponent,
     FavoritesComponent,
-    LoginComponent
+    TvshowsComponent,
+    MoviesComponent
   ],
   imports: [
     PaginationModule.forRoot(),

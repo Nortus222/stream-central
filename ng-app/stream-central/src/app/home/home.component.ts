@@ -17,7 +17,7 @@ export class HomeComponent {
   filteredContents: Content[] = [];
 
   constructor(private route: ActivatedRoute, private content$: ContentproxyService) {
-    this.content$.getContents().subscribe((res: any) => {
+    this.content$.getAllContent().subscribe((res: any) => {
       this.contents = res;
       this.filteredContents = res;
       this.setPage(this.page)

@@ -27,7 +27,7 @@ export class FavoritesComponent {
   
   getContentsByIds() { 
     for (const movieId of this.contentIds.movies) 
-      this.contentService.getContentById(movieId).subscribe((movie: any) => {
+      this.contentService.getMovieById(movieId).subscribe((movie: any) => {
         console.log(movieId);
         this.favorites.push(movie);
         console.log(this.favorites);
