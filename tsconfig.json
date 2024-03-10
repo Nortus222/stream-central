@@ -11,12 +11,13 @@
     "typeRoots": [
       "node_modules/@types"
     ],
+    "skipLibCheck": true,
   },
-  "includes" : [
-    "src/**/*.ts",
+  "include" : [
+    "src",
   ],
   "exclude": [
     "node_modules",
-    "fron-end",
+    "angular-app",
   ]
 }

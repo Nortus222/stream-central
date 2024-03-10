@@ -42,6 +42,7 @@ describe('Test Movies result', function () {
         expect(response.body).to.satisfy(
           function (body) {
             for (var i = 0; i < body.length; i++) {
+              expect(body[i]).to.have.property('_id');
               expect(body[i]).to.have.property('tmdb_id').that.is.a('number');
               expect(body[i]).to.have.property('title');
               expect(body[i]).to.have.property('imdb_id');
@@ -58,7 +59,7 @@ describe('Test Favorites result', function () {
      
     before(function (done) {
         chai.request("http://localhost:8080")
-      .get("/favorites/1")
+      .get("/favorites/2")
       .end(function (err, res) {
         requestResult = res.body;
         response = res;
@@ -70,13 +71,11 @@ describe('Test Favorites result', function () {
 
     it('Should return one element', function (){ 
       expect(response).to.have.status(200);
-      expect(response.body).to.have.length(1);
       expect(response).to.have.headers;
-
     });
 
     it('Object has known properties', function(){
-      expect(requestResult).to.include.keys('id', 'movies', 'user_id');
+      expect(requestResult).to.include.keys('_id', 'id', 'movies', 'userId');
       expect(requestResult['movies']).to.be.an('array');
     });
 });

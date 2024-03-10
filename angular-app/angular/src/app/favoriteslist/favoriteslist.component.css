@@ -1,0 +1,8 @@
+.navbar-bottom {
+    background:transparent;
+    color: #fff;
+}
+.album-contents {
+    background: linear-gradient(to bottom, #20243b, #040A18);
+    color: #fff;    
+}
