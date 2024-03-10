@@ -86,8 +86,10 @@ class FavoritesModel {
 
         try {
             const updatedFavorites = await query.exec();
+            console.log(updatedFavorites);
             response.json(updatedFavorites);
         } catch (e) {
+            
             console.error(e);
         }
     }

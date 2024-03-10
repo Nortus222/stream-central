@@ -6,6 +6,8 @@ import { MovieModel } from './API/models/MovieModel';
 import { ReccomendationSetModel } from './API/models/RecommendationSetModel';
 import { UserModel } from './API/models/UserModel';
 
+// const cors = require('cors');
+
 class App {
 
   // ref to Express instance
@@ -37,6 +39,7 @@ class App {
     this.expressApp.use( (req, res, next) => {
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+      res.header("Access-Control-Allow-Methods", "*");
       next();
     });
   }
