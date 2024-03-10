@@ -1,3 +1,4 @@
+import * as path from 'path';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { FavoritesModel } from './API/models/FavoritesListModel';
@@ -9,6 +10,21 @@ import { TVShowModel } from './API/models/TVShowModel';
 import { TVShowModelMin } from './API/models/TVShowModelMin';
 import { MovieModelMin } from './API/models/MovieModelMin';
 
+import * as session from 'express-session'
+import * as cookieParser from 'cookie-parser';
+
+import GooglePassportObj from './GooglePassport';
+import * as passport from 'passport'
+
+declare global {
+  namespace Express {
+    interface User {
+      id: string,
+      displayName: string,
+    }
+  }
+}
+
 class App {
 
   // ref to Express instance
@@ -18,6 +34,7 @@ class App {
   public Favorites: FavoritesModel;
   public MovieGenres: MovieGenreModel;
   public TVShows: TVShowModel;
+  public googlePassportObj: GooglePassportObj;
   // public TVShowsMin: TVShowModelMin;
   // public MoviesMin: MovieModelMin;
   // public Recommendations: ReccomendationSetModel;
@@ -26,6 +43,7 @@ class App {
   //Run configuration methods on the Express instance.
   constructor(mongoDBConnection:string)
   {
+    this.googlePassportObj = new GooglePassportObj();
     this.expressApp = express();
     this.middleware();
     this.routes();
@@ -43,6 +61,10 @@ class App {
   private middleware(): void {
     this.expressApp.use(bodyParser.json());
     this.expressApp.use(bodyParser.urlencoded({ extended: false }));
+    this.expressApp.use(session({ secret: 'keyboard cat' }));
+    this.expressApp.use(cookieParser());
+    this.expressApp.use(passport.initialize());
+    this.expressApp.use(passport.session());
     this.expressApp.use( (req, res, next) => {
       res.header("Access-Control-Allow-Origin", "*");
       res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
@@ -50,9 +72,32 @@ class App {
     });
   }
 
+  private validateAuth(req, res, next):void {
+    if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
+    console.log("user is not authenticated");
+    res.redirect('/');
+  }
+
+
+
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
+
+    router.get('/auth/google', passport.authenticate('google', {scope: ['profile']}));
+
+    router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
+      console.log("successfully authenticated user and returned to callback page.");
+      res.redirect('/#/movies');
+    });
+
+    router.get('/app/user/info', this.validateAuth, (req, res) => {
+      console.log('Query All list');
+      console.log("user info:" + JSON.stringify(req.user));
+      console.log("user info:" + JSON.stringify(req.user.id));
+      console.log("user info:" + JSON.stringify(req.user.displayName));
+      res.json({"username" : req.user.displayName, "id" : req.user.id});
+    });
 
     router.get('/movies/:movieId', async (req, res) => {
       var id = req.params.movieId;
