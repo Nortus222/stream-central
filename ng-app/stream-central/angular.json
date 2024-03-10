@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/stream-central",
+            "outputPath": "../../dist/stream-central",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
