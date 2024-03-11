@@ -131,11 +131,48 @@ class MovieModel {
             const items = await query.exec();
             
             response.json(items);
-           
         }
         catch (e) {
             console.error(e);
         
+        }
+    }
+
+<<<<<<< HEAD
+    public async retrieveMovieById(response: any, movieId: string) {
+        try {
+            const movieIdNumber = Number(movieId);
+            const item = await this.model.findOne({ tmdb_id: movieIdNumber }).exec();
+            if (!item) {
+                return response.status(404).send(`No movie found with the given id: ${movieId}`);
+            }
+            response.json(item);
+        } catch (e) {
+            console.error(e);
+=======
+    public async retrieveAllMoviesMin(response: any) {
+        var query = this.model.find({}).select('tmdb_id title poster');
+
+        try {
+            const items = await query.exec();
+            
+            response.json(items);
+        }
+        catch (e) {
+            console.error(e);
+        
+        }
+    }
+
+    public async retrieveContent() {
+        var query = this.model.find({}).select('tmdb_id title poster');
+
+        try {
+            const items = await query.exec();
+            return items;
+        }
+        catch (e) {
+            console.error(e);
         }
     }
 
@@ -149,6 +186,7 @@ class MovieModel {
             response.json(item);
         } catch (e) {
             console.error(e);
+>>>>>>> main
         }
     }
 
