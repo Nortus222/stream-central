@@ -1,7 +1,7 @@
-import googleAppAuth from './googleOauth2';
-
 let passport = require('passport');
 let GoogleStrategy = require('passport-google-oauth').OAuth2Strategy;
+
+import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } from "./googleOAuth2";
 
 // Creates a Passport configuration for Google
 class GooglePassport {
@@ -10,8 +10,8 @@ class GooglePassport {
     secretId: string;
      
     constructor() { 
-        this.clientId = googleAppAuth.id;
-        this.secretId = googleAppAuth.secret;
+        this.clientId = GOOGLE_CLIENT_ID;
+        this.secretId = GOOGLE_CLIENT_SECRET;
 
         passport.use(new GoogleStrategy({
                 clientID: this.clientId,

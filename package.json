@@ -28,7 +28,8 @@
     "uuid": "^9.0.1"
   },
   "devDependencies": {
-    "@angular/cli": "^17.1.1"
+    "@angular/cli": "^17.1.1",
+    "@types/passport": "^1.0.7"
   },
   "scripts": {
     "start": "node dist/src/AppServer.js",

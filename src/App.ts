@@ -7,21 +7,18 @@ import * as cookieParser from 'cookie-parser';
 import { FavoritesModel } from './API/models/FavoritesListModel';
 import { MovieGenreModel } from './API/models/MovieGenreModel';
 import { MovieModel } from './API/models/MovieModel';
-import { ReccomendationSetModel } from './API/models/RecommendationSetModel';
 import { UserModel } from './API/models/UserModel';
 import { TVShowModel } from './API/models/TVShowModel';
-import { TVShowModelMin } from './API/models/TVShowModelMin';
-import { MovieModelMin } from './API/models/MovieModelMin';
-
 import GooglePassportObj from './GooglePassport';
 import * as passport from 'passport'
 
 declare global {
   namespace Express {
-    interface User {
+
+      interface User {
       id: string,
       displayName: string,
-    }
+      }
   }
 }
 
@@ -35,10 +32,6 @@ class App {
   public MovieGenres: MovieGenreModel;
   public TVShows: TVShowModel;
   public googlePassportObj: GooglePassportObj;
-  public TVShowsMin: TVShowModelMin;
-  public MoviesMin: MovieModelMin;
-  public Recommendations: ReccomendationSetModel;
-
 
   //Run configuration methods on the Express instance.
   constructor(mongoDBConnection:string)
@@ -52,9 +45,6 @@ class App {
     this.Favorites = new FavoritesModel(mongoDBConnection);
     this.MovieGenres = new MovieGenreModel(mongoDBConnection);
     this.TVShows = new TVShowModel(mongoDBConnection);
-    this.TVShowsMin = new TVShowModelMin(mongoDBConnection);
-    this.MoviesMin = new MovieModelMin(mongoDBConnection);
-    this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
   }
 
   // Configure Express middleware.
@@ -132,20 +122,20 @@ class App {
       await this.Users.createUser(res, jsonObj);
     });
 */
-    router.get('/user/favorites', this.validateAuth, (req, res) => {
+    router.get('/user/favorites', this.validateAuth, async (req, res) => {
       var id = req.user.id;
       console.log('Query single favorites list for user with id: ' + id);
       await this.Favorites.retrieveFavorites(res, id);
     });
 
-    router.post('/user/favorites/:movieId', async (req, res) => {
+    router.post('/user/favorites/:movieId', this.validateAuth, async (req, res) => {
       var userId = req.user.id;
       var movieId = req.params.movieId.toString();
       console.log('Add movie with id: ' + movieId + ' to favorites list of user with id: ' + userId);
       await this.Favorites.addMovieToFavorites(res, userId, movieId);
     });
 
-    router.delete('/user/favorites/:movieId', async (req, res) => {
+    router.delete('/user/favorites/:movieId', this.validateAuth, async (req, res) => {
       var userId = req.user.id;
       var movieId = req.params.movieId.toString();
       console.log('Remove movie with id: ' + movieId + ' from favorites list of user with id: ' + userId);
@@ -154,13 +144,18 @@ class App {
     
     router.get('/allContent', async (req, res) => {
       console.log('Query all content');
-      var movies = await this.Movies.retrieveContent();
-      var shows = await this.TVShows.retrieveContent();
+      try {
 
-      var allContent = [...movies, ...shows]
-      allContent.sort((a, b) => (a['tmdb_id'] > b['tmdb_id']) ? 1 : -1);
-     
-      res.json(allContent);
+        var movies = await this.Movies.retrieveContent();
+        var shows = await this.TVShows.retrieveContent();
+  
+        var allContent = [...movies, ...shows]
+        allContent.sort((a, b) => (a['tmdb_id'] > b['tmdb_id']) ? 1 : -1);
+       
+        res.json(allContent);
+      } catch (e) {
+        console.error(e);
+      }
     });
 
 
