@@ -1,6 +1,9 @@
 import * as path from 'path';
 import * as express from 'express';
 import * as bodyParser from 'body-parser';
+import * as session from 'express-session'
+import * as cookieParser from 'cookie-parser';
+
 import { FavoritesModel } from './API/models/FavoritesListModel';
 import { MovieGenreModel } from './API/models/MovieGenreModel';
 import { MovieModel } from './API/models/MovieModel';
@@ -9,9 +12,6 @@ import { UserModel } from './API/models/UserModel';
 import { TVShowModel } from './API/models/TVShowModel';
 import { TVShowModelMin } from './API/models/TVShowModelMin';
 import { MovieModelMin } from './API/models/MovieModelMin';
-
-import * as session from 'express-session'
-import * as cookieParser from 'cookie-parser';
 
 import GooglePassportObj from './GooglePassport';
 import * as passport from 'passport'
@@ -25,8 +25,6 @@ declare global {
   }
 }
 
-// const cors = require('cors');
-
 class App {
 
   // ref to Express instance
@@ -37,9 +35,9 @@ class App {
   public MovieGenres: MovieGenreModel;
   public TVShows: TVShowModel;
   public googlePassportObj: GooglePassportObj;
-  // public TVShowsMin: TVShowModelMin;
-  // public MoviesMin: MovieModelMin;
-  // public Recommendations: ReccomendationSetModel;
+  public TVShowsMin: TVShowModelMin;
+  public MoviesMin: MovieModelMin;
+  public Recommendations: ReccomendationSetModel;
 
 
   //Run configuration methods on the Express instance.
@@ -54,9 +52,9 @@ class App {
     this.Favorites = new FavoritesModel(mongoDBConnection);
     this.MovieGenres = new MovieGenreModel(mongoDBConnection);
     this.TVShows = new TVShowModel(mongoDBConnection);
-    // this.TVShowsMin = new TVShowModelMin(mongoDBConnection);
-    // this.MoviesMin = new MovieModelMin(mongoDBConnection);
-    // this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
+    this.TVShowsMin = new TVShowModelMin(mongoDBConnection);
+    this.MoviesMin = new MovieModelMin(mongoDBConnection);
+    this.Recommendations = new ReccomendationSetModel(mongoDBConnection);
   }
 
   // Configure Express middleware.
@@ -81,8 +79,6 @@ class App {
     res.redirect('/');
   }
 
-
-
   // Configure API endpoints.
   private routes(): void {
     let router = express.Router();
@@ -91,6 +87,7 @@ class App {
 
     router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
       console.log("successfully authenticated user and returned to callback page.");
+      console.log("redirecting to /#/movies");
       res.redirect('/#/movies');
     });
 
@@ -135,7 +132,7 @@ class App {
       await this.Users.createUser(res, jsonObj);
     });
 */
-    router.get('/user/favorites', async (req, res) => {
+    router.get('/user/favorites', this.validateAuth, (req, res) => {
       var id = req.user.id;
       console.log('Query single favorites list for user with id: ' + id);
       await this.Favorites.retrieveFavorites(res, id);
