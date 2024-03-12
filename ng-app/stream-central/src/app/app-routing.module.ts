@@ -15,7 +15,7 @@ const routes: Routes = [
   { path: 'movies/content/:id', redirectTo: ':type/content/:id' },
   { path: 'tvshows', component: TvshowsComponent},
   { path: 'tvshows/content/:id', redirectTo: ':type/content/:id' },
-  { path: 'auth/google', redirectTo: 'http://localhost:8080/auth/google'},
+  { path: 'auth/google', redirectTo: 'https://streamcentral.azurewebsites.net/auth/google'},
   
 ];
 
