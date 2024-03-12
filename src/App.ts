@@ -124,7 +124,13 @@ class App {
 
       favorites.movies.forEach(async (movieId) => {
         var movie = await this.Movies.retrieveMovieById(null, movieId.toString());
-        allmovies.push(movie);
+        if (movie)
+          allmovies.push(movie);
+        else {
+          var tvshow = await this.TVShows.retrieveTVShowById(null, movieId.toString());
+          if (tvshow)
+            allmovies.push(tvshow);
+        }
       });
 
       var result = {
