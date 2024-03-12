@@ -22,7 +22,7 @@ export class ContentDetailsComponent {
   }
 
   addToFavorites(contentId: number): void{
-    this.contentService.addToFavorites('2', contentId).subscribe((res: any) => {
+    this.contentService.addToFavorites(contentId).subscribe((res: any) => {
       console.log(res);
     });
   }
