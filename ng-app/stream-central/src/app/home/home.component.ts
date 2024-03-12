@@ -31,7 +31,7 @@ export class HomeComponent {
       console.log(res);
       if (res){
         this._snackbar.open('Added to Favorites', 'Close', {
-          duration: 2000,
+          duration: 200,
         });
       }
     });
