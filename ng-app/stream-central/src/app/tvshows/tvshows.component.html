@@ -4,7 +4,7 @@
             <div *ngFor="let content of results" class="wrapper">
                 <div class="col">
                     <div class="card">
-                        <a [routerLink]="[content.type, 'content', content.tmdb_id]">
+                        <a [routerLink]="[ 'content', content.tmdb_id]">
                             <img src={{content.poster}} class="card-img-top" alt="...">
                             <button class="favorite-btn"></button>
                         </a>

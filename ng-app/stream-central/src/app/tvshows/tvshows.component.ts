@@ -15,11 +15,6 @@ export class TvshowsComponent {
     this.content$.getTVShows().subscribe((res: any) => {
       this.results = res;
       console.log(res);
-      if (res) {
-        this._snackbar.open('TV Shows Loaded', 'Close', {
-          duration: 2000,
-        });
-      }
     });
   }
 }
