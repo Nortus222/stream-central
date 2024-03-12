@@ -5,7 +5,7 @@
     "target": "es6",
     "moduleResolution" : "node",
     "rootDir": "src",
-    "outDir": "dist",
+    "outDir": "dist/src",
     "sourceMap": true,
     "types":["node"],
     "typeRoots": [

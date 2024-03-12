@@ -73,7 +73,7 @@ class App {
   private routes(): void {
     let router = express.Router();
 
-    router.get('/auth/google', passport.authenticate('google', {scope: ['profile']}));
+    router.get('/auth/google', passport.authenticate('google', {scope: ['https://googleapis.com/auth/userinfo.profile', 'profile']}));
 
     router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
       console.log("successfully authenticated user and returned to callback page.");
