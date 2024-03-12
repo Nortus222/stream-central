@@ -37,9 +37,13 @@ export class ContentproxyService {
     return this.httpClient.delete( this.hostUrl + '/user/favorites/' + contentId, {});
   }
 
-  getContentById(contentId: string) {
-    return this.httpClient.get( this.hostUrl + '/movies/' + contentId);
-  } //might fix this later
+  getContentById(contentId: string, contentType: string) {
+    if (contentType === 'movies') {
+      return this.getMovieById(contentId);
+    } else {
+      return this.getTVShowById(contentId);
+    }
+  }
 
   getAllContent() {
     return this.httpClient.get<any[]>( this.hostUrl + '/allContent');

@@ -9,6 +9,7 @@ import { MovieGenreModel } from './API/models/MovieGenreModel';
 import { MovieModel } from './API/models/MovieModel';
 import { UserModel } from './API/models/UserModel';
 import { TVShowModel } from './API/models/TVShowModel';
+
 import GooglePassportObj from './GooglePassport';
 import * as passport from 'passport'
 
@@ -72,7 +73,7 @@ class App {
   private routes(): void {
     let router = express.Router();
 
-    router.get('/auth/google', passport.authenticate('google', {scope: ['https://www.googleapis.com/auth/userinfo.profile', 'profile']}));
+    router.get('/auth/google', passport.authenticate('google', {scope: ['https://www.googleapis.com/auth/userinfo.profile', 'https://www.googleapis.com/auth/userinfo.email']}));
 
     router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
       console.log("successfully authenticated user and returned to callback page.");

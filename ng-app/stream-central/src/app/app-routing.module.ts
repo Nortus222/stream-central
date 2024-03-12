@@ -9,12 +9,13 @@ import { TvshowsComponent } from './tvshows/tvshows.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'favorites', component: FavoritesComponent },
-  { path: 'favorites/content/:id', redirectTo: 'content/:id' },
-  { path: 'content/:id', component: ContentDetailsComponent },
+  { path: 'favorites/content/:id', redirectTo: ':type/content/:id' },
+  { path: ':type/content/:id', component: ContentDetailsComponent },
   { path: 'movies', component: MoviesComponent},
-  { path: 'movies/content/:id', redirectTo: 'content/:id' },
+  { path: 'movies/content/:id', redirectTo: ':type/content/:id' },
   { path: 'tvshows', component: TvshowsComponent},
-  { path: 'tvshows/content/:id', redirectTo: 'content/:id' },
+  { path: 'tvshows/content/:id', redirectTo: ':type/content/:id' },
+  { path: 'auth/google', redirectTo: 'https://streamcentral.azurewebsites.net/auth/google'},
   
 ];
 

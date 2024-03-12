@@ -12,9 +12,9 @@ import { ContentproxyService } from '../contentproxy.service';
 export class HomeComponent {
   page = 1;
   pageSize = 15;
-  pagedItems: Content[] = [];
-  contents: Content[] = [];
-  filteredContents: Content[] = [];
+  pagedItems: any = [];
+  contents: any = [];
+  filteredContents: any = [];
 
   constructor(private route: ActivatedRoute, private content$: ContentproxyService) {
     this.content$.getAllContent().subscribe((res: any) => {
@@ -57,7 +57,7 @@ export class HomeComponent {
       });
     }
     this.page = 1;
-    this.setPage(this.page);
+    this.setPage(this.page);  
   }
 
   filterByGenre(genre: string) {
