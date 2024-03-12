@@ -62,7 +62,7 @@ tsc AppServer.ts
 
 #### 6. Execute Node/Express server on port 8080
 ```
-node AppServer.js
+node dist/src/AppServer.js
 ```
 
 

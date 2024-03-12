@@ -23,11 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-<<<<<<<< HEAD:ng-app/stream-central/angular.json
-            "outputPath": "../../dist/stream-central",
-========
             "outputPath": "../../dist/angular",
->>>>>>>> main:angular-app/angular/angular.json
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -39,13 +35,9 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<<< HEAD:ng-app/stream-central/angular.json
+             
               "src/styles.css"
-========
-              "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
->>>>>>>> main:angular-app/angular/angular.json
+              
             ],
             "scripts": []
           },
@@ -104,10 +96,7 @@
               "src/assets"
             ],
             "styles": [
-<<<<<<<< HEAD:ng-app/stream-central/angular.json
-========
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
->>>>>>>> main:angular-app/angular/angular.json
               "src/styles.css"
             ],
             "scripts": []

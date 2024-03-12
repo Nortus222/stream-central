@@ -16,7 +16,6 @@ class FavoritesModel {
     public createSchema(): void {
         this.schema = new Mongoose.Schema(
             {
-                id: { type: String, required: true },
                 userId: { type: String, required: true },
                 movies: [Number],
             }, {collection: 'favorites'}
@@ -37,8 +36,7 @@ class FavoritesModel {
     }
 
     public async createFavoritesList(response: any, userId: string) {
-        const favoritesListId = uuidv4();
-        var query = this.model.create({ userId: userId, id: favoritesListId});
+        var query = this.model.create({ userId: userId, movies: [] });
         try {
             const favoritesList = await query.exec();
             response.json(favoritesList);
@@ -60,7 +58,7 @@ class FavoritesModel {
             
             // If the user doesn't have a favorites list, create one
             if (!record) {
-                const newRecord = new this.model({id: uuidv4(), userId: userId, movies: [movieId] });
+                const newRecord = new this.model({userId: userId, movies: [movieId] });
                 await newRecord.save();
                 response.json(newRecord);
                 return;

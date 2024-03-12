@@ -1,13 +1,13 @@
 import {
   NG_VALUE_ACCESSOR
-} from "./chunk-SXA4W4OT.js";
+} from "./chunk-2UTACU6X.js";
 import {
   CommonModule,
   NgClass,
   NgForOf,
   NgIf,
   NgTemplateOutlet
-} from "./chunk-Z6CPQRJN.js";
+} from "./chunk-H5YR3GBH.js";
 import {
   ChangeDetectorRef,
   Component,
@@ -44,7 +44,7 @@ import {
   ɵɵtemplateRefExtractor,
   ɵɵtext,
   ɵɵtextInterpolate
-} from "./chunk-N3XTPJSH.js";
+} from "./chunk-ZME423HW.js";
 
 // node_modules/ngx-bootstrap/pagination/fesm2022/ngx-bootstrap-pagination.mjs
 var _c0 = (a0, a1) => ({

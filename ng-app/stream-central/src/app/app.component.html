@@ -20,10 +20,10 @@
           </ul>
       </div>
       <div *ngIf="isLoggedIn; else signInButton">
-        <button (click)="logout()">Logout</button>
+        <button>Logout</button>
       </div>
       <ng-template #signInButton>
-        <button [routerLink]="['/login']" class="btn btn-info">Login</button>
+        <a href="/auth/google" class="btn btn-info">Login</a>
       </ng-template>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>

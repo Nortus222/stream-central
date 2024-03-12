@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { TvshowsComponent } from './tvshows/tvshows.component';
 import { MoviesComponent } from './movies/movies.component';
+import { OAuthModule } from 'angular-oauth2-oidc';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MoviesComponent } from './movies/movies.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    OAuthModule.forRoot(),
   ],
   providers: [ContentproxyService, AuthService],
   bootstrap: [AppComponent]

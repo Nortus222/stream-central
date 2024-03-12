@@ -18,7 +18,7 @@ export class ContentproxyService {
   }
 
   getFavorites(userId: string) {
-    return this.httpClient.get( this.hostUrl + '/favorites/' + userId);
+    return this.httpClient.get( this.hostUrl + 'user/favorites/' + userId);
   }
 
   getTVShows() {
@@ -30,11 +30,11 @@ export class ContentproxyService {
   }
 
   addToFavorites(userId: string, contentId: number) {
-    return this.httpClient.post( this.hostUrl + '/favorites/' + userId + '/' + contentId, {});
+    return this.httpClient.post( this.hostUrl + 'user/favorites/' + userId + '/' + contentId, {});
   }
 
   removeFromFavorites(userId: string, contentId: number) {
-    return this.httpClient.delete( this.hostUrl + '/favorites/' + userId + '/' + contentId, {});
+    return this.httpClient.delete( this.hostUrl + 'user/favorites/' + userId + '/' + contentId, {});
   }
 
   getContentById(contentId: string) {

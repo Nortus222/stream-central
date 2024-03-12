@@ -10,13 +10,11 @@ import { AuthService } from './auth.service';
 export class AppComponent {
   title = 'stream-central';
 
-  constructor(private authService: AuthService, public router: Router) { }
+  constructor(public router: Router) { }
 
   get isLoggedIn() {
-    return this.authService.isLoggedIn;
+    return false;
+    // return this.authService.isLoggedIn;
   }
 
-  logout() {
-    this.authService.logout();
-  }
 }

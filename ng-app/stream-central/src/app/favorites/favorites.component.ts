@@ -12,7 +12,7 @@ export class FavoritesComponent {
   favorites: any = [];
 
   constructor(private router: ActivatedRoute, private contentService: ContentproxyService) {
-    this.contentService.getFavorites("2").subscribe((res: any) => {
+    this.contentService.getFavorites("1").subscribe((res: any) => {
       this.contentIds = res;
       console.log(res);
       this.getContentsByIds();

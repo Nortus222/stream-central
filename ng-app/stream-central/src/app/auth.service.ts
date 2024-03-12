@@ -1,4 +1,13 @@
 import { Injectable } from '@angular/core';
+import { OAuthService } from 'angular-oauth2-oidc';
+
+const oAuthConfig = {
+  issuer: 'https://accounts.google.com',
+  strictDiscoveryDocumentValidation: false,
+  redirectUri: window.location.origin,
+  clientId: '321343580149-7msslemavpks4dpoa7cgt1ku34bi6gob.apps.googleusercontent.com',
+  scope: 'openid profile email',
+}
 
 @Injectable({
   providedIn: 'root'
@@ -6,19 +15,23 @@ import { Injectable } from '@angular/core';
 export class AuthService {
   isLoggedIn = false;
 
-  constructor() { }
+  constructor(private readonly oAuthService: OAuthService) {
+    oAuthService.configure(oAuthConfig);
+    oAuthService.loadDiscoveryDocumentAndTryLogin().then(() => {
 
-  login(username: string, password: string) {
-    if (username === 'user' && password === 'password') {
-      this.isLoggedIn = true;
-    }
-  }
+      oAuthService.tryLoginImplicitFlow().then(() => {
+        if (oAuthService.hasValidIdToken()) {
+          oAuthService.initLoginFlow();
+        } else {
+          oAuthService.loadUserProfile().then((userProfile) => {
+            console.log('User profile', JSON.stringify(userProfile));
+          });
+        }
+      });
 
-  signup(username: string, password: string, email: string) {
-    // logic to create a new user
-  }
+    });
 
-  logout() {
-    this.isLoggedIn = false;
-  }
+   }
+
+  
 }
