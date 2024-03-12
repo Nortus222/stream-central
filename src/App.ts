@@ -127,10 +127,13 @@ class App {
         allmovies.push(movie);
       });
 
-      favorites.movies = allmovies;
+      var result = {
+        movies: allmovies,
+        user: req.user
+      };
 
-      res.json(favorites);
-      
+
+      res.json(result);
       }
       catch (e) {
         console.error(e);
