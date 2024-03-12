@@ -10,7 +10,7 @@ var should = chai.should();
 var http = require('http');
 chai.use(chaiHttp);
 
-describe('Test Movies result', function () {
+describe('HTTP GET Test 1: Test all movies', function () {
     var requestResult;
     var response;
        
@@ -33,8 +33,10 @@ describe('Test Movies result', function () {
       });
 
       it('The first entry in the array has known properties', function(){
-        expect(requestResult[0]).to.include.keys('tmdb_id', 'title', 'imdb_id');
-        expect(requestResult[0]).to.have.property('_id');
+        expect(requestResult[0]).to.include.keys('tmdb_id', 'title', '_id');
+        expect(requestResult[0]).to.have.property('_id').that.is.a('string');
+        expect(requestResult[0]).to.have.property('tmdb_id').that.is.a('number');
+        expect(requestResult[0]).to.have.property('title').that.is.a('string');
       });
 
       it('The elements in the array have the expected properties', function(){
@@ -45,15 +47,13 @@ describe('Test Movies result', function () {
               expect(body[i]).to.have.property('_id');
               expect(body[i]).to.have.property('tmdb_id').that.is.a('number');
               expect(body[i]).to.have.property('title');
-              expect(body[i]).to.have.property('imdb_id');
             }
             return true;
           });
       });
 });
 
-describe('Test Favorites result', function () {
-
+describe('HTTP GET Test 2: Test one movie', function () {
   var requestResult;
   var response;
      
@@ -75,7 +75,61 @@ describe('Test Favorites result', function () {
     });
 
     it('Object has known properties', function(){
-      expect(requestResult).to.include.keys('_id', 'id', 'movies', 'userId');
-      expect(requestResult['movies']).to.be.an('array');
+      expect(requestResult).to.include.keys('_id', 'tmdb_id');
+      expect(requestResult['tmdb_id']).to.be.a('number');
     });
+});
+
+// Test HTTP POST
+describe('Test POST: adding a movie to the Favorites list', function(){
+  var requestResult;
+  var response;
+
+    // post request to add a movie to the favorites list of user 1
+      before(function (done) {
+          chai.request("https://streamcentral.azurewebsites.net")
+        .post('/favorites/1/98723472')
+        .end(function (err, res) {
+          requestResult = res.body;
+          response = res;
+                  expect(err).to.be.null;
+                  expect(res).to.have.status(200);
+          done();
+        });
+      });
+      // endpoint: Favorites/userid
+
+      it('Should return one JSON object', function (){ 
+        expect(response).to.have.headers;
+        expect(response).to.have.status(200);
+      });
+  
+      it('The JSON object properties have the expected names and types', function(){
+        expect(requestResult).to.include.keys('__v', '_id', 'movies', 'userId');
+        expect(requestResult['movies']).to.be.an('array');
+        expect(requestResult['_id']).to.be.a('string');
+        expect(requestResult['userId']).to.be.a('string');
+      });
+
+      it('The user and movie IDs are equal to the expected values', function(){
+        expect(requestResult['movies']).to.have.lengthOf.above(0);
+        expect(requestResult['movies']).to.include(98723472);
+        expect(requestResult['userId']).to.equal('1');
+      });
+
+      it('The movies array contains distinct numbers', function(){
+        expect(requestResult['movies']).to.satisfy(
+          function(moviesArray){
+            // check that every element is a number
+            for(var i = 0; i < moviesArray.length; i++){
+              expect(moviesArray[i]).to.be.a('number');
+            }
+
+            // check that the numbers are distinct
+            set = new Set(moviesArray);
+            expect(set.size).to.equal(moviesArray.length);
+            return true;
+          }
+        )
+      })
 });
