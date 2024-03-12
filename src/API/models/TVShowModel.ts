@@ -128,5 +128,13 @@ class TVShowModel {
     }
   }
 
+  public async fetchShowById(tvShowId: string) {
+  
+    const tvShowIdNumber = Number(tvShowId);
+    const item = await this.model.findOne({ tmdb_id: tvShowIdNumber }).exec();
+    return item;
+
+  }
+
 }
 export { TVShowModel };

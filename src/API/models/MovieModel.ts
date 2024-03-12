@@ -178,6 +178,13 @@ class MovieModel {
         }
     }
 
+    public async fetchMovieById( id: string) {
+        
+        const movieIdNumber = Number(id);
+        const item = await this.model.findOne({ tmdb_id: movieIdNumber }).exec();
+        return item;
+    }
+
     public async retrieveMovieCount(response: any) {
         var query = this.model.estimatedDocumentCount();
 

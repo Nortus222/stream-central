@@ -123,11 +123,11 @@ class App {
       var allmovies: any[] = [];
 
       favorites.movies.forEach(async (movieId) => {
-        var movie = await this.Movies.retrieveMovieById(null, movieId.toString());
+        var movie = await this.Movies.fetchMovieById(movieId.toString());
         if (movie)
           allmovies.push(movie);
         else {
-          var tvshow = await this.TVShows.retrieveTVShowById(null, movieId.toString());
+          var tvshow = await this.TVShows.fetchShowById(movieId.toString());
           if (tvshow)
             allmovies.push(tvshow);
         }
