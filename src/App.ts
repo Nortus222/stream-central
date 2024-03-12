@@ -66,7 +66,10 @@ class App {
 
   private validateAuth(req, res, next):void {
     if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
-    res.redirect('/auth/google');
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.header("Access-Control-Allow-Methods", "*");
+    res.redirect('#/auth/google');
   }
 
   // Configure API endpoints.
