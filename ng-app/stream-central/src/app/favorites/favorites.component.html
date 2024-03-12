@@ -17,7 +17,7 @@
                         </a>
                         <button class="remove-btn" title="Remove from list" (click)="removeFromFavorites(content.tmdb_id)"><i class='bx bx-check'></i></button>
                     </div>
-                    <h3 class="content-title">{{content.title}}</h3>
+                    <h3 class="content-title">{{content.type === 'tv' ? content.name : content.title}}</h3>
                 </div>
             </div>
         </div>

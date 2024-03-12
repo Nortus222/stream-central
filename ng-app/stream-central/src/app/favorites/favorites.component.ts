@@ -22,11 +22,10 @@ export class FavoritesComponent {
   }
 
   removeFromFavorites(contentId: number): void{
-    this.favorites = this.favorites.filter((item: any) => item.id !== contentId);
-
     this.contentService.removeFromFavorites(contentId).subscribe((res: any) => {
       console.log(res);
       if (res) {
+        this.favorites = this.favorites.filter((item: any) => item.id !== contentId);
         this._snackbar.open('Removed from Favorites', 'Close', {
           duration: 2000,
         });
