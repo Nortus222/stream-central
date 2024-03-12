@@ -120,7 +120,7 @@ class App {
       try {
       var favorites = await this.Favorites.retrieveFavorites(id);
 
-      var allmovies = favorites.movies.map(async (movieId) => {
+      var allmovies = await favorites.movies.map(async (movieId) => {
         var movie: any = await this.Movies.fetchMovieById(movieId);
         var tvshow = await this.TVShows.fetchShowById(movieId);
         if (movie) {
