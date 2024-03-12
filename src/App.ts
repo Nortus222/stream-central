@@ -65,6 +65,9 @@ class App {
 
   private validateAuth(req, res, next):void {
     if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    res.setHeader("Access-Control-Allow-Methods", "*");
     res.redirect('/auth/google');
   }
 
