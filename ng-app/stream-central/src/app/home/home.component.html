@@ -67,7 +67,7 @@
             <div *ngFor="let content of pagedItems" class="wrapper">
                 <div class="col">
                     <div class="card card-results">
-                        <a [routerLink]="['content', content.tmdb_id]">
+                        <a [routerLink]="[content.type, 'content', content.tmdb_id]">
                             <img src={{content.poster}} class="card-img-top" alt="...">
                         </a>
                         <button class="favorite-btn" title="Add to Favorites" (click)="addToFavorites(content.tmdb_id); $event.stopPropagation()"></button>
