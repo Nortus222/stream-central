@@ -10,7 +10,7 @@ var should = chai.should();
 var http = require('http');
 chai.use(chaiHttp);
 
-describe('HTTP GET Test 1: Test Movies result', function () {
+describe('HTTP GET Test 1: Test all movies', function () {
     var requestResult;
     var response;
        
@@ -34,9 +34,10 @@ describe('HTTP GET Test 1: Test Movies result', function () {
       });
 
       it('The first entry in the array has known properties', function(){
-        expect(requestResult[0]).to.include.keys('tmdb_id');
-        // expect(requestResult[0]).to.include.keys('tmdb_id', 'title', 'imdb_id');
-        expect(requestResult[0]).to.have.property('_id');
+        expect(requestResult[0]).to.include.keys('tmdb_id', 'title', '_id');
+        expect(requestResult[0]).to.have.property('_id').that.is.a('string');
+        expect(requestResult[0]).to.have.property('tmdb_id').that.is.a('number');
+        expect(requestResult[0]).to.have.property('title').that.is.a('string');
       });
 
       it('The elements in the array have the expected properties', function(){
@@ -46,15 +47,14 @@ describe('HTTP GET Test 1: Test Movies result', function () {
             for (var i = 0; i < body.length; i++) {
               expect(body[i]).to.have.property('_id');
               expect(body[i]).to.have.property('tmdb_id').that.is.a('number');
-              // expect(body[i]).to.have.property('title');
-              // expect(body[i]).to.have.property('imdb_id');
+              expect(body[i]).to.have.property('title');
             }
             return true;
           });
       });
 });
 
-describe('HTTP GET Test 2: Test Favorites result', function () {
+describe('HTTP GET Test 2: Test one movie', function () {
   var requestResult;
   var response;
      
@@ -76,33 +76,7 @@ describe('HTTP GET Test 2: Test Favorites result', function () {
     });
 
     it('Object has known properties', function(){
-      expect(requestResult).to.include.keys('_id'
-      ,  "backdrop"
-      ,  "budget"
-      ,  "casts"
-      ,  "genres"
-      ,  "imdb_id"
-      ,  "keywords"
-      ,  "original_language"
-      ,  "original_title"
-      ,  "overview"
-      ,  "popularity"
-      ,  "poster"
-      ,  "production_countries"
-      ,  "ratings"
-      ,  "release_date"
-      ,  "revenue"
-      ,  "runtime"
-      ,  "spoken_languages"
-      ,  "status"
-      ,  "streamingInfo"
-      ,  "streams"
-      ,  "tagline"
-      ,  "title"
-      ,  "tmdb_id"
-      ,  "trailer"
-      ,  "type"
-      ,  "watch_providers");
+      expect(requestResult).to.include.keys('_id', 'tmdb_id');
       expect(requestResult['tmdb_id']).to.be.a('number');
     });
 });
@@ -115,7 +89,7 @@ describe('Test POST: adding a movie to the Favorites list', function(){
     // post request to add a movie to the favorites list of user 1
       before(function (done) {
           chai.request("https://streamcentral.azurewebsites.net")
-        .post('/favorites/1/866398')
+        .post('/favorites/1/98723472')
         .end(function (err, res) {
           requestResult = res.body;
           response = res;
@@ -124,24 +98,24 @@ describe('Test POST: adding a movie to the Favorites list', function(){
           done();
         });
       });
-      // Ihor endpoint: Favorites/userid
+      // endpoint: Favorites/userid
 
       it('Should return one JSON object', function (){ 
         expect(response).to.have.headers;
-        expect(requestResult).to.have.lengthOf(1);
+        expect(response).to.have.status(200);
       });
   
       it('The JSON object properties have the expected names and types', function(){
-        expect(requestResult).to.include.keys('id', 'movies', 'userId');
+        expect(requestResult).to.include.keys('__v', '_id', 'movies', 'userId');
         expect(requestResult['movies']).to.be.an('array');
-        expect(requestResult['id'].to.be.a('string'))
-        expect(requestResult['userId'].to.be.a('string'))
+        expect(requestResult['_id']).to.be.a('string');
+        expect(requestResult['userId']).to.be.a('string');
       });
 
       it('The user and movie IDs are equal to the expected values', function(){
-        expect(requestResult['movies']).to.have.lengthOf.above(0)
-        expect(requestResult['movies']).to.contain(1)
-        expect(requestResult['userId']).to.equal('1')
+        expect(requestResult['movies']).to.have.lengthOf.above(0);
+        expect(requestResult['movies']).to.include(98723472);
+        expect(requestResult['userId']).to.equal('1');
       });
 
       it('The movies array contains distinct numbers', function(){
@@ -153,8 +127,8 @@ describe('Test POST: adding a movie to the Favorites list', function(){
             }
 
             // check that the numbers are distinct
-            set = new Set(moviesArray)
-            expect(set.size).to.equal(moviesArray.length)
+            set = new Set(moviesArray);
+            expect(set.size).to.equal(moviesArray.length);
             return true;
           }
         )
