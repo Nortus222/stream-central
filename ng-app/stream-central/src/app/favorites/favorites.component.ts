@@ -26,7 +26,7 @@ export class FavoritesComponent {
       console.log(res);
       if (res) {
         console.log(this.favorites);
-        this.favorites = this.favorites.filter((item: any) => item.id !== contentId);
+        this.favorites = this.favorites.filter((item: any) => item.tmdb_id !== contentId);
         console.log(this.favorites);
         this._snackbar.open('Removed from Favorites', 'Close', {
           duration: 200,
