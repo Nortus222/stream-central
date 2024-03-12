@@ -73,7 +73,7 @@ class App {
   private routes(): void {
     let router = express.Router();
 
-    router.get('/auth/google', passport.authenticate('google', {scope: ['https://googleapis.com/auth/userinfo.profile', 'profile']}));
+    router.get('/auth/google', passport.authenticate('google', {scope: ['https://www.googleapis.com/auth/userinfo.profile', 'profile']}));
 
     router.get('/auth/google/callback', passport.authenticate('google', { failureRedirect: '/' }), (req, res) => {
       console.log("successfully authenticated user and returned to callback page.");
@@ -120,13 +120,6 @@ class App {
     router.post('/user/favorites/:movieId', this.validateAuth, async (req, res) => {
       var userId = req.user.id;
       var movieId = req.params.movieId.toString();
-      console.log('Add movie with id: ' + movieId + ' to favorites list of user with id: ' + userId);
-      await this.Favorites.addMovieToFavorites(res, userId, movieId);
-    });
-
-    router.post('favorites/:userId/:movieId', async (req, res) => {
-      var userId = req.params.userId;
-      var movieId = req.params.movieId;
       console.log('Add movie with id: ' + movieId + ' to favorites list of user with id: ' + userId);
       await this.Favorites.addMovieToFavorites(res, userId, movieId);
     });
