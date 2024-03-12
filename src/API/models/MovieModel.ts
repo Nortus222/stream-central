@@ -93,6 +93,7 @@ class MovieModel {
                     }
                 ],
                 trailer: String,
+                type: String,
                 poster: String,
                 backdrop: String,
                 streamingInfo: [
@@ -139,7 +140,7 @@ class MovieModel {
     }
 
     public async retrieveAllMoviesMin(response: any) {
-        var query = this.model.find({}).select('tmdb_id title poster');
+        var query = this.model.find({}).select('tmdb_id title poster type');
 
         try {
             const items = await query.exec();
@@ -153,7 +154,7 @@ class MovieModel {
     }
 
     public async retrieveContent() {
-        var query = this.model.find({}).select('tmdb_id title poster');
+        var query = this.model.find({}).select('tmdb_id title poster type');
 
         try {
             const items = await query.exec();

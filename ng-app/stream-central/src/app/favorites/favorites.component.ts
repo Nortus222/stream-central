@@ -12,7 +12,7 @@ export class FavoritesComponent {
   favorites: any = [];
 
   constructor(private router: ActivatedRoute, private contentService: ContentproxyService) {
-    this.contentService.getFavorites("1").subscribe((res: any) => {
+    this.contentService.getFavorites().subscribe((res: any) => {
       this.contentIds = res;
       console.log(res);
       this.getContentsByIds();
@@ -20,7 +20,7 @@ export class FavoritesComponent {
   }
 
   removeFromFavorites(contentId: number): void{
-    this.contentService.removeFromFavorites('2', contentId).subscribe((res: any) => {
+    this.contentService.removeFromFavorites(contentId).subscribe((res: any) => {
       console.log(res);
     });
   }
