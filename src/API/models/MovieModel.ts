@@ -139,11 +139,13 @@ class MovieModel {
     }
 
     public async retrieveAllMoviesMin(response: any) {
+        // find(): queries the DB
         var query = this.model.find({}).select('tmdb_id title poster');
 
         try {
             const items = await query.exec();
             
+            // parse "items" as json
             response.json(items);
         }
         catch (e) {

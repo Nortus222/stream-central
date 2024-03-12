@@ -49,11 +49,12 @@ class FavoritesModel {
 
     public async addMovieToFavorites(response: any, userId: string, tmdbId: string) {
         try {
-            const record = await this.model.findOne({userId: userId });
+            const record = await this.model.findOne({userId: userId }); // find that user's favorites list
             const movieId = Number(tmdbId);
             
             // Check if the movie is already in the favorites list
             if (record && record.movies.includes(movieId)) {
+                // Make the response contain a json message that the movie already exists
                 response.status(400).json({ message: "Movie already exists in favorites." });
                 return;
             }
@@ -70,7 +71,7 @@ class FavoritesModel {
             record.movies.push(movieId);
             await record.save();
 
-            response.json(record);
+            response.json(record); // convert response body to json
         } catch (e) {
             console.error(e);
         }
