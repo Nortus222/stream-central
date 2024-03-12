@@ -8,29 +8,24 @@ import { ContentproxyService } from '../contentproxy.service';
   styleUrl: './favorites.component.css'
 })
 export class FavoritesComponent {
-  contentIds: any = [];
+  result: any = [];
   favorites: any = [];
 
   constructor(private router: ActivatedRoute, private contentService: ContentproxyService) {
     this.contentService.getFavorites().subscribe((res: any) => {
-      this.contentIds = res;
+      this.result = res;
       console.log(res);
-      this.getContentsByIds();
+      this.favorites = this.result.movies;
     });
   }
 
   removeFromFavorites(contentId: number): void{
+    this.favorites = this.favorites.filter((item: any) => item.id !== contentId);
+    
     this.contentService.removeFromFavorites(contentId).subscribe((res: any) => {
       console.log(res);
     });
   }
   
-  getContentsByIds() { 
-    for (const movieId of this.contentIds.movies) 
-      this.contentService.getMovieById(movieId).subscribe((movie: any) => {
-        console.log(movieId);
-        this.favorites.push(movie);
-        console.log(this.favorites);
-    });
-  }
+  
 }

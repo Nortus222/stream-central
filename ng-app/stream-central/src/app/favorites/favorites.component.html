@@ -9,7 +9,7 @@
             <div *ngFor="let content of favorites" class="wrapper">
                 <div class="col">
                     <div class="card">
-                        <a [routerLink]="['content', content.tmdb_id]">
+                        <a [routerLink]="[content.type, 'content', content.tmdb_id]">
                             <img src={{content.poster}} class="card-img-top" alt="...">
                         </a>
                         <button class="remove-btn" title="Remove from list" (click)="removeFromFavorites(content.tmdb_id)"><i class='bx bx-check'></i></button>

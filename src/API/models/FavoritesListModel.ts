@@ -92,16 +92,14 @@ class FavoritesModel {
         }
     }
 
-    public async retrieveFavorites(response: any, userId: string) {
+    public async retrieveFavorites( userId: string) {
         var query = this.model.findOne({ userId: userId });
 
         try {
-            const items = await query.exec();
-            if (items) {
-                response.json(items);
-            } else {
-                response.status(404).send();
-            }
+            const item = await query.exec();
+
+            return item;
+           
         }
         catch (e) {
             console.error(e);

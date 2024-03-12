@@ -117,7 +117,25 @@ class App {
     router.get('/user/favorites', this.validateAuth, async (req, res) => {
       var id = req.user.id;
       console.log('Query single favorites list for user with id: ' + id);
-      await this.Favorites.retrieveFavorites(res, id);
+      try {
+      var favorites = await this.Favorites.retrieveFavorites(id);
+
+      var allmovies: any[] = [];
+
+      favorites.movies.forEach(async (movieId) => {
+        var movie = await this.Movies.retrieveMovieById(null, movieId.toString());
+        allmovies.push(movie);
+      });
+
+      favorites.movies = allmovies;
+
+      res.json(favorites);
+      
+      }
+      catch (e) {
+        console.error(e);
+      }
+        
     });
 
     router.post('/user/favorites/:movieId', this.validateAuth, async (req, res) => {
