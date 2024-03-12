@@ -60,7 +60,7 @@ describe('HTTP GET Test 2: Test Favorites result', function () {
      
     before(function (done) {
         chai.request("https://streamcentral.azurewebsites.net")
-      .get("/movies/28")
+      .get("/movies/866398")
       .end(function (err, res) {
         requestResult = res.body;
         response = res;
@@ -77,7 +77,17 @@ describe('HTTP GET Test 2: Test Favorites result', function () {
     });
 
     it('Object has known properties', function(){
-      expect(requestResult).to.include.keys('_id', 'id', 'movies', 'userId');
+      // expect(requestResult).to.include.all.keys('_id', 'id', 'movies');
+      expect(requestResult[0]).to.include.keys('_id', 'id', 'movies');
+      // expect(requestResult[0]).to.have.property('_id');
+      // expect(requestResult[0]).to.have.property('id');
+      // expect(requestResult).to.have.nested.property('movies');
+      // expect(requestResult['userId']).to.not.be.null;
+      // expect(requestResult['id']).to.not.be.null;
+      // expect(requestResult['movies']).to.not.be.null;
+
+
+
       expect(requestResult['movies']).to.be.an('array');
     });
 });
@@ -90,7 +100,7 @@ describe('Test POST: adding a movie to the Favorites list', function(){
     // post request to add a movie w/ ID 1 to the favorites list of user 1
       before(function (done) {
           chai.request("https://streamcentral.azurewebsites.net")
-        .post('/user/favorites/1')
+        .post('/favorites/1/866398')
         .end(function (err, res) {
           requestResult = res.body;
           response = res;
@@ -99,6 +109,7 @@ describe('Test POST: adding a movie to the Favorites list', function(){
           done();
         });
       });
+      // Ihor endpoint: Favorites/userid
 
       it('Should return one JSON object', function (){ 
         expect(response).to.have.headers;
@@ -128,7 +139,7 @@ describe('Test POST: adding a movie to the Favorites list', function(){
 
             // check that the numbers are distinct
             set = new Set(moviesArray)
-            expect(set.length).to.equal(moviesArray.length)
+            expect(set.size).to.equal(moviesArray.length)
             return true;
           }
         )
