@@ -120,17 +120,9 @@ class App {
       try {
       var favorites = await this.Favorites.retrieveFavorites(id);
 
-      var allmovies;
-
-      favorites.movies.forEach(async (movieId) => {
-        var movie = await this.Movies.fetchMovieById(movieId.toString());
-        if (movie)
-          allmovies.push(movie);
-        else {
-          var tvshow = await this.TVShows.fetchShowById(movieId.toString());
-          if (tvshow)
-            allmovies.push(tvshow);
-        }
+      var allmovies = favorites.movies.map(async (movieId) => {
+        var movie: any = await this.Movies.fetchMovieById(movieId);
+        return movie;
       });
 
       console.log('allmovies: ' + allmovies);
