@@ -36,7 +36,7 @@ class TVShowModel {
       popularity: Number,
       poster: String,
       ratings: [{
-        source: Number,
+        source: String,
         value: Number,
         score: Number,
         votes: Number,

@@ -24,7 +24,7 @@ interface ITVShowModel extends Mongoose.Document {
   popularity:  Number;
   poster: string;
   ratings: {
-    source: Number
+    source: String;
     value: Number;
     score: Number;
     votes: Number;
