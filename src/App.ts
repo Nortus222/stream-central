@@ -118,27 +118,25 @@ class App {
       var id = req.user.id;
       console.log('Query single favorites list for user with id: ' + id);
       try {
-      var favorites = await this.Favorites.retrieveFavorites(id);
+        var favorites = await this.Favorites.retrieveFavorites(id);
 
-      var allmovies = await favorites.movies.map(async (movieId) => {
-        var movie: any = await this.Movies.fetchMovieById(movieId);
-        var tvshow = await this.TVShows.fetchShowById(movieId);
-        if (movie) {
-          
-          return movie;
-        } 
-        return tvshow;
-      });
+        var allmovies = await Promise.all(favorites.movies.map(async (movieId: string) => {
+          var movie = await this.Movies.fetchMovieById(movieId);
+          var tvshow = await this.TVShows.fetchShowById(movieId);
+          if (movie) {
+            return movie;
+          } 
+          return tvshow;
+        }));
 
-      console.log('allmovies: ' + allmovies);
+        console.log('allmovies: ' + allmovies);
 
-      var result = {
-        movies: allmovies,
-        user: req.user
-      };
+        var result = {
+          movies: allmovies,
+          user: req.user
+        };
 
-
-      res.json(result);
+        res.json(result);
       }
       catch (e) {
         console.error(e);
