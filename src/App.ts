@@ -65,8 +65,7 @@ class App {
 
   private validateAuth(req, res, next):void {
     if (req.isAuthenticated()) { console.log("user is authenticated"); return next(); }
-    console.log("user is not authenticated");
-    res.redirect('/');
+    res.redirect('/auth/google');
   }
 
   // Configure API endpoints.
