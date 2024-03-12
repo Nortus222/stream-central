@@ -45,6 +45,36 @@ class FavoritesModel {
         }
     }
 
+    public async addToFavoritesList(response: any, userId: string, tmdbId: string) {
+        try {
+            const record = await this.model.findOne({userId: userId });
+            const movieId = Number(tmdbId);
+            
+            // Check if the movie is already in the favorites list
+            if (record && record.movies.includes(movieId)) {
+                response.status(200).json({ message: "Movie already exists in favorites." });
+                return;
+            }
+            
+            // If the user doesn't have a favorites list, create one
+            if (!record) {
+                const newRecord = new this.model({userId: userId, movies: [movieId] });
+                await newRecord.save();
+                response.json(newRecord);
+                return;
+            }
+            
+            // Add the movie to the user's favorites list
+            record.movies.push(movieId);
+            await record.save();
+
+            response.json(record);
+        } catch (e) {
+            console.error(e);
+        }
+
+    }
+
     public async addMovieToFavorites(response: any, userId: string, tmdbId: string) {
         try {
             const record = await this.model.findOne({userId: userId });

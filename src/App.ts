@@ -157,7 +157,7 @@ class App {
       var userId = req.params.userId;
       var movieId = req.params.movieId;
       console.log('Add movie with id: ' + movieId + ' to favorites list of user with id: ' + userId);
-      await this.Favorites.addMovieToFavorites(res, userId, movieId);
+      await this.Favorites.addToFavoritesList(res, userId, movieId);
     });
 
     router.delete('/user/favorites/:movieId', this.validateAuth, async (req, res) => {
