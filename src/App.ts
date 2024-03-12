@@ -135,6 +135,8 @@ class App {
         }
       });
 
+      console.log('allmovies: ' + allmovies);
+
       var result = {
         movies: allmovies,
         user: req.user
