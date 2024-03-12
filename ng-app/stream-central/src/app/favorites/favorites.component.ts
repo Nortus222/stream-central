@@ -9,14 +9,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrl: './favorites.component.css'
 })
 export class FavoritesComponent {
-  result: any = [];
+  
   favorites: any = [];
+  user: any;
 
   constructor(private router: ActivatedRoute, private contentService: ContentproxyService, private _snackbar: MatSnackBar) {
     this.contentService.getFavorites().subscribe((res: any) => {
-      this.result = res;
       console.log(res);
-      this.favorites = this.result.movies;
+      this.favorites = res.movies;
+      this.user = res.user;
     });
   }
 
