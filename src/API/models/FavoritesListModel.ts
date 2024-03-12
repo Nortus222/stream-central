@@ -52,7 +52,7 @@ class FavoritesModel {
             
             // Check if the movie is already in the favorites list
             if (record && record.movies.includes(movieId)) {
-                response.status(200).json({ message: "Movie already exists in favorites." });
+                response.json(record);
                 return;
             }
             
