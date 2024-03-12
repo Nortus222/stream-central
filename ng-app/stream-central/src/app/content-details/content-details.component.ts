@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute} from '@angular/router';
 import { ContentproxyService } from '../contentproxy.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-content-details',
@@ -12,7 +13,7 @@ export class ContentDetailsComponent {
   contentService: ContentproxyService = inject(ContentproxyService);
   content: any | undefined;
 
-  constructor() {
+  constructor(private _snackbar: MatSnackBar) {
     const contentId = this.route.snapshot.params['id'];
     const contentType = this.route.snapshot.params['type'];
     console.log('Content ID from route:', contentId);
@@ -26,6 +27,11 @@ export class ContentDetailsComponent {
   addToFavorites(contentId: number): void{
     this.contentService.addToFavorites(contentId).subscribe((res: any) => {
       console.log(res);
+      if (res) {
+        this._snackbar.open('Added to Favorites', 'Close', {
+          duration: 2000,
+        });
+      }
     });
   }
 }

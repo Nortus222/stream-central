@@ -14,6 +14,7 @@ import { AuthService } from './auth.service';
 import { TvshowsComponent } from './tvshows/tvshows.component';
 import { MoviesComponent } from './movies/movies.component';
 import { OAuthModule } from 'angular-oauth2-oidc';
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { OAuthModule } from 'angular-oauth2-oidc';
   imports: [
     PaginationModule.forRoot(),
     FormsModule, 
+    MatSnackBarModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

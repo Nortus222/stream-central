@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ContentproxyService } from '../contentproxy.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-tvshows',
@@ -10,10 +11,15 @@ import { ContentproxyService } from '../contentproxy.service';
 export class TvshowsComponent {
   results: any = [];
 
-  constructor(private route: ActivatedRoute, private content$: ContentproxyService) {
+  constructor(private route: ActivatedRoute, private content$: ContentproxyService, private _snackbar: MatSnackBar) {
     this.content$.getTVShows().subscribe((res: any) => {
       this.results = res;
       console.log(res);
+      if (res) {
+        this._snackbar.open('TV Shows Loaded', 'Close', {
+          duration: 2000,
+        });
+      }
     });
   }
 }

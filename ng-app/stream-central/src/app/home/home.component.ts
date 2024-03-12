@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Content } from '../contents';
 import { ActivatedRoute} from '@angular/router';
 import { ContentproxyService } from '../contentproxy.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class HomeComponent {
   contents: any = [];
   filteredContents: any = [];
 
-  constructor(private route: ActivatedRoute, private content$: ContentproxyService) {
+  constructor(private route: ActivatedRoute, private content$: ContentproxyService, private _snackbar: MatSnackBar) {
     this.content$.getAllContent().subscribe((res: any) => {
       this.contents = res;
       this.filteredContents = res;
@@ -24,9 +25,15 @@ export class HomeComponent {
       console.log(res);
   });
 }
+
   addToFavorites(contentId: number): void{
     this.content$.addToFavorites(contentId).subscribe((res: any) => {
       console.log(res);
+      if (res){
+        this._snackbar.open('Added to Favorites', 'Close', {
+          duration: 2000,
+        });
+      }
     });
   }
 
