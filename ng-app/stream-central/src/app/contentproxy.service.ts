@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class ContentproxyService {
-  hostUrl:string = 'http://localhost:8080';
+  hostUrl:string = 'https://streamcentral.azurewebsites.net';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -17,8 +17,8 @@ export class ContentproxyService {
     return this.httpClient.get( this.hostUrl + '/movies');
   }
 
-  getFavorites(userId: string) {
-    return this.httpClient.get( this.hostUrl + 'user/favorites/' + userId);
+  getFavorites() {
+    return this.httpClient.get( this.hostUrl + '/user/favorites');
   }
 
   getTVShows() {
@@ -29,12 +29,12 @@ export class ContentproxyService {
     return this.httpClient.get( this.hostUrl + '/tvshows/' + tvshowId);
   }
 
-  addToFavorites(userId: string, contentId: number) {
-    return this.httpClient.post( this.hostUrl + 'user/favorites/' + userId + '/' + contentId, {});
+  addToFavorites(contentId: number) {
+    return this.httpClient.post( this.hostUrl + '/user/favorites/' + contentId, {});
   }
 
-  removeFromFavorites(userId: string, contentId: number) {
-    return this.httpClient.delete( this.hostUrl + 'user/favorites/' + userId + '/' + contentId, {});
+  removeFromFavorites( contentId: number) {
+    return this.httpClient.delete( this.hostUrl + '/user/favorites/' + contentId, {});
   }
 
   getContentById(contentId: string, contentType: string) {
