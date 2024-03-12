@@ -32,7 +32,7 @@
     "@types/passport": "^1.0.7"
   },
   "scripts": {
-    "start": "node dist/src/AppServer.js",
+    "start": "npm install && node dist/src/AppServer.js",
     "build": "tsc -p tsconfig.json",
     "buildAngular": "cd ng-app/stream-central && npm install && ng build --configuration production"
   },
