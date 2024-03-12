@@ -78,6 +78,7 @@ interface IMovieModel extends Mongoose.Document {
         }
     ],
     trailer: String,
+    type: String,
     poster: String,
     backdrop: String,
     streamingInfo: [
