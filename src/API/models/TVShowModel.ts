@@ -90,7 +90,7 @@ class TVShowModel {
   }
 
   public async retrieveAllTVShowsMin(response: any) {
-    var query = this.model.find({}).select('tmdb_id name poster');
+    var query = this.model.find({}).select('tmdb_id name poster type');
 
     try {
         const items = await query.exec();
@@ -104,13 +104,10 @@ class TVShowModel {
   }
 
   public async retrieveContent() {
-    var query = this.model.find({}).select('tmdb_id name poster');
+    var query = this.model.find({}).select('tmdb_id name poster type');
 
     try {
         const items = await query.exec();
-        items.forEach((item: any) => {
-            item['type'] = 'tvshow';
-        });
         return items;
     }
     catch (e) {
