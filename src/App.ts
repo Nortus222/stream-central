@@ -135,6 +135,7 @@ class App {
           movies: allmovies,
           user: req.user
         };
+        
 
         res.json(result);
       }
