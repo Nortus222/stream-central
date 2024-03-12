@@ -73,22 +73,48 @@ describe('HTTP GET Test 2: Test Favorites result', function () {
     it('Should return one element', function (){ 
       expect(response).to.have.status(200);
       expect(response).to.have.headers;
-      expect(requestResult).to.have.lengthOf(1);
+      expect(requestResult).to.have.size(1);
     });
 
     it('Object has known properties', function(){
       // expect(requestResult).to.include.all.keys('_id', 'id', 'movies');
-      expect(requestResult[0]).to.include.keys('_id', 'id', 'movies');
+      expect(requestResult).to.include.keys('_id'
+      ,  "backdrop"
+      ,  "budget"
+      ,  "casts"
+      ,  "genres"
+      ,  "imdb_id"
+      ,  "keywords"
+      ,  "original_language"
+      ,  "original_title"
+      ,  "overview"
+      ,  "popularity"
+      ,  "poster"
+      ,  "production_countries"
+      ,  "ratings"
+      ,  "release_date"
+      ,  "revenue"
+      ,  "runtime"
+      ,  "spoken_languages"
+      ,  "status"
+      ,  "streamingInfo"
+      ,  "streams"
+      ,  "tagline"
+      ,  "title"
+      ,  "tmdb_id"
+      ,  "trailer"
+      ,  "type"
+      ,  "watch_providers");
       // expect(requestResult[0]).to.have.property('_id');
       // expect(requestResult[0]).to.have.property('id');
       // expect(requestResult).to.have.nested.property('movies');
       // expect(requestResult['userId']).to.not.be.null;
       // expect(requestResult['id']).to.not.be.null;
-      // expect(requestResult['movies']).to.not.be.null;
+      expect(requestResult['tmdb_id']).to.be.a('number');
 
 
 
-      expect(requestResult['movies']).to.be.an('array');
+      // expect(requestResult['movies']).to.be.an('array');
     });
 });
 
