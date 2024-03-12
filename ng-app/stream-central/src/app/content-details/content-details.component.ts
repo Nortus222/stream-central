@@ -14,8 +14,10 @@ export class ContentDetailsComponent {
 
   constructor() {
     const contentId = this.route.snapshot.params['id'];
+    const contentType = this.route.snapshot.params['type'];
     console.log('Content ID from route:', contentId);
-    this.contentService.getContentById(contentId).subscribe((res: any) => {
+    console.log('Content Type from route:', contentType);
+    this.contentService.getContentById(contentId, contentType).subscribe((res: any) => {
       this.content = res;
       console.log(res);
     });

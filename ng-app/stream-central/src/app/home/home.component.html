@@ -23,8 +23,9 @@
             {{ filter.value === 'tv-show' ? 'TV-Shows' : 'Movies' }}
         </button>
         <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByType('')">All</a></li>
             <li><a class="dropdown-item rounded-2" href="#" (click)="filterByType('movie')">Movies</a></li>
-            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByType('tv-show')">TV-Shows</a></li>
+            <li><a class="dropdown-item rounded-2" href="#" (click)="filterByType('tv')">TV-Shows</a></li>
         </ul>
     </div>
     <div class="btn-group">
@@ -52,6 +53,9 @@
     </div>
 </section> -->
 <section class="results p-4 border-bottom border-info">
+    <pagination class="justify-content-center home-pagination" [totalItems]="filteredContents.length" 
+    [itemsPerPage]="pageSize" (pageChanged)="setPage($event.page)">
+    </pagination>
     <div *ngIf="filteredContents.length == 0" class="no-favorites text-center" style="height: 100vh;">
         <h3>No results containing you search terms.</h3>
         <p>Try different keywords</p>
@@ -68,7 +72,7 @@
                         </a>
                         <button class="favorite-btn" title="Add to Favorites" (click)="addToFavorites(content.tmdb_id); $event.stopPropagation()"></button>
                     </div>
-                    <h5 class="content-title">{{content.title}}</h5>
+                    <h5 class="content-title">{{ content.type === 'tv' ? content.name : content.title }}</h5>
                 </div>
             </div>
         </div>

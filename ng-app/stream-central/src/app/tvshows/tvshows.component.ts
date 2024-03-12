@@ -15,5 +15,5 @@ export class TvshowsComponent {
       this.results = res;
       console.log(res);
     });
-}
+  }
 }

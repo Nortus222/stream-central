@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { OAuthService } from 'angular-oauth2-oidc';
+import { Observable } from 'rxjs';
 
 const oAuthConfig = {
   issuer: 'https://accounts.google.com',
@@ -30,6 +31,10 @@ export class AuthService {
       });
 
     });
+
+    // isAuthenticated(): Observable<any> {
+    //   return this.http.get('/app/user/info');
+    // }
 
    }
 

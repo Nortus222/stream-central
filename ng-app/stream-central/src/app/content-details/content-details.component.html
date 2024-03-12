@@ -1,53 +1,129 @@
 <div class="container p-4 mx-5 border-info">
     <section class="card-section">
-        <div class="card content-info">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="{{content?.poster}}" alt="Movie Poster" class="img-fluid rounded">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h1 class="content-title">{{content?.title}}</h1>
-
-                        <p> ({{content?.release_date | date:'yyyy'}})</p>
-                        <div class="genre-tags mb-5">
-                            <ng-container *ngFor="let genre of content?.genres">
-                                <span class="badge rounded-pill text-bg-success d-inline-block" style="margin: 3px;">{{
-                                    genre?.name }}</span>
-                            </ng-container>
+        <div *ngIf="content?.type === 'movie'">
+            <div class="card content-info">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{content?.poster}}" alt="Movie Poster" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="content-title">{{content?.title}}</h1>
+        
+                            <p> ({{content?.release_date | date:'yyyy'}})</p>
+                            <div class="genre-tags mb-5">
+                                <ng-container *ngFor="let genre of content?.genres">
+                                    <span class="badge rounded-pill text-bg-success d-inline-block" style="margin: 3px;">{{
+                                        genre?.name }}</span>
+                                </ng-container>
+                            </div>
+                            <p><i>{{content?.tagline}}</i></p>
+                            <a class="btn trailer-btn"
+                                [href]="content?.trailer.startsWith('https://') ? content?.trailer : 'https://' + content?.trailer"
+                                target="_blank" aria-label="Watch Trailer">
+                                <i class='bx bxl-youtube text-danger fs-4 align-middle'></i> Watch Trailer
+                            </a>
+                            <button class="btn favorite-btn" title="Add to Favorites" aria-label="Add to favorites"
+                                (click)="addToFavorites(content?.tmdb_id)"></button>
+                            <h5 class="text-secondary">Ratings:
+                                <div *ngFor="let rating of content.ratings" class="d-inline-block">
+                                    <button
+                                        *ngIf="rating.source === 'imdb' || rating.source === 'tomatoes' || rating.source === 'tmdb'"
+                                        class="btn btn-rating btn-sm">
+                                        {{ rating.source | uppercase }}: {{ rating.value }}
+                                    </button>
+                                </div> 
+                            </h5>
                         </div>
-                        <p><i>{{content?.tagline}}</i></p>
-                        <a class="btn trailer-btn"
-                            [href]="content?.trailer.startsWith('https://') ? content.trailer : 'https://' + content.trailer"
-                            target="_blank" aria-label="Watch Trailer">
-                            <i class='bx bxl-youtube text-danger fs-4 align-middle'></i> Watch Trailer
-                        </a>
-                        <button class="btn favorite-btn" title="Add to Favorites" aria-label="Add to favorites"
-                            (click)="addToFavorites(content?.tmdb_id)"></button>
-                        <h5 class="text-secondary">Ratings:
-                            <div *ngFor="let rating of content.ratings" class="d-inline-block">
-                                <button
-                                    *ngIf="rating.source === 'imdb' || rating.source === 'tomatoes' || rating.source === 'tmdb'"
-                                    class="btn btn-rating btn-sm">
-                                    {{ rating.source | uppercase }}: {{ rating.value }}
-                                </button>
-                            </div> 
-                        </h5>
                     </div>
                 </div>
             </div>
+            <div class="card content-details">
+                <h3 class="text-light mb-4">About {{content.title}}</h3>
+                <h4 class="text-light">Overview</h4>
+                <p class="mb-4">{{content.overview}}</p>
+                <p class="mb-2"><strong class="text-secondary">Cast:</strong><ng-container
+                        *ngFor="let cast of content.casts">
+                        {{ cast.name + ', '}}
+                    </ng-container></p>
+                <p><strong class="text-secondary">Genres:</strong> <ng-container *ngFor="let genre of content.genres">
+                        {{ genre.name + ', '}}
+                    </ng-container></p>
+            </div>
         </div>
-        <div class="card content-details">
-            <h3 class="text-light mb-4">About {{content.title}}</h3>
-            <h4 class="text-light">Overview</h4>
-            <p class="mb-4">{{content.overview}}</p>
-            <p class="mb-2"><strong class="text-secondary">Cast:</strong><ng-container
-                    *ngFor="let cast of content.casts">
-                    {{ cast.name + ', '}}
-                </ng-container></p>
-            <p><strong class="text-secondary">Genres:</strong> <ng-container *ngFor="let genre of content.genres">
-                    {{ genre.name + ', '}}
-                </ng-container></p>
+        <div *ngIf="content?.type === 'tv'">
+            <div class="card content-info">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{content?.poster}}" alt="TV-show Poster" class="img-fluid rounded">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h1 class="content-name">{{content?.name}}</h1>
+                            <p> First Aired date: ({{content?.first_air_date | date:'yyyy'}})</p>
+                            <p> Last Aired date: ({{content?.last_air_date | date:'yyyy'}})</p>
+                            <p> Total Seasons: {{content?.number_of_seasons}}</p>
+                            <p> Total Episodes: {{content?.number_of_episodes}}</p>
+                            <div class="genre-tags mb-5">
+                                <ng-container *ngFor="let genre of content?.genres">
+                                    <span class="badge rounded-pill text-bg-success d-inline-block" style="margin: 3px;">{{
+                                        genre?.name }}</span>
+                                </ng-container>
+                            </div>
+                            <p><i>{{content?.tagline}}</i></p>
+                            <div *ngIf="content?.trailer">
+                                <a class="btn trailer-btn"
+                                    [href]="content?.trailer.startsWith('https://') ? content?.trailer : 'https://' + content?.trailer"
+                                    target="_blank" aria-label="Watch Trailer">
+                                    <i class='bx bxl-youtube text-danger fs-4 align-middle'></i> Watch Trailer
+                                </a>
+                            </div>
+                            <button class="btn favorite-btn" title="Add to Favorites" aria-label="Add to favorites"
+                                (click)="addToFavorites(content?.tmdb_id)"></button>
+                            <div class="provider-tags">
+                                <ng-container *ngFor="let provider of content?.streamingInfo">
+                                    <div class="provider-tag">
+                                        <div *ngIf="provider?.streamingType !== 'addon'">
+                                            <span class="badge rounded-pill text-bg-warning d-inline-block" style="margin: 3px;">
+                                                {{ provider?.service | uppercase}}
+                                            </span>
+                                            <span class="badge rounded-pill text-bg-primary d-inline-block" style="margin: 3px;">
+                                                {{ provider?.streamingType }}
+                                            </span>
+                                            <a [href]="provider?.link" target="_blank" class="badge rounded-pill text-bg-info d-inline-block" style="margin: 3px;">
+                                                Visit {{ provider?.service }}
+                                            </a>
+                                        </div>
+                                    </div>
+                                </ng-container>
+                            </div>
+                            <!-- <h5 class="text-secondary">Ratings:
+                                <div *ngFor="let rating of content.ratings" class="d-inline-block">
+                                    <button
+                                        *ngIf="rating.source === 'imdb' || rating.source === 'tomatoes' || rating.source === 'tmdb'"
+                                        class="btn btn-rating btn-sm">
+                                        {{ rating.source | uppercase }}: {{ rating.value }}
+                                    </button>
+                                </div> 
+                            </h5> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card content-details">
+                <h3 class="text-light mb-4">About {{content.name}}</h3>
+                <h4 class="text-light">Overview</h4>
+                <p class="mb-4">{{content.overview}}</p>
+                <div *ngIf="content?.casts">
+                    <p class="mb-2"><strong class="text-secondary">Cast:</strong><ng-container
+                        *ngFor="let cast of content.casts">
+                        {{ cast.name + ', '}}
+                    </ng-container></p>
+                </div>
+                <p><strong class="text-secondary">Genres:</strong> <ng-container *ngFor="let genre of content.genres">
+                        {{ genre.name + ', '}}
+                    </ng-container></p>
+            </div>
         </div>
     </section>
 </div>

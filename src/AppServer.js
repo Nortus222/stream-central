@@ -6,7 +6,7 @@ dotenv.config();
 var port = process.env.PORT;
 var dbUser = process.env.DB_USER;
 var dbPassword = process.env.DB_PASSWORD;
-var mongoDBConnection = 'mongodb+srv://' + dbUser + ':' + encodeURIComponent(dbPassword) + process.env.DB_INFO;
+var mongoDBConnection = "mongodb+srv://azure-functions:Q7I1u0hKnGEusfVg@stream-central.y4w6mwk.mongodb.net/?retryWrites=true&w=majority&appName=stream-central" + dbUser + ':' + encodeURIComponent(dbPassword) + process.env.DB_INFO;
 console.log("server db connection URL " + mongoDBConnection);
 var server = new App_1.App(mongoDBConnection).expressApp;
 server.listen(port);

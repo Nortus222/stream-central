@@ -8,7 +8,7 @@
   }
   
   .content-title {
-      font-size: 32px;
+      font-size: 28px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -26,6 +26,11 @@
   .content-details h2 {
       color: light;
     }
+
+  .provider-tags {
+    display: flex;
+    font-size: 18px;
+  }
   
   .btn {
     margin: 3px;
