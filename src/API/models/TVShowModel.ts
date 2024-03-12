@@ -104,7 +104,7 @@ class TVShowModel {
   }
 
   public async retrieveContent() {
-    var query = this.model.find({}).select('tmdb_id name poster');
+    var query = this.model.find({}).select('tmdb_id name poster type');
 
     try {
         const items = await query.exec();

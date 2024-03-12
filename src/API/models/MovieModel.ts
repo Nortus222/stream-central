@@ -153,7 +153,7 @@ class MovieModel {
     }
 
     public async retrieveContent() {
-        var query = this.model.find({}).select('tmdb_id title poster');
+        var query = this.model.find({}).select('tmdb_id title poster type');
 
         try {
             const items = await query.exec();
