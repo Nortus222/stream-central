@@ -100,11 +100,6 @@ class App {
       await this.Movies.retrieveAllMoviesMin(res);
     });
 
-    router.get('/moviesCount', async (req, res) => {
-      console.log('Query the number of movie elements in db');
-      await this.Movies.retrieveMovieCount(res);
-    });
-
     router.get('/tvshows', async (req, res) => {
       console.log('Query All tvshows');
       await this.TVShows.retrieveAllTVShows(res);
@@ -115,13 +110,7 @@ class App {
       console.log('Query single tvshow with id: ' + id);
       await this.TVShows.retrieveTVShowById(res, id);
     });
-/*
-    router.post('/users', async (req, res) => {
-      var jsonObj = req.body;
-      console.log('Create user');
-      await this.Users.createUser(res, jsonObj);
-    });
-*/
+    
     router.get('/user/favorites', this.validateAuth, async (req, res) => {
       var id = req.user.id;
       console.log('Query single favorites list for user with id: ' + id);

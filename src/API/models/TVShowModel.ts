@@ -108,6 +108,9 @@ class TVShowModel {
 
     try {
         const items = await query.exec();
+        items.forEach((item: any) => {
+            item['type'] = 'tvshow';
+        });
         return items;
     }
     catch (e) {

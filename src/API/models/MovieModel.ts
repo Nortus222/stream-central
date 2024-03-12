@@ -157,6 +157,9 @@ class MovieModel {
 
         try {
             const items = await query.exec();
+            items.forEach((item: any) => {
+                item['type'] = 'movie';
+            });
             return items;
         }
         catch (e) {
