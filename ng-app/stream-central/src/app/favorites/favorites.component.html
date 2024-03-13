@@ -2,7 +2,7 @@
     <div class="container py-4">
         <h1 class="section-title">Favorites</h1>
         <div *ngIf="user" class="user-info">
-            <h5 class="section-subtitle">{{user.displayName}}  {{user.emails.value}}</h5>
+            <h5 class="section-subtitle">{{user.displayName}}  {{user.emails[0].value}}</h5>
         </div>
         <div class="row row-cols-sm-1 row-cols-md-4 row-cols-lg-5 gx-2 gy-2">
             <div *ngIf="favorites.length == 0" class="no-favorites">
