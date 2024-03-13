@@ -12,7 +12,9 @@ export class AppComponent {
   isLoggedIn = false;
 
   constructor(public router: Router, public contentService: ContentproxyService) { 
+  }
 
+  ngOnInit() {
     this.contentService.checkifLoggedIn().subscribe((res: any) => {
       console.log(res);
       if (res.loggedIn) {
