@@ -101,6 +101,14 @@ class App {
       }
     });
 
+    router.get('user/logOut', (req, res) => {
+      req.logout(function(err) {
+       
+        res.redirect('/');
+      });
+
+    });
+
     router.get('/movies/:movieId', async (req, res) => {
       var id = req.params.movieId;
       console.log('Query single movie with id: ' + id);
