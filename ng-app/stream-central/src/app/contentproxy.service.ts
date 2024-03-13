@@ -48,4 +48,8 @@ export class ContentproxyService {
   getAllContent() {
     return this.httpClient.get<any[]>( this.hostUrl + '/allContent');
   }
+
+  checkifLoggedIn() {
+    return this.httpClient.get( this.hostUrl + '/user/loggedIn');
+  }
 }

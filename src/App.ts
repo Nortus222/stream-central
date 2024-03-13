@@ -92,6 +92,14 @@ class App {
       res.json({"username" : req.user.displayName, "id" : req.user.id});
     });
 
+    router.get('user/loggedIn', (req, res) => {
+      if (req.user) {
+        res.json({loggedIn: true});
+      } else {
+        res.json({loggedIn: false});
+      }
+    });
+
     router.get('/movies/:movieId', async (req, res) => {
       var id = req.params.movieId;
       console.log('Query single movie with id: ' + id);
@@ -135,7 +143,7 @@ class App {
           movies: allmovies,
           user: req.user
         };
-        
+
 
         res.json(result);
       }

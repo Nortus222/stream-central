@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService } from './auth.service';
+import { ContentproxyService } from './contentproxy.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,18 @@ import { AuthService } from './auth.service';
 })
 export class AppComponent {
   title = 'stream-central';
+  isLoggedIn = false;
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, public contentService: ContentproxyService) { 
 
-  get isLoggedIn() {
-    return false;
-    // return this.authService.isLoggedIn;
+    this.contentService.checkifLoggedIn().subscribe((res: any) => {
+      console.log(res);
+      if (res.loggedIn) {
+        this.isLoggedIn = true;
+      }
+    });
   }
+
+  
 
 }
