@@ -16,4 +16,10 @@ export class MoviesComponent {
       console.log(res);
     });
   }
+
+  addToFavorites(contentId: number): void{
+    this.content$.addToFavorites(contentId).subscribe((res: any) => {
+      console.log(res);
+    });
+  }
 }

@@ -11,9 +11,16 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class TvshowsComponent {
   results: any = [];
 
-  constructor(private route: ActivatedRoute, private content$: ContentproxyService, private _snackbar: MatSnackBar) {
+  constructor(private route: ActivatedRoute, private content$: ContentproxyService) {
     this.content$.getTVShows().subscribe((res: any) => {
       this.results = res;
+      console.log(res);
+    });
+    
+  }
+
+  addToFavorites(contentId: number): void{
+    this.content$.addToFavorites(contentId).subscribe((res: any) => {
       console.log(res);
     });
   }
