@@ -15,12 +15,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    this.contentService.checkifLoggedIn().subscribe((res: any) => {
-      console.log(res);
-      if (res.loggedIn) {
-        this.isLoggedIn = true;
-      }
-    });
+    this.isLoggedIn=false;
   }
 
   logout() {
