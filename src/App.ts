@@ -92,7 +92,8 @@ class App {
       res.json({"username" : req.user.displayName, "id" : req.user.id});
     });
 
-    router.get('user/loggedIn', (req, res) => {
+    router.get('/user/loggedIn', (req, res) => {
+      console.log('Check if logged in');
       if (req.user) {
         res.json({loggedIn: true});
       } else {
