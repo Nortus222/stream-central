@@ -27,11 +27,6 @@ export class ContentDetailsComponent {
   addToFavorites(contentId: number): void{
     this.contentService.addToFavorites(contentId).subscribe((res: any) => {
       console.log(res);
-      if (res) {
-        this._snackbar.open('Added to Favorites', 'Close', {
-          duration: 2000,
-        });
-      }
     });
   }
 }

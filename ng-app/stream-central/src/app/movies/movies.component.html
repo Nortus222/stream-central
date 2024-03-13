@@ -6,8 +6,8 @@
                     <div class="card">
                         <a [routerLink]="['content', content.tmdb_id]">
                             <img src={{content.poster}} class="card-img-top" alt="...">
-                            <button class="favorite-btn" title="Add to Favorites" (click)="addToFavorites(content.tmdb_id); $event.stopPropagation()"></button>
                         </a>
+                        <button class="favorite-btn" title="Add to Favorites" (click)="addToFavorites(content.tmdb_id); $event.stopPropagation()"></button>
                     </div>
                     <h3 class="content-title">{{content.title}}</h3>
                 </div>
