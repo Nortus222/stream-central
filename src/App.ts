@@ -107,8 +107,6 @@ class App {
         res.redirect('/');
       });
 
-      res.json({loggedOut: true});
-
     });
 
     router.get('/movies/:movieId', async (req, res) => {
