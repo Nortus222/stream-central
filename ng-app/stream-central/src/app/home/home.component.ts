@@ -48,7 +48,10 @@ export class HomeComponent {
     if (!searchTerm) this.filteredContents = this.contents;
 
     this.filteredContents = this.contents.filter((contents: any) => {
-      return contents.title.toLowerCase().includes(searchTerm.toLowerCase());
+      if (contents.type === 'movie')
+        return contents.title.toLowerCase().includes(searchTerm.toLowerCase());
+
+      return contents.name.toLowerCase().includes(searchTerm.toLowerCase());
     });
 
     this.page = 1;
