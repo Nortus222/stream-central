@@ -20,7 +20,7 @@
           </ul>
       </div>
       <div *ngIf="isLoggedIn; else signInButton">
-        <button>Logout</button>
+        <a href="https://streamcentral.azurewebsites.net/user/logOut" class="btn btn-info">LogOut</a>
       </div>
       <ng-template #signInButton>
         <a href="https://streamcentral.azurewebsites.net/auth/google" class="btn btn-info">Login</a>

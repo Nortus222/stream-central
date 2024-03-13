@@ -52,4 +52,8 @@ export class ContentproxyService {
   checkifLoggedIn() {
     return this.httpClient.get( this.hostUrl + '/user/loggedIn');
   }
+
+  logOut() {
+    return this.httpClient.get( this.hostUrl + '/user/logout');
+  }
 }

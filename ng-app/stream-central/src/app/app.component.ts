@@ -23,6 +23,16 @@ export class AppComponent {
     });
   }
 
+  logout() {
+    this.contentService.logOut().subscribe((res: any) => {
+      console.log(res);
+      // if (res.loggedOut) {
+      //   this.isLoggedIn = false;
+      //   this.router.navigate(['/']);
+      // }
+    });
+  }
+
   
 
 }
