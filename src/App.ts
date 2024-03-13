@@ -84,14 +84,6 @@ class App {
       res.redirect('/#/movies');
     });
 
-    router.get('/app/user/info', this.validateAuth, (req, res) => {
-      console.log('Query All list');
-      console.log("user info:" + JSON.stringify(req.user));
-      console.log("user info:" + JSON.stringify(req.user.id));
-      console.log("user info:" + JSON.stringify(req.user.displayName));
-      res.json({"username" : req.user.displayName, "id" : req.user.id});
-    });
-
     router.get('/movies/:movieId', async (req, res) => {
       var id = req.params.movieId;
       console.log('Query single movie with id: ' + id);
