@@ -101,11 +101,13 @@ class App {
       }
     });
 
-    router.get('user/logOut', (req, res) => {
+    router.get('/user/logout', (req, res) => {
       req.logout(function(err) {
        
         res.redirect('/');
       });
+
+      res.json({loggedOut: true});
 
     });
 
