@@ -38,7 +38,7 @@ export class ContentproxyService {
   }
 
   getContentById(contentId: string, contentType: string) {
-    if (contentType === 'movies') {
+    if (contentType === 'movies' || contentType === 'movie') {
       return this.getMovieById(contentId);
     } else {
       return this.getTVShowById(contentId);
