@@ -92,25 +92,6 @@ class App {
       res.json({"username" : req.user.displayName, "id" : req.user.id});
     });
 
-    router.get('/user/loggedIn', (req, res) => {
-      console.log('Check if logged in');
-      if (req.user) {
-        res.json({loggedIn: true});
-      } else {
-        res.json({loggedIn: false});
-      }
-    });
-
-    router.get('/user/logout', (req, res) => {
-      req.logout(function(err) {
-       
-        res.redirect('/');
-      });
-
-      res.json({loggedOut: true});
-
-    });
-
     router.get('/movies/:movieId', async (req, res) => {
       var id = req.params.movieId;
       console.log('Query single movie with id: ' + id);

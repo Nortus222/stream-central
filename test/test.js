@@ -14,14 +14,15 @@ describe('HTTP GET Test 1: Test all movies', function () {
     var requestResult;
     var response;
        
+    // execute the get request
       before(function (done) {
-          chai.request("http://localhost:8080")
+          chai.request("https://streamcentral.azurewebsites.net")
         .get("/movies")
         .end(function (err, res) {
           requestResult = res.body;
           response = res;
-                  expect(err).to.be.null;
-                  expect(res).to.have.status(200);
+          expect(err).to.be.null;
+          expect(res).to.have.status(200);
           done();
         });
           });
@@ -58,8 +59,8 @@ describe('HTTP GET Test 2: Test one movie', function () {
   var response;
      
     before(function (done) {
-        chai.request("http://localhost:8080")
-      .get("/favorites/2")
+        chai.request("https://streamcentral.azurewebsites.net")
+      .get("/movies/866398")
       .end(function (err, res) {
         requestResult = res.body;
         response = res;
